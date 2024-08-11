@@ -256,4 +256,51 @@ namespace Game
         [DllImport("Engine.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool GetKey(int key);
     }
+
+    public class Timer
+    {
+        private float interval;
+        private float elapsedTime;
+
+        public Timer(float intervalInSeconds)
+        {
+            interval = intervalInSeconds;
+            elapsedTime = 0f;
+        }
+
+        public void Update(float deltaTime)
+        {
+            elapsedTime += deltaTime;
+            if (elapsedTime >= interval)
+            {
+                Console.WriteLine($"{interval} segundos han pasado.");
+                elapsedTime = 0f; // Reinicia el temporizador
+            }
+        }
+    }
+
+    public class Character
+    {
+        public float PositionX { get; private set; }
+        private float speed;
+        private float timeMoving;
+        private float maxTime;
+
+        public Character(float initialPositionX, float speed, float maxTimeInSeconds)
+        {
+            PositionX = initialPositionX;
+            this.speed = speed;
+            this.maxTime = maxTimeInSeconds;
+            timeMoving = 0f;
+        }
+
+        public void Update(float deltaTime)
+        {
+            if (timeMoving < maxTime)
+            {
+                PositionX += speed * deltaTime;
+                timeMoving += deltaTime;
+            }
+        }
+    }
 }

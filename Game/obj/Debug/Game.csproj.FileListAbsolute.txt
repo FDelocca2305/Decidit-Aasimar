@@ -25,14 +25,16 @@ D:\Paradigmas de Programación\Paradigmas de Programación\ProyectoBase\Game\bin
 D:\Paradigmas de Programación\Paradigmas de Programación\ProyectoBase\Game\obj\Debug\Game.csprojAssemblyReference.cache
 D:\Paradigmas de Programación\Paradigmas de Programación\ProyectoBase\Game\obj\Debug\Game.exe
 D:\Paradigmas de Programación\Paradigmas de Programación\ProyectoBase\Game\obj\Debug\Game.pdb
-C:\Users\franc\Desktop\EngineParadigmas\Game\obj\Debug\Game.exe
-C:\Users\franc\Desktop\EngineParadigmas\Game\obj\Debug\Game.pdb
-C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Engine.dll
-C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\ship.png
-C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Game.cs
-C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Program.cs
-C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Game.exe.config
-C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Game.exe
-C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Game.pdb
-C:\Users\franc\Desktop\EngineParadigmas\Game\obj\Debug\Game.csproj.AssemblyReference.cache
-C:\Users\franc\Desktop\EngineParadigmas\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Engine.dll
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\ship.png
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Game.cs
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Program.cs
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Game.exe
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Game.pdb
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\obj\Debug\Game.exe
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\obj\Debug\Game.pdb
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Game.exe.config
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\background.png
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\character.png
