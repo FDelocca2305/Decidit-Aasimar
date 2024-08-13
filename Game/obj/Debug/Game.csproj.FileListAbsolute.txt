@@ -38,3 +38,16 @@ C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\Proye
 C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Game.exe.config
 C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\background.png
 C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\character.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\background.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\character.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Engine.dll
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\ship.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.cs
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Program.cs
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.exe.config
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.exe
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.pdb
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.exe
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.pdb

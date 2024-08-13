@@ -279,28 +279,5 @@ namespace Game
         }
     }
 
-    public class Character
-    {
-        public float PositionX { get; private set; }
-        private float speed;
-        private float timeMoving;
-        private float maxTime;
-
-        public Character(float initialPositionX, float speed, float maxTimeInSeconds)
-        {
-            PositionX = initialPositionX;
-            this.speed = speed;
-            this.maxTime = maxTimeInSeconds;
-            timeMoving = 0f;
-        }
-
-        public void Update(float deltaTime)
-        {
-            if (timeMoving < maxTime)
-            {
-                PositionX += speed * deltaTime;
-                timeMoving += deltaTime;
-            }
-        }
-    }
+    
 }

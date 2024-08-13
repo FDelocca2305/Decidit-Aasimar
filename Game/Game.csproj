@@ -47,12 +47,16 @@
     <Reference Include="System.Windows.Forms.DataVisualization.Design" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\GameObject.cs" />
+    <Compile Include="Core\Timer.cs" />
+    <Compile Include="Core\Vector2.cs" />
     <Compile Include="Game.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Program.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Scripts\Character.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="background.png">
