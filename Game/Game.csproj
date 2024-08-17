@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\GameObject.cs" />
+    <Compile Include="Core\PhysicsObject.cs" />
+    <Compile Include="Core\TileMap.cs" />
     <Compile Include="Core\Timer.cs" />
     <Compile Include="Core\Vector2.cs" />
     <Compile Include="Game.cs">
@@ -71,6 +73,7 @@
     <Content Include="ship.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="tile.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

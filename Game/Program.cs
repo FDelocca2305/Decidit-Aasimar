@@ -8,34 +8,30 @@ namespace Game
     {
         static void Main(string[] args)
         {
-            Engine.Initialize("Mi Juego", 1920, 1080, false);
+            int screenWidth = 800;
+            int screenHeight = 600;
+            float characterScale = 0.25f;
+            Engine.Initialize("Plataformas", screenWidth, screenHeight, false);
 
-            Timer timer = new Timer(3f);
-            Character character = new Character(new Vector2(0f, 100f), 100f, 4f);
+            TileMap map = new TileMap(25, 18, 32, 32);
+            Character character = new Character(new Vector2(100, 300), screenWidth, screenHeight, characterScale);
 
             DateTime startTime = DateTime.Now;
             float lastFrameTime = 0f;
 
             while (true)
             {
-                var currentTime = (float)(DateTime.Now - startTime).TotalSeconds;
+                float currentTime = (float)(DateTime.Now - startTime).TotalSeconds;
                 float deltaTime = currentTime - lastFrameTime;
                 lastFrameTime = currentTime;
 
-                Engine.Clear();
-                
-                Engine.Draw("background.png", 0, 0);
-                
-                character.Update(deltaTime);
-                timer.Update(deltaTime);
-                
-                float scaX = 0.5f;
-                float scaY = 0.5f;
-                Engine.Draw("character.png", character.Position.x, character.Position.y, scaX, scaY);
+                Engine.Clear(135, 206, 235);
 
+                map.Draw();
+                character.Update(deltaTime, map);
+
+                Engine.Draw("character.png", character.Position.x, character.Position.y, characterScale, characterScale);
                 Engine.Show();
-                
-                Console.WriteLine($"Posición del personaje: {character.Position}");
             }
         }
     }
