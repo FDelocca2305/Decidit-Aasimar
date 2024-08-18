@@ -59,6 +59,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Scripts\Character.cs" />
+    <Compile Include="Scripts\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="background.png">
@@ -67,6 +68,7 @@
     <Content Include="character.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="enemy.png" />
     <Content Include="Engine.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

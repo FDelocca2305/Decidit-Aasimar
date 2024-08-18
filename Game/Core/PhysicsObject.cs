@@ -1,7 +1,7 @@
 using System;
 
 namespace Game.Core
-{
+    {
     public abstract class PhysicsObject : GameObject
     {
         protected Vector2 velocity;
@@ -18,6 +18,11 @@ namespace Game.Core
             isGrounded = false;
         }
 
+        public virtual void Update(float deltaTime, TileMap map)
+        {
+            ApplyPhysics(deltaTime, map);
+        }
+
         public void ApplyPhysics(float deltaTime, TileMap map)
         {
             if (!isGrounded)
@@ -28,9 +33,9 @@ namespace Game.Core
                     velocity = new Vector2(velocity.x, TerminalVelocity);
                 }
             }
-            
+
             Position += velocity * deltaTime;
-            
+
             CheckCollision(map);
         }
 
@@ -46,5 +51,12 @@ namespace Game.Core
                 isGrounded = false;
             }
         }
+
+        public Vector2 Velocity
+        {
+            get { return velocity; }
+            set { velocity = value; }
+        }
     }
 }
+
