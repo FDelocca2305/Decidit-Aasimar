@@ -8,14 +8,19 @@ namespace Game
     {
         static void Main(string[] args)
         {
-            int screenWidth = 800;
-            int screenHeight = 600;
+
+            int screenWidth = 1920;
+            int screenHeight = 1080;
             float characterScale = 0.25f;
-            float enemySpeed = 50f; 
+            int tileWidth = 32;
+            int tileHeight = 32;
+            float enemySpeed = 50f;
+            int mapWidth = screenWidth / tileWidth;
+            int mapHeight = screenHeight / tileHeight;
             Engine.Initialize("Plataformas", screenWidth, screenHeight, false);
 
-            TileMap map = new TileMap(25, 18, 32, 32);
-            Character character = new Character(new Vector2(100, 300), screenWidth, screenHeight, characterScale);
+            TileMap map = new TileMap(mapWidth, mapHeight, tileWidth, tileHeight);
+            Character character = new Character(new Vector2(100, screenHeight - 350), screenWidth, screenHeight, characterScale);
             Enemy enemy = new Enemy(600, 100, character, enemySpeed);
 
             DateTime startTime = DateTime.Now;

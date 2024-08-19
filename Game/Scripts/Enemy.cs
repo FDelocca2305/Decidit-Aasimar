@@ -23,10 +23,9 @@ namespace Game.Scripts
         }
 
 
-
         public void Draw()
         {
-            Engine.Draw("ship.png", Position.x, Position.y);
+            Engine.Draw("enemy.png", Position.x, Position.y);
         }
     }
 }

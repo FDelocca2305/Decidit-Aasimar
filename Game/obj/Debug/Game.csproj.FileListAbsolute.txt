@@ -64,3 +64,18 @@ C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\
 C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
 C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\obj\Debug\Game.exe
 C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\obj\Debug\Game.pdb
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\background.png
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\character.png
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Engine.dll
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\ship.png
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.cs
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Program.cs
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.exe.config
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.exe
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.pdb
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.exe
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.pdb
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\enemy.png
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\tile.png

@@ -47,6 +47,7 @@
     <Reference Include="System.Windows.Forms.DataVisualization.Design" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Animator.cs" />
     <Compile Include="Core\GameObject.cs" />
     <Compile Include="Core\PhysicsObject.cs" />
     <Compile Include="Core\TileMap.cs" />
@@ -68,14 +69,18 @@
     <Content Include="character.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="enemy.png" />
+    <Content Include="enemy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Engine.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ship.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="tile.png" />
+    <Content Include="tile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

@@ -8,7 +8,7 @@ namespace Game.Core
         protected Vector2 acceleration;
         protected bool isGrounded;
 
-        protected const float Gravity = 9.8f;
+        protected const float Gravity = 18.8f;
         protected const float TerminalVelocity = 50f;
 
         public PhysicsObject(Vector2 initialPosition) : base(initialPosition)
@@ -27,7 +27,7 @@ namespace Game.Core
         {
             if (!isGrounded)
             {
-                velocity += acceleration * deltaTime;
+                velocity += (acceleration * deltaTime * Gravity) * 2;
                 if (velocity.y > TerminalVelocity)
                 {
                     velocity = new Vector2(velocity.x, TerminalVelocity);

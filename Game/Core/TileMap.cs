@@ -14,16 +14,12 @@ namespace Game.Core
             tiles = new int[width, height];
             this.tileWidth = tileWidth;
             this.tileHeight = tileHeight;
+
             
-            for (int y = 0; y < height; y++)
+            int groundRow = height - 2;
+            for (int x = 0; x < width; x++)
             {
-                for (int x = 0; x < width; x++)
-                {
-                    if (y > height / 2)
-                        tiles[x, y] = 1;
-                    else
-                        tiles[x, y] = 0;
-                }
+                tiles[x, groundRow] = 1;
             }
         }
 
@@ -48,7 +44,7 @@ namespace Game.Core
                 {
                     if (tiles[x, y] == 1)
                     {
-                        Engine.Draw("character.png", x * tileWidth, y * tileHeight);
+                        Engine.Draw("tile.png", x * tileWidth, y * tileHeight);
                     }
                 }
             }
