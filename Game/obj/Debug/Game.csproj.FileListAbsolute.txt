@@ -79,3 +79,5 @@ C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.exe
 C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.pdb
 C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\enemy.png
 C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\tile.png
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\enemy.png
+C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\tile.png

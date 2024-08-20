@@ -36,7 +36,7 @@ namespace Game.Core
             return tiles[tileX, tileY] == 1;
         }
 
-        public void Draw()
+        public void Draw(Camera camera)
         {
             for (int y = 0; y < tiles.GetLength(1); y++)
             {
@@ -44,10 +44,15 @@ namespace Game.Core
                 {
                     if (tiles[x, y] == 1)
                     {
-                        Engine.Draw("tile.png", x * tileWidth, y * tileHeight);
+                        // Calcular la posición en pantalla del tile considerando la cámara y el zoom
+                        Vector2 tilePosition = camera.WorldToScreen(new Vector2(x * tileWidth, y * tileHeight));
+
+                        // Dibujar el tile con el tamaño ajustado según el zoom
+                        Engine.Draw("tile.png", tilePosition.x, tilePosition.y, tileWidth * camera.Zoom, tileHeight * camera.Zoom);
                     }
                 }
             }
         }
+
     }
 }

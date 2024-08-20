@@ -48,7 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Animator.cs" />
+    <Compile Include="Core\Camera.cs" />
     <Compile Include="Core\GameObject.cs" />
+    <Compile Include="Core\MathUtils.cs" />
     <Compile Include="Core\PhysicsObject.cs" />
     <Compile Include="Core\TileMap.cs" />
     <Compile Include="Core\Timer.cs" />
