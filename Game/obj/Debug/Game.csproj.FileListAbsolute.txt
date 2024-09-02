@@ -25,57 +25,60 @@ D:\Paradigmas de Programación\Paradigmas de Programación\ProyectoBase\Game\bin
 D:\Paradigmas de Programación\Paradigmas de Programación\ProyectoBase\Game\obj\Debug\Game.csprojAssemblyReference.cache
 D:\Paradigmas de Programación\Paradigmas de Programación\ProyectoBase\Game\obj\Debug\Game.exe
 D:\Paradigmas de Programación\Paradigmas de Programación\ProyectoBase\Game\obj\Debug\Game.pdb
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Engine.dll
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\ship.png
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Game.cs
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Program.cs
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Game.exe
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Game.pdb
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\obj\Debug\Game.csproj.AssemblyReference.cache
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\obj\Debug\Game.exe
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\obj\Debug\Game.pdb
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\Game.exe.config
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\background.png
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Paradigmas\ProyectoBase\Game\bin\Debug\character.png
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\background.png
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\character.png
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Engine.dll
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\ship.png
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.cs
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Program.cs
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.exe.config
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.exe
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.pdb
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.csproj.AssemblyReference.cache
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.exe
-C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.pdb
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\background.png
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\character.png
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\Engine.dll
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\ship.png
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\Game.cs
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\Program.cs
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\Game.exe.config
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\Game.exe
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\bin\Debug\Game.pdb
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\obj\Debug\Game.csproj.AssemblyReference.cache
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\obj\Debug\Game.exe
-C:\Users\Gabriel\OneDrive - Fundación UADE\Documentos\Facultad\Decidit-Aasimar\Game\obj\Debug\Game.pdb
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\background.png
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\character.png
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Engine.dll
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\ship.png
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.cs
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Program.cs
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.exe.config
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.exe
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Game.pdb
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.csproj.AssemblyReference.cache
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.exe
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\obj\Debug\Game.pdb
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\enemy.png
-C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\tile.png
+C:\Users\franc\Desktop\EngineParadigmas\Game\obj\Debug\Game.exe
+C:\Users\franc\Desktop\EngineParadigmas\Game\obj\Debug\Game.pdb
+C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Engine.dll
+C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\ship.png
+C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Game.cs
+C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Program.cs
+C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Game.exe.config
+C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Game.exe
+C:\Users\franc\Desktop\EngineParadigmas\Game\bin\Debug\Game.pdb
+C:\Users\franc\Desktop\EngineParadigmas\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\franc\Desktop\EngineParadigmas\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Engine.dll
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Game.cs
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Program.cs
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Game.exe.config
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Game.exe
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Game.pdb
+C:\Users\franc\Desktop\VampireFranco\Game\obj\Debug\Game.csproj.AssemblyReference.cache
+C:\Users\franc\Desktop\VampireFranco\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\franc\Desktop\VampireFranco\Game\obj\Debug\Game.exe
+C:\Users\franc\Desktop\VampireFranco\Game\obj\Debug\Game.pdb
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\bar_empty.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\bar_green.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\bar_red.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\enemy.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\ship.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\player.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Run\0.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Run\1.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Run\2.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Run\3.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Run\4.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Run\5.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Run\6.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Run\7.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\RunBack\0.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\RunBack\1.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\RunBack\2.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\RunBack\3.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\RunBack\4.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\RunBack\5.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\RunBack\6.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\10.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\0.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\1.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\2.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\3.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\4.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\5.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\6.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\7.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\8.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\Textures\Player\Attack\9.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\floor.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\experience_orb.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\exp_bar_black.png
+C:\Users\franc\Desktop\VampireFranco\Game\bin\Debug\Assets\exp_bar_blue.png
