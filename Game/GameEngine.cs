@@ -10,44 +10,17 @@ namespace Game
 {
     public class GameEngine
     {
-        private ObjectManager objectManager;
-        private Player player;
         private UIManager uiManager;
-        private GameTimer gameTimer;
-        private WaveManager waveManager;
+        
         private bool isRunning = true;
 
-        public void Initialize()
-        {
-            Engine.Initialize("Vampire Franco", 1920, 1080);
-            player = new Player(960f, 540f);
-            objectManager = new ObjectManager(player);
-            objectManager.Add(player);
-            uiManager = new UIManager(player);
-            gameTimer = new GameTimer();
-            waveManager = new WaveManager(objectManager, player);
-        }
-
-        public void Run()
+        public void Run(Game game)
         {
             while (isRunning)
             {
-                Engine.Clear(135, 206, 235);
-                Engine.Draw("Assets/floor.png");
-
-                float deltaTime = GetDeltaTime();
-                gameTimer.Update(deltaTime);
-                objectManager.UpdateAll(deltaTime, player);
-                objectManager.RenderAll();
-                waveManager.Update(deltaTime);
-                uiManager.Render(gameTimer.GetFormattedTime());
-                Engine.Show();
-
-                if (Engine.GetKey(Keys.ESCAPE))
-                    isRunning = false;
+                game.Render();
+                game.Update(GetDeltaTime());   
             }
-
-            Engine.CloseWindow();
         }
 
         public static float GetDeltaTime()

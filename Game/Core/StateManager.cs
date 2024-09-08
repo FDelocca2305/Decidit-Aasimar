@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game.Core
 {
-    internal class StateManager
+    public class StateManager
     {
         private IGameState currentState;
 

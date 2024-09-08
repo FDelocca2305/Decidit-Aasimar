@@ -28,6 +28,9 @@ namespace Game.States
             {
                 GameManager.Instance.ChangeState(new PlayState());
             }
+
+            if (Engine.GetKey(Keys.ESCAPE)) 
+                Engine.CloseWindow();
         }
 
         public void Render()

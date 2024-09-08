@@ -13,6 +13,7 @@ namespace Game
 
         public Game()
         {
+            Engine.Initialize("Vampire Franco", 1920, 1080);
             stateManager = new StateManager();
             stateManager.ChangeState(new MainMenuState());
         }

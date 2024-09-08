@@ -8,8 +8,8 @@ namespace Game
         static void Main(string[] args)
         {
             var gameEngine = new GameEngine();
-            gameEngine.Initialize();
-            gameEngine.Run();
+            var game = new Game();
+            gameEngine.Run(game);
         }
     }
 }
