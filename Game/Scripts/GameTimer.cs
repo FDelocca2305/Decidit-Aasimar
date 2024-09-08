@@ -10,6 +10,8 @@ namespace Game.Scripts
     {
         private float timeElapsed;
 
+        public float TimeElapsedInMinutes => (int)timeElapsed / 60;
+
         public GameTimer()
         {
             timeElapsed = 0f;

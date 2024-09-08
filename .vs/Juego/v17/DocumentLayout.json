@@ -1,184 +1,87 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\franc\\Desktop\\VampireFranco\\",
+  "WorkspaceRootPath": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\core\\objectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\objectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\desktop\\vampirefranco\\game\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\desktop\\vampirefranco\\game\\scripts\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\core\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\core\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\game\\core\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\onedrive\\documentos\\github\\decidit-aasimar\\game\\core\\textmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\textmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\game\\scripts\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\scripts\\gametimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\gametimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\game\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\core\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\scripts\\experienceorb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\experienceorb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Desktop\\VampireFranco\\game\\core\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 143,
+      "VerticalTabListWidth": 142,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TextManager.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\Core\\TextManager.cs",
+              "RelativeDocumentMoniker": "Game\\Core\\TextManager.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\Core\\TextManager.cs",
+              "RelativeToolTip": "Game\\Core\\TextManager.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwDUAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T18:47:03.53Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "WaveManager.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\WaveManager.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\WaveManager.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\WaveManager.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\WaveManager.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\WaveManager.cs",
               "RelativeToolTip": "Game\\Scripts\\WaveManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T17:08:25.413Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ExperienceOrb.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\ExperienceOrb.cs",
-              "RelativeDocumentMoniker": "Game\\Scripts\\ExperienceOrb.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\ExperienceOrb.cs",
-              "RelativeToolTip": "Game\\Scripts\\ExperienceOrb.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T01:29:02.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Vector2.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Core\\Vector2.cs",
-              "RelativeDocumentMoniker": "Game\\Core\\Vector2.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Core\\Vector2.cs",
-              "RelativeToolTip": "Game\\Core\\Vector2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T23:43:33.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Animation.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Core\\Animation.cs",
-              "RelativeDocumentMoniker": "Game\\Core\\Animation.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Core\\Animation.cs",
-              "RelativeToolTip": "Game\\Core\\Animation.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAA5wB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T22:38:47.282Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GameTimer.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\GameTimer.cs",
-              "RelativeDocumentMoniker": "Game\\Scripts\\GameTimer.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\GameTimer.cs",
-              "RelativeToolTip": "Game\\Scripts\\GameTimer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T22:17:34.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "UIManager.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Core\\UIManager.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\Core\\UIManager.cs",
               "RelativeDocumentMoniker": "Game\\Core\\UIManager.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Core\\UIManager.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\Core\\UIManager.cs",
               "RelativeToolTip": "Game\\Core\\UIManager.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAA3wDwAAAAAAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAwDwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T22:00:09.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Weapon.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\Weapon.cs",
-              "RelativeDocumentMoniker": "Game\\Scripts\\Weapon.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\Weapon.cs",
-              "RelativeToolTip": "Game\\Scripts\\Weapon.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAlwC4AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T21:45:08.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\Enemy.cs",
-              "RelativeDocumentMoniker": "Game\\Scripts\\Enemy.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\Enemy.cs",
-              "RelativeToolTip": "Game\\Scripts\\Enemy.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowBEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T21:12:04.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GameEngine.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\GameEngine.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\GameEngine.cs",
               "RelativeDocumentMoniker": "Game\\GameEngine.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\GameEngine.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\GameEngine.cs",
               "RelativeToolTip": "Game\\GameEngine.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAswDgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -187,50 +90,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\Player.cs",
-              "RelativeDocumentMoniker": "Game\\Scripts\\Player.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Scripts\\Player.cs",
-              "RelativeToolTip": "Game\\Scripts\\Player.cs",
-              "ViewState": "AQIAAL0AAAAAAAAAAAAgwNYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T21:04:09.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ObjectManager.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Core\\ObjectManager.cs",
-              "RelativeDocumentMoniker": "Game\\Core\\ObjectManager.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Core\\ObjectManager.cs",
-              "RelativeToolTip": "Game\\Core\\ObjectManager.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAIwGMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T21:03:30.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GameObject.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Core\\GameObject.cs",
-              "RelativeDocumentMoniker": "Game\\Core\\GameObject.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Core\\GameObject.cs",
-              "RelativeToolTip": "Game\\Core\\GameObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T21:03:11.498Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\Program.cs",
               "RelativeDocumentMoniker": "Game\\Program.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Program.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\Program.cs",
               "RelativeToolTip": "Game\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -239,13 +103,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Game.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\Game.cs",
               "RelativeDocumentMoniker": "Game\\Game.cs",
-              "ToolTip": "C:\\Users\\franc\\Desktop\\VampireFranco\\Game\\Game.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\GitHub\\Decidit-Aasimar\\Game\\Game.cs",
               "RelativeToolTip": "Game\\Game.cs",
-              "ViewState": "AQIAAL0AAAAAAAAAAAAvwMQAAAAAAAAA",
+              "ViewState": "AQIAAL4AAAAAAAAAAAAvwOwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T20:55:51.872Z",
               "EditorCaption": ""

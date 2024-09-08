@@ -42,6 +42,7 @@
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
     <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Windows.Forms.DataVisualization.Design" />
@@ -50,6 +51,7 @@
     <Compile Include="Core\Animation.cs" />
     <Compile Include="Core\GameObject.cs" />
     <Compile Include="Core\ObjectManager.cs" />
+    <Compile Include="Core\TextManager.cs" />
     <Compile Include="Core\UIManager.cs" />
     <Compile Include="Core\Vector2.cs" />
     <Compile Include="Game.cs">
@@ -89,6 +91,185 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\floor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\100.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\101.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\102.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\103.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\104.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\105.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\106.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\107.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\108.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\109.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\110.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\111.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\112.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\113.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\114.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\115.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\116.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\117.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\118.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\119.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\120.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\121.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\122.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\123.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\124.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\125.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\126.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\33.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\34.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\35.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\36.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\37.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\38.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\39.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\40.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\41.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\42.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\43.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\44.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\45.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\46.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\47.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\48.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\49.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\50.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\51.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\52.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\53.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\54.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\55.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\56.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\57.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\58.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\59.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\60.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\61.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\62.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\63.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\64.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\91.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\92.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\93.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\94.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\95.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\96.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\97.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\98.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\99.png" />
+    <Content Include="Assets\Fonts\WhitePeaberry\a.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\b.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\dp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\e.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\f.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\g.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\h.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\i.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\j.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\k.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\l.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\m.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\n.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\o.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\p.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\q.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\r.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\t.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\u.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\v.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\w.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\y.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\WhitePeaberry\z.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Textures\Player\Attack\0.png">

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Runtime.InteropServices;
 
 namespace Game
@@ -207,6 +208,9 @@ namespace Game
             int res = ClearInternal(r, g, b);
             if (res == 1) WindowOpened = false;
         }
+
+        [DllImport("Engine.dll", CallingConvention = CallingConvention.Cdecl)]
+        private static extern void RenderText(Font font, string text, float x, float y, float r, float g, float b);
 
         [DllImport("Engine.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void Show();

@@ -36,14 +36,14 @@ namespace Game.Core
         {
             RenderHealthBar();
             RenderExpBar();
-            //RenderGameTime(formattedTime);
+            RenderGameTime(formattedTime);
         }
 
         private void RenderGameTime(string formattedTime)
         {
-            int timeX = 700;
-            int timeY = 10;
-            Engine.Draw(formattedTime, timeX, timeY, 20, 255, 255, 255);
+            int timeX = 900;
+            int timeY = 80;
+            TextManager.Instance.DrawText(formattedTime, timeX, timeY, 1.5f);
         }
 
         private void RenderHealthBar()
