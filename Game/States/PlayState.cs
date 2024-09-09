@@ -25,15 +25,10 @@ namespace Game.States
 
         public void Update(float deltaTime)
         {
-            Engine.Clear(135, 206, 235);
-            Engine.Draw("Assets/floor.png");
-            
             gameTimer.Update(deltaTime);
             objectManager.UpdateAll(deltaTime, player);
             
             waveManager.Update(deltaTime);
-            
-            Engine.Show();
 
             if (player.Health <= 0)
             {
@@ -51,8 +46,11 @@ namespace Game.States
 
         public void Render()
         {
+            Engine.Clear(0, 0, 0);
+            Engine.Draw("Assets/floor.png");
             objectManager.RenderAll();
             uiManager.Render(gameTimer.GetFormattedTime());
+            Engine.Show();
         }
 
         public void Exit()

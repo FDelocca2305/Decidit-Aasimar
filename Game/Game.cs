@@ -14,18 +14,7 @@ namespace Game
         public Game()
         {
             Engine.Initialize("Vampire Franco", 1920, 1080);
-            stateManager = new StateManager();
-            stateManager.ChangeState(new MainMenuState());
-        }
-
-        public void Update(float deltaTime)
-        {
-            stateManager.Update(deltaTime);
-        }
-
-        public void Render()
-        {
-            stateManager.Render();
+            GameManager.Instance.ChangeState(new MainMenuState());
         }
     }
 

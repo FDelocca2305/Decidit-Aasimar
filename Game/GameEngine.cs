@@ -18,8 +18,11 @@ namespace Game
         {
             while (isRunning)
             {
-                game.Render();
-                game.Update(GetDeltaTime());   
+                Engine.Clear(135, 206, 235);
+                GameManager.Instance.Update(GetDeltaTime());
+                GameManager.Instance.Render();
+                
+                Engine.Show();
             }
         }
 

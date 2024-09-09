@@ -10,12 +10,6 @@ namespace Game.States
 {
     public class MainMenuState : IGameState
     {
-        private TextManager textManager;
-
-        public MainMenuState()
-        {
-            textManager = TextManager.Instance;
-        }
 
         public void Enter()
         {
@@ -35,7 +29,9 @@ namespace Game.States
 
         public void Render()
         {
-            textManager.DrawText("PRESIONA ENTER PARA JUGAR", 100, 100, 1f);
+            Engine.Clear(0, 0, 0);
+            TextManager.Instance.DrawText("presiona enter para continuar", 420, 700, 2f);
+            Engine.Show();
         }
 
         public void Exit()

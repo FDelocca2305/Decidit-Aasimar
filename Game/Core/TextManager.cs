@@ -11,7 +11,7 @@ namespace Game.Core
     {
         private static TextManager instance;
         private Dictionary<char, Texture> letterTextures = new Dictionary<char, Texture>();
-        private float letterSpacing = 5f;
+        private float letterSpacing = 1.5f;
 
         private TextManager()
         {
@@ -55,7 +55,7 @@ namespace Game.Core
         {
             float startX = x;
 
-            foreach (char letter in text.ToUpper())
+            foreach (char letter in text)
             {
                 if (letterTextures.ContainsKey(letter))
                 {
@@ -67,7 +67,7 @@ namespace Game.Core
                     }
                     else
                     {
-                        x += letterSpacing * 2 * fontSize;
+                        x += letterSpacing * 7 * fontSize;
                     }
                 }
             }
