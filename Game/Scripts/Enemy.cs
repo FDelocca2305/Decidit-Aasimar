@@ -1,9 +1,6 @@
 ﻿using Game.Core;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Game.Scripts
 {
@@ -14,7 +11,10 @@ namespace Game.Scripts
         private float baseSpeed = 20f;
         private float baseHealth = 10;
         private float currentHealth;
-        
+
+        private Dictionary<string, Animation> animations = new Dictionary<string, Animation>();
+        private Animation currentAnimation;
+
 
         public Enemy(float x, float y, Player player, float difficultyMultiplier)
         {
@@ -24,11 +24,52 @@ namespace Game.Scripts
 
             this.currentHealth = (int)(baseHealth * difficultyMultiplier);
             this.speed = baseSpeed * difficultyMultiplier;
+
+            InitializeAnimations();
+            currentAnimation = animations["run"];
+        }
+
+        private void InitializeAnimations()
+        {
+            InitializeRunAnimation();
+            InitializeRunBackAnimation();
+        }
+
+        private void InitializeRunAnimation()
+        {
+            Animation run;
+            var runningTextures = new List<Texture>();
+
+            for (int i = 0; i <= 7; i++)
+            {
+                runningTextures.Add(Engine.GetTexture("Assets/Textures/Enemy/Walk/" + i + ".png"));
+            }
+
+            run = new Animation("run", 0.1f, runningTextures, true);
+            animations.Add("run", run);
+        }
+
+        private void InitializeRunBackAnimation()
+        {
+            Animation runBack;
+            var runningBackTextures = new List<Texture>();
+
+            for (int i = 0; i <= 7; i++)
+            {
+                runningBackTextures.Add(Engine.GetTexture("Assets/Textures/Enemy/WalkBack/" + i + ".png"));
+            }
+
+            runBack = new Animation("run", 0.1f, runningBackTextures, true);
+            animations.Add("runBack", runBack);
         }
 
         public override void Update(float deltaTime)
         {
             MoveTowardsPlayer(deltaTime);
+            
+            currentAnimation = Position.X <= player.Position.X ? animations["run"] : animations["runBack"];
+
+            currentAnimation.Update(deltaTime);
         }
 
         private void MoveTowardsPlayer(float deltaTime)
@@ -59,7 +100,7 @@ namespace Game.Scripts
 
         public override void Render()
         {
-            Engine.Draw("Assets/enemy.png", Position.X, Position.Y);
+            Engine.Draw(currentAnimation.CurrentTexture, Position.X, Position.Y);
         }
     }
 }

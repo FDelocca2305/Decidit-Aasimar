@@ -19,7 +19,7 @@ namespace Game.States
 
         public void Enter()
         {
-            Console.WriteLine("Jugador Perdió - Pantalla de Derrota");
+            Console.WriteLine("PANTALLA DE DERROTA");
         }
 
         public void Update(float deltaTime)
@@ -32,8 +32,8 @@ namespace Game.States
 
         public void Render()
         {
-            textManager.DrawText("GAME OVER", 100, 100, 2f);
-            textManager.DrawText("PRESIONA ENTER PARA VOLVER AL MENU", 100, 150, 1f);
+            textManager.DrawText("game over", 100, 100, 2f);
+            textManager.DrawText("presionar enter para volver al menu principal", 100, 150, 1f);
         }
 
         public void Exit()

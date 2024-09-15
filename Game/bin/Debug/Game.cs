@@ -14,6 +14,7 @@ namespace Game
         public Game()
         {
             Engine.Initialize("Vampire Franco", 1920, 1080);
+            AudioManager.Instance.LoadTrack("Main", "Assets/Audio/background-music.mp3");
             GameManager.Instance.ChangeState(new MainMenuState());
         }
     }
