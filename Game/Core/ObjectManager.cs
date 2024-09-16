@@ -28,6 +28,11 @@ namespace Game.Core
         {
             gameObjects.Add(gameObject);
 
+            if (gameObject is Enemy enemy)
+            {
+                enemy.OnDeath += HandleEnemyDeath;
+            }
+
             if (gameObject is ExperienceOrb orb)
             {
                 experienceOrbs.Add(orb);
@@ -71,18 +76,11 @@ namespace Game.Core
                     if (GameEngine.IsBoxColliding(player.Position, new Vector2(30, 44), enemy.Position, new Vector2(48, 60)))
                     {
                         player.TakeDamage(10);
-                        //objectsToRemove.Add(enemy);
                     }
 
                     if (player.IsAttacking && GameEngine.IsBoxColliding(player.Position, new Vector2(100, 50), enemy.Position, new Vector2(48,60)))
                     {
                         enemy.TakeDamage(player.Attack);
-                        if (!enemy.IsActive)
-                        {
-                            objectsToRemove.Add(enemy);
-                            SpawnExperienceOrbs(enemy.Position.X, enemy.Position.Y);
-                        }
-                        
                     }
                 }
             }
@@ -121,6 +119,12 @@ namespace Game.Core
                 var enemy = new Enemy(spawnPosition.X, spawnPosition.Y, player, difficultyMultiplier);
                 Add(enemy);
             }
+        }
+
+        private void HandleEnemyDeath(Enemy enemy)
+        {
+            objectsToRemove.Add(enemy);
+            SpawnExperienceOrbs(enemy.Position.X, enemy.Position.Y);
         }
 
         private Vector2 GenerateSpawnPosition(Player player)

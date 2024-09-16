@@ -37,6 +37,10 @@ namespace Game.Scripts
 
         public List<string> Upgrades { get; private set; } = new List<string>();
 
+        public event Action<int> OnDamageTaken;
+        public event Action<int> OnExperienceChanged;
+        public event Action<Vector2> OnPositionChanged;
+
         public Player(float x, float y)
         {
             Position = new Vector2(x, y);
@@ -51,7 +55,6 @@ namespace Game.Scripts
             HandleAnimation(deltaTime);
             HandleAttack(deltaTime);
             HandleInvulnerability(deltaTime);
-            
         }
 
         private void HandleInvulnerability(float deltaTime)
@@ -109,6 +112,7 @@ namespace Game.Scripts
         private void HandleInput(float deltaTime)
         {
             var position = Position;
+            Vector2 previousPosition = Position;
 
             if (Engine.GetKey(Keys.UP))
                 position = new Vector2(position.X, position.Y - speed * deltaTime);
@@ -120,6 +124,11 @@ namespace Game.Scripts
                 position = new Vector2(position.X + speed * deltaTime, position.Y);
 
             Position = position;
+
+            if (previousPosition != Position)
+            {
+                OnPositionChanged?.Invoke(Position); // Desencadenar el evento de cambio de posición
+            }
         }
 
         private void InitializeIdleAnimation()
@@ -185,12 +194,12 @@ namespace Game.Scripts
 
         public void TakeDamage(int damage)
         {
-            
-
             if (invulnerabilityTimer <= 0)
             {
                 Health -= damage;
                 invulnerabilityTimer = invulnerabilityTime;
+
+                OnDamageTaken?.Invoke(damage);
 
                 if (Health <= 0)
                 {
@@ -208,7 +217,7 @@ namespace Game.Scripts
         public void CollectExperience(ExperienceOrb orb)
         {
             Experience += orb.ExperiencePoints;
-            Console.WriteLine($"exp: {orb.ExperiencePoints} total: {Experience}");
+            OnExperienceChanged?.Invoke(Experience);
             orb.IsActive = false;
             CheckLevelUp();
         }

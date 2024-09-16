@@ -84,8 +84,10 @@
     <Compile Include="Core\GameObject.cs" />
     <Compile Include="Core\IGameState.cs" />
     <Compile Include="Core\ObjectManager.cs" />
+    <Compile Include="Core\Renderer.cs" />
     <Compile Include="Core\StateManager.cs" />
     <Compile Include="Core\TextManager.cs" />
+    <Compile Include="Core\Transform.cs" />
     <Compile Include="Core\UIManager.cs" />
     <Compile Include="Core\Vector2.cs" />
     <Compile Include="Game.cs">
@@ -100,7 +102,6 @@
     <Compile Include="Scripts\GameTimer.cs" />
     <Compile Include="Scripts\Player.cs" />
     <Compile Include="Scripts\WaveManager.cs" />
-    <Compile Include="Scripts\Weapon.cs" />
     <Compile Include="States\GameOverState.cs" />
     <Compile Include="States\MainMenuState.cs" />
     <Compile Include="States\PlayState.cs" />

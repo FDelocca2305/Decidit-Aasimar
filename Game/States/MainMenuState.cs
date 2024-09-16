@@ -32,6 +32,7 @@ namespace Game.States
         {
             Engine.Clear(0, 0, 0);
             TextManager.Instance.DrawText("presiona enter para continuar", 420, 700, 2f);
+            TextManager.Instance.DrawText("presiona escape para salir", 420, 750, 2f);
             Engine.Show();
         }
 

@@ -15,12 +15,5 @@ namespace Game.Core
         public abstract void Update(float deltaTime);
         public abstract void Render();
 
-        public virtual bool CheckCollision(int width, int height, GameObject other)
-        {
-            return Position.X < other.Position.X + width &&
-                   Position.X + width > other.Position.X &&
-                   Position.Y < other.Position.Y + height &&
-                   Position.Y + height > other.Position.Y;
-        }
     }
 }

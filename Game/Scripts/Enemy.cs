@@ -15,6 +15,7 @@ namespace Game.Scripts
         private Dictionary<string, Animation> animations = new Dictionary<string, Animation>();
         private Animation currentAnimation;
 
+        public event Action<Enemy> OnDeath;
 
         public Enemy(float x, float y, Player player, float difficultyMultiplier)
         {
@@ -95,6 +96,7 @@ namespace Game.Scripts
             if (currentHealth <= 0)
             {
                 IsActive = false;
+                OnDeath?.Invoke(this);
             }
         }
 

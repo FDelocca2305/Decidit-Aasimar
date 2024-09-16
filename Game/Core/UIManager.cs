@@ -11,7 +11,6 @@ namespace Game.Core
     {
         public static UIManager instance;
 
-        private Player player;
         private Texture healthBarBackground;
         private Texture healthBarBackgroundRed;
         private Texture healthBarForegroundGreen;
@@ -19,17 +18,42 @@ namespace Game.Core
         private Texture expBarBackgroundBlack;
         private Texture expBarForegroundBlue;
 
+        private float currentHealth;
+        private int currentExperience;
+        private Vector2 playerPosition;
+
         public UIManager(Player player)
         {
             instance = this;
 
-            this.player = player;
             healthBarBackground = Engine.GetTexture("Assets/bar_empty.png");
             healthBarBackgroundRed = Engine.GetTexture("Assets/bar_red.png");
             healthBarForegroundGreen = Engine.GetTexture("Assets/bar_green.png");
 
             expBarBackgroundBlack = Engine.GetTexture("Assets/exp_bar_black.png");
             expBarForegroundBlue = Engine.GetTexture("Assets/exp_bar_blue.png");
+
+            player.OnDamageTaken += UpdateHealth;
+            player.OnExperienceChanged += UpdateExperience;
+            player.OnPositionChanged += UpdatePlayerPosition;
+            currentHealth = player.Health;
+            currentExperience = player.Experience;
+            playerPosition = player.Position;
+        }
+
+        private void UpdateHealth(int health)
+        {
+            currentHealth = health;
+        }
+
+        private void UpdateExperience(int experience)
+        {
+            currentExperience = experience;
+        }
+
+        private void UpdatePlayerPosition(Vector2 newPosition)
+        {
+            playerPosition = newPosition;
         }
 
         public void Render(string formattedTime)
@@ -48,9 +72,9 @@ namespace Game.Core
 
         private void RenderHealthBar()
         {
-            float healthPercentage = player.Health / 100f;
-            float barX = player.Position.X - 50f;
-            float barY = player.Position.Y - 20f;
+            float healthPercentage = currentHealth / 100f;
+            float barX = playerPosition.X - 50f;
+            float barY = playerPosition.Y - 20f;
 
             Engine.Draw(healthBarBackground, barX, barY, 1f, 0.2f);
 
@@ -61,7 +85,7 @@ namespace Game.Core
 
         private void RenderExpBar()
         {
-            float expPercentage = player.Experience / 100f;
+            float expPercentage = currentExperience / 100f;
             int barX = 50;
             int barY = 10;
 
