@@ -1,4 +1,5 @@
 ﻿using Game.Scripts;
+using Game.Scripts.Enemies;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -113,10 +114,13 @@ namespace Game.Core
 
         public void SpawnEnemies(int count, Player player, float difficultyMultiplier)
         {
+            Random random = new Random();
             for (int i = 0; i < count; i++)
             {
                 Vector2 spawnPosition = GenerateSpawnPosition(player);
-                var enemy = new Enemy(spawnPosition.X, spawnPosition.Y, player, difficultyMultiplier);
+                EnemyFactory.EnemyType randomType = (EnemyFactory.EnemyType)random.Next(0, Enum.GetNames(typeof(EnemyFactory.EnemyType)).Length);
+
+                var enemy = EnemyFactory.CreateEnemy(randomType, spawnPosition.X, spawnPosition.Y, player, difficultyMultiplier);
                 Add(enemy);
             }
         }

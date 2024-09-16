@@ -97,7 +97,10 @@
     <Compile Include="Program.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Scripts\Enemy.cs" />
+    <Compile Include="Scripts\Enemies\BasicEnemy.cs" />
+    <Compile Include="Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Scripts\Enemies\EnemyFactory.cs" />
+    <Compile Include="Scripts\Enemies\FastEnemy.cs" />
     <Compile Include="Scripts\ExperienceOrb.cs" />
     <Compile Include="Scripts\GameTimer.cs" />
     <Compile Include="Scripts\Player.cs" />
