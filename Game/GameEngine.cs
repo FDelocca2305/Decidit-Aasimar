@@ -10,9 +10,8 @@ namespace Game
 {
     public class GameEngine
     {
-        private UIManager uiManager;
-        
         private bool isRunning = true;
+        private static DateTime lastFrameTime = DateTime.UtcNow;
 
         public void Run(Game game)
         {
@@ -28,7 +27,10 @@ namespace Game
 
         public static float GetDeltaTime()
         {
-            return 1.0f / 60.0f;
+            DateTime currentFrameTime = DateTime.UtcNow;
+            float deltaTime = (float)(currentFrameTime - lastFrameTime).TotalSeconds;
+            lastFrameTime = currentFrameTime;
+            return deltaTime;
         }
 
         public static bool IsBoxColliding(Vector2 positionA, Vector2 sizeA, Vector2 positionB, Vector2 sizeB)

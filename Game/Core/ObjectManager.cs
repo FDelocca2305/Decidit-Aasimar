@@ -18,13 +18,6 @@ namespace Game.Core
         private List<GameObject> objectsToRemove = new List<GameObject>();
         private List<GameObject> objectsToAdd = new List<GameObject>();
 
-        private Player player;
-
-        public ObjectManager(Player player)
-        {
-            this.player = player;
-        }
-
         public void Add(GameObject gameObject)
         {
             gameObjects.Add(gameObject);

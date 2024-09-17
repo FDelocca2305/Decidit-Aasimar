@@ -32,8 +32,10 @@ namespace Game.States
 
         public void Render()
         {
+            Engine.Clear(0, 0, 0);
             textManager.DrawText("game over", 100, 100, 2f);
             textManager.DrawText("presionar enter para volver al menu principal", 100, 150, 1f);
+            Engine.Show();
         }
 
         public void Exit()

@@ -12,7 +12,7 @@ namespace Game.Scripts
         private ObjectManager objectManager;
         private Player player;
         private int currentWave = 1;
-        private float timeBetweenWaves = 20f;
+        private float timeBetweenWaves = 3f;
         private float waveTimer = 0f;
         private bool waveInProgress = false;
 

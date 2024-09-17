@@ -9,8 +9,6 @@ namespace Game
 {
     public class Game
     {
-        private StateManager stateManager;
-
         public Game()
         {
             Engine.Initialize("Vampire Franco", 1920, 1080);

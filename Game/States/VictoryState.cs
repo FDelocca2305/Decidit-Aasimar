@@ -32,8 +32,10 @@ namespace Game.States
 
         public void Render()
         {
-            textManager.DrawText("¡GANASTE!", 100, 100, 2f);
-            textManager.DrawText("PRESIONA ENTER PARA VOLVER AL MENU", 100, 150, 1f);
+            Engine.Clear(0, 0, 0);
+            textManager.DrawText("ganaste", 100, 100, 2f);
+            textManager.DrawText("presionar enter para volver al menu principal", 100, 150, 1f);
+            Engine.Show();
         }
 
         public void Exit()

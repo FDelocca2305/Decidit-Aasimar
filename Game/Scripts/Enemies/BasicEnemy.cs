@@ -26,7 +26,7 @@ namespace Game.Scripts.Enemies
 
             for (int i = 0; i <= 7; i++)
             {
-                runningTextures.Add(Engine.GetTexture($"Assets/Textures/Enemy/WalkBack/{i}.png"));
+                runningTextures.Add(Engine.GetTexture($"Assets/Textures/Enemy/Walk/{i}.png"));
             }
 
             run = new Animation("run", 0.1f, runningTextures, true);

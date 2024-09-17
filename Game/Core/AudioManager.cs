@@ -15,7 +15,6 @@ namespace Game.Core
         private WaveOutEvent outputDevice;
         private AudioFileReader currentTrack;
 
-
         private AudioManager()
         {
             outputDevice = new WaveOutEvent();
@@ -46,7 +45,7 @@ namespace Game.Core
         {
             if (tracks.ContainsKey(name))
             {
-                Stop(); // Detener la pista actual si hay una reproduciendo
+                Stop();
                 currentTrack = tracks[name];
                 outputDevice.Init(currentTrack);
                 outputDevice.Play();
@@ -54,14 +53,6 @@ namespace Game.Core
                 {
                     outputDevice.PlaybackStopped += (sender, e) => PlayTrack(name, true);
                 }
-            }
-        }
-
-        public void Pause()
-        {
-            if (outputDevice != null && outputDevice.PlaybackState == PlaybackState.Playing)
-            {
-                outputDevice.Pause();
             }
         }
 
@@ -75,16 +66,6 @@ namespace Game.Core
                     currentTrack.Position = 0;
                 }
             }
-        }
-
-        public void UnloadAll()
-        {
-            foreach (var track in tracks.Values)
-            {
-                track.Dispose();
-            }
-            tracks.Clear();
-            outputDevice.Dispose();
         }
     }
 }

@@ -127,7 +127,7 @@ namespace Game.Scripts
 
             if (previousPosition != Position)
             {
-                OnPositionChanged?.Invoke(Position); // Desencadenar el evento de cambio de posición
+                OnPositionChanged?.Invoke(Position);
             }
         }
 
