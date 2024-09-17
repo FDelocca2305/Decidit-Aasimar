@@ -104,6 +104,7 @@
     <Compile Include="Scripts\ExperienceOrb.cs" />
     <Compile Include="Scripts\GameTimer.cs" />
     <Compile Include="Scripts\Player.cs" />
+    <Compile Include="Scripts\UpgradeManager.cs" />
     <Compile Include="Scripts\WaveManager.cs" />
     <Compile Include="States\GameOverState.cs" />
     <Compile Include="States\MainMenuState.cs" />
@@ -441,6 +442,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Textures\Player\Run\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\upgrades_panel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Engine.dll">

@@ -286,3 +286,4 @@ C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\E
 C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\Walk\5.png
 C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\Walk\6.png
 C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\Walk\7.png
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\upgrades_panel.png

@@ -18,6 +18,10 @@ namespace Game.Core
         private Texture expBarBackgroundBlack;
         private Texture expBarForegroundBlue;
 
+        private bool isUpgradePanelVisible = false;
+        private List<string> currentUpgrades;
+        private Texture upgradePanelTexture;
+
         private float currentHealth;
         private int currentExperience;
         private Vector2 playerPosition;
@@ -32,6 +36,8 @@ namespace Game.Core
 
             expBarBackgroundBlack = Engine.GetTexture("Assets/exp_bar_black.png");
             expBarForegroundBlue = Engine.GetTexture("Assets/exp_bar_blue.png");
+
+            upgradePanelTexture = Engine.GetTexture("Assets/upgrades_panel.png");
 
             player.OnDamageTaken += UpdateHealth;
             player.OnExperienceChanged += UpdateExperience;
@@ -61,6 +67,50 @@ namespace Game.Core
             RenderHealthBar();
             RenderExpBar();
             RenderGameTime(formattedTime);
+
+            if (isUpgradePanelVisible)
+            {
+                RenderUpgradePanel();
+            }
+        }
+
+        public void ShowUpgradePanel(List<string> upgrades)
+        {
+            isUpgradePanelVisible = true;
+            currentUpgrades = upgrades;
+        }
+
+        private void RenderUpgradePanel()
+        {
+            Engine.Draw(upgradePanelTexture, 500, 200);
+            for (int i = 0; i < currentUpgrades.Count; i++)
+            {
+                TextManager.Instance.DrawText($"{i + 1} - {currentUpgrades[i]}", 550, 250 + (i * 50), 1.5f);
+            }
+        }
+
+        public void HideUpgradePanel()
+        {
+            isUpgradePanelVisible = false;
+        }
+
+        public void HandleUpgradeSelection()
+        {
+            if (isUpgradePanelVisible)
+            {
+                if (Engine.GetKey(Keys.Num1))
+                {
+                    GameManager.Instance.UpgradeManager.ApplyUpgrade(1);
+                }
+                else if (Engine.GetKey(Keys.Num2))
+                {
+                    GameManager.Instance.UpgradeManager.ApplyUpgrade(2);
+                }
+                else if (Engine.GetKey(Keys.Num3))
+                {
+                    GameManager.Instance.UpgradeManager.ApplyUpgrade(3);
+                }
+            }
         }
 
         private void RenderGameTime(string formattedTime)

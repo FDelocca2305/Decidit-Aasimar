@@ -13,6 +13,7 @@ namespace Game.Scripts
 
         private Dictionary<string, Animation> animations = new Dictionary<string, Animation>();
         private Animation currentAnimation;
+        
 
         private float attackCooldown = 2.0f;
         private float attackDuration = 1f;
@@ -231,7 +232,7 @@ namespace Game.Scripts
                 Console.WriteLine($"subio a nivel {Level}");
                 experienceToNextLevel = CalculateExperienceForNextLevel();
 
-                SelectUpgrade();
+                GameManager.Instance.UpgradeManager.ShowUpgradeOptions();
             }
         }
 
@@ -240,47 +241,29 @@ namespace Game.Scripts
             return (int)(experienceToNextLevel * 1.5f);
         }
 
-        private void SelectUpgrade()
+        public void IncreaseSpeed(float amount)
         {
-            List<string> possibleUpgrades = new List<string>
-            {
-                "Aumentar Velocidad",
-                "Aumentar Daño",
-                "Regeneración de Salud",
-                "Disparo Rápido",
-                "Aumentar Salud Máxima"
-            };
-
-            Random rand = new Random();
-            string selectedUpgrade = possibleUpgrades[rand.Next(possibleUpgrades.Count)];
-            Upgrades.Add(selectedUpgrade);
-            Console.WriteLine($"Mejora desbloqueada: {selectedUpgrade}");
-
-            ApplyUpgrade(selectedUpgrade);
+            speed += amount;
         }
 
-        private void ApplyUpgrade(string upgrade)
+        public void IncreaseDamage(float multiplier)
         {
-            switch (upgrade)
-            {
-                case "Aumentar Velocidad":
-                    speed += 20f;
-                    break;
-                case "Aumentar Daño":
-                    attack *= 1.20f;
-                    break;
-                case "Regeneración de Salud":
-                    Health += 20;
-                    break;
-                case "Disparo Rápido":
-                    attackCooldown *= 0.95f;
-                    break;
-                case "Aumentar Salud Máxima":
-                    Health += 50;
-                    break;
-                default:
-                    break;
-            }
+            attack *= multiplier;
+        }
+
+        public void RegenerateHealth(int amount)
+        {
+            Health += amount;
+        }
+
+        public void ReduceAttackCooldown(float multiplier)
+        {
+            attackCooldown *= multiplier;
+        }
+
+        public void IncreaseMaxHealth(int amount)
+        {
+            Health += amount;
         }
     }
 }

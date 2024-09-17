@@ -21,6 +21,7 @@ namespace Game.States
             gameTimer = new GameTimer();
             waveManager = new WaveManager(objectManager, player);
             uiManager = new UIManager(player);
+            GameManager.Instance.InitializeUpgradeSystem(player, uiManager);
         }
 
         public void Update(float deltaTime)
@@ -42,6 +43,8 @@ namespace Game.States
 
             if (Engine.GetKey(Keys.ESCAPE))
                 GameManager.Instance.ChangeState(new MainMenuState());
+
+            uiManager.HandleUpgradeSelection();
         }
 
         public void Render()
