@@ -10,14 +10,13 @@ namespace Game
 {
     public class GameEngine
     {
-        private bool isRunning = true;
+        public static bool isRunning = true;
         private static DateTime lastFrameTime = DateTime.UtcNow;
 
         public void Run(Game game)
         {
             while (isRunning)
             {
-                Engine.Clear(135, 206, 235);
                 GameManager.Instance.Update(GetDeltaTime());
                 GameManager.Instance.Render();
                 

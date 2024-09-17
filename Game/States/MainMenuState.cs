@@ -24,8 +24,12 @@ namespace Game.States
                 GameManager.Instance.ChangeState(new PlayState());
             }
 
-            if (Engine.GetKey(Keys.ESCAPE)) 
+            if (Engine.GetKey(Keys.ESCAPE))
+            {
+                GameManager.Instance.ExitGame();
                 Engine.CloseWindow();
+            }
+                
         }
 
         public void Render()

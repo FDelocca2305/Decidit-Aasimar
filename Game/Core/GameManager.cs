@@ -28,6 +28,11 @@ namespace Game.Core
             }
         }
 
+        public void ExitGame()
+        {
+            GameEngine.isRunning = false;
+        }
+
         public void ChangeState(IGameState newState)
         {
             stateManager.ChangeState(newState);

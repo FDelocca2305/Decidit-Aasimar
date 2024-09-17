@@ -45,6 +45,15 @@ namespace Game.Core
         public void UpdateAll(float deltaTime, Player player)
         {
             AddAll();
+            foreach (var obj in objectsToRemove)
+            {
+                gameObjects.Remove(obj);
+                if (obj is ExperienceOrb orb)
+                {
+                    experienceOrbs.Remove(orb);
+                }
+            }
+            objectsToRemove.Clear();
             foreach (var obj in gameObjects)
             {
                 if (obj.IsActive)
@@ -79,15 +88,7 @@ namespace Game.Core
                 }
             }
 
-            foreach (var obj in objectsToRemove)
-            {
-                gameObjects.Remove(obj);
-                if (obj is ExperienceOrb orb)
-                {
-                    experienceOrbs.Remove(orb);
-                }
-            }
-            objectsToRemove.Clear();
+            
         }
 
         public void SpawnExperienceOrbs(float x, float y)

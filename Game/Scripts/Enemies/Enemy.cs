@@ -17,7 +17,7 @@ namespace Game.Scripts
 
         public event Action<Enemy> OnDeath;
 
-        public Enemy(float x, float y, Player player)
+        protected Enemy(float x, float y, Player player)
         {
             Position = new Vector2(x, y);
             this.player = player;
