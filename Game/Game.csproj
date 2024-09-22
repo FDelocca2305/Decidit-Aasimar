@@ -105,7 +105,11 @@
     <Compile Include="Scripts\GameTimer.cs" />
     <Compile Include="Scripts\Player.cs" />
     <Compile Include="Scripts\UpgradeManager.cs" />
-    <Compile Include="Scripts\WaveManager.cs" />
+    <Compile Include="Scripts\Waves\BasicWave.cs" />
+    <Compile Include="Scripts\Waves\SpecialWave.cs" />
+    <Compile Include="Scripts\Waves\Wave.cs" />
+    <Compile Include="Scripts\Waves\WaveFactory.cs" />
+    <Compile Include="Scripts\Waves\WaveManager.cs" />
     <Compile Include="States\GameOverState.cs" />
     <Compile Include="States\MainMenuState.cs" />
     <Compile Include="States\PlayState.cs" />
