@@ -1,5 +1,6 @@
 ﻿using Game.Core;
 using Game.Scripts;
+using Game.Scripts.Waves;
 using System;
 
 namespace Game.States
@@ -36,7 +37,7 @@ namespace Game.States
                 GameManager.Instance.ChangeState(new GameOverState());
             }
 
-            if (gameTimer.TimeElapsedInMinutes == 1f)
+            if (gameTimer.TimeElapsedInMinutes == 5f)
             {
                 GameManager.Instance.ChangeState(new VictoryState());
             }
