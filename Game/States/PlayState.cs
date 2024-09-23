@@ -37,7 +37,7 @@ namespace Game.States
                 GameManager.Instance.ChangeState(new GameOverState());
             }
 
-            if (gameTimer.TimeElapsedInMinutes == 5f)
+            if (gameTimer.TimeElapsedInMinutes == 3f)
             {
                 GameManager.Instance.ChangeState(new VictoryState());
             }

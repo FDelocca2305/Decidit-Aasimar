@@ -1,10 +1,5 @@
 ﻿using Game.Core;
-using Game.Scripts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Game.States
 {
@@ -33,8 +28,9 @@ namespace Game.States
         public void Render()
         {
             Engine.Clear(0, 0, 0);
-            textManager.DrawText("game over", 100, 100, 2f);
-            textManager.DrawText("presionar enter para volver al menu principal", 100, 150, 1f);
+            Engine.Draw("Assets/LoseScreen.png");
+            textManager.DrawText("game over", 740, 800, 2f);
+            textManager.DrawText("presionar enter para volver al menu principal", 550, 850, 1f);
             Engine.Show();
         }
 
