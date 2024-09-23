@@ -412,3 +412,6 @@ C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\ob
 C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\LoseScreen.png
 C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\MainScreen.png
 C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\WinScreen.png
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\LoseScreen.png
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\MainScreen.png
+C:\Users\franc\Documents\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\WinScreen.png

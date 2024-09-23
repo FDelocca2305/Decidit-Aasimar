@@ -14,7 +14,6 @@ namespace Game.Core
         private Dictionary<string, WaveOutEvent> audioOutputs = new Dictionary<string, WaveOutEvent>();
         private Dictionary<string, AudioFileReader> audioFiles = new Dictionary<string, AudioFileReader>();
 
-
         public static AudioManager Instance
         {
             get
@@ -26,8 +25,6 @@ namespace Game.Core
                 return instance;
             }
         }
-
-        
 
         public void LoadTrack(string name, string filePath)
         {
