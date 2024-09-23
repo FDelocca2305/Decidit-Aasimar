@@ -1,20 +1,16 @@
 ﻿using Game.Core;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Game.Scripts
+namespace Game.Scripts.Waves
 {
     public class WaveManager
     {
         private ObjectManager objectManager;
         private Player player;
         private int currentWave = 1;
+        private int basicWaveCount;
         private float timeBetweenWaves = 3f;
-        private float waveTimer = 0f;
-        private bool waveInProgress = false;
+        private float waveTimer;
+        private bool waveInProgress;
 
         public WaveManager(ObjectManager objectManager, Player player)
         {
@@ -45,17 +41,24 @@ namespace Game.Scripts
         private void StartNextWave()
         {
             waveInProgress = true;
-            int enemyCount = CalculateEnemyCountForWave();
-            float difficultyMultiplier = 1.0f + (currentWave * 0.1f);
+            
+            WaveFactory.WaveType waveType;
 
-            objectManager.SpawnEnemies(enemyCount, player, difficultyMultiplier);
-            Console.WriteLine($"Horda {currentWave} iniciada con {enemyCount} enemigos");
+            if (basicWaveCount < 2)
+            {
+                waveType = WaveFactory.WaveType.Basic;
+                basicWaveCount++;
+            }
+            else
+            {
+                waveType = WaveFactory.WaveType.Special;
+                basicWaveCount = 0;  
+            }
+            
+            Wave wave = WaveFactory.CreateWave(waveType, currentWave, objectManager, player);
+            wave.StartWave();
+            Console.WriteLine($"Wave {currentWave} started. Wave Type: {waveType}");
             currentWave++;
-        }
-
-        private int CalculateEnemyCountForWave()
-        {
-            return currentWave * 5;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Game.States
         public void Enter()
         {
             Console.WriteLine("Entrando al Menú Principal");
-            AudioManager.Instance.PlayTrack("Main");
+            AudioManager.Instance.PlayTrack("Main", true);
         }
 
         public void Update(float deltaTime)
