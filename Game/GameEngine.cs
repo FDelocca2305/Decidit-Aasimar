@@ -13,7 +13,7 @@ namespace Game
         public static bool isRunning = true;
         private static DateTime lastFrameTime = DateTime.UtcNow;
 
-        public void Run(Game game)
+        public void Run()
         {
             while (isRunning)
             {

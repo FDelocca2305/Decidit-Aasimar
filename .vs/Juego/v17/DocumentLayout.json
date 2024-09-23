@@ -3,55 +3,67 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\gametimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\gametimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\gametimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\experienceorb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\experienceorb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\experienceorb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\waves\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\waves\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\waves\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\waves\\wavefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\waves\\wavefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\waves\\wavefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\waves\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\waves\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\waves\\wavemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\waves\\specialwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\waves\\specialwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\waves\\specialwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\waves\\basicwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\waves\\basicwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\waves\\basicwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\enemies\\fastenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\enemies\\fastenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\enemies\\fastenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\enemies\\enemyfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\enemies\\enemyfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\enemies\\enemyfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\enemies\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\scripts\\enemies\\basicenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\enemies\\basicenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\enemies\\basicenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\core\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\core\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\vector2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -59,7 +71,7 @@
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\core\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\core\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -71,7 +83,7 @@
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\statemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\core\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\core\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -79,11 +91,11 @@
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\objectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\core\\igamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\core\\igamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\igamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\core\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\core\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -95,27 +107,15 @@
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\core\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\core\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\core\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\gameengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\scripts\\upgrademanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\scripts\\upgrademanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|c:\\users\\franc\\documents\\github\\decidit-aasimar\\game\\states\\playstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\game\\states\\playstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B96137A-5E6A-434B-BBF0-8B3C9342750C}|Game\\Game.csproj|solutionrelative:game\\states\\playstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -130,11 +130,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 29,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "WaveManager.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Waves\\WaveManager.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\Waves\\WaveManager.cs",
@@ -142,12 +142,11 @@
               "RelativeToolTip": "Game\\Scripts\\Waves\\WaveManager.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAowDgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:09:24.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:09:24.528Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "WaveFactory.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Waves\\WaveFactory.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\Waves\\WaveFactory.cs",
@@ -155,12 +154,11 @@
               "RelativeToolTip": "Game\\Scripts\\Waves\\WaveFactory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:09:23.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:09:23.932Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Wave.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Waves\\Wave.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\Waves\\Wave.cs",
@@ -168,12 +166,11 @@
               "RelativeToolTip": "Game\\Scripts\\Waves\\Wave.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:09:21.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:09:21.286Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "SpecialWave.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Waves\\SpecialWave.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\Waves\\SpecialWave.cs",
@@ -181,12 +178,11 @@
               "RelativeToolTip": "Game\\Scripts\\Waves\\SpecialWave.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:09:19.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:09:19.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "BasicWave.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Waves\\BasicWave.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\Waves\\BasicWave.cs",
@@ -194,12 +190,11 @@
               "RelativeToolTip": "Game\\Scripts\\Waves\\BasicWave.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:09:13.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:09:13.401Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "FastEnemy.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Enemies\\FastEnemy.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\Enemies\\FastEnemy.cs",
@@ -207,12 +202,11 @@
               "RelativeToolTip": "Game\\Scripts\\Enemies\\FastEnemy.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:09:08.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:09:08.224Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "EnemyFactory.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Enemies\\EnemyFactory.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\Enemies\\EnemyFactory.cs",
@@ -220,12 +214,11 @@
               "RelativeToolTip": "Game\\Scripts\\Enemies\\EnemyFactory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:09:04.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:09:04.486Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Enemies\\Enemy.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\Enemies\\Enemy.cs",
@@ -233,12 +226,11 @@
               "RelativeToolTip": "Game\\Scripts\\Enemies\\Enemy.cs",
               "ViewState": "AQIAACYAAAAAAAAAAAAIwEEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:08:35.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:08:35.334Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "BasicEnemy.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Enemies\\BasicEnemy.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\Enemies\\BasicEnemy.cs",
@@ -246,12 +238,11 @@
               "RelativeToolTip": "Game\\Scripts\\Enemies\\BasicEnemy.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwCEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:08:28.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:08:28.111Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Vector2.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\Vector2.cs",
               "RelativeDocumentMoniker": "Game\\Core\\Vector2.cs",
@@ -259,12 +250,11 @@
               "RelativeToolTip": "Game\\Core\\Vector2.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAA1wCUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:08:20.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:08:20.484Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "Transform.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\Transform.cs",
               "RelativeDocumentMoniker": "Game\\Core\\Transform.cs",
@@ -272,12 +262,11 @@
               "RelativeToolTip": "Game\\Core\\Transform.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:08:13.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:08:13.014Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Renderer.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\Renderer.cs",
               "RelativeDocumentMoniker": "Game\\Core\\Renderer.cs",
@@ -285,12 +274,11 @@
               "RelativeToolTip": "Game\\Core\\Renderer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:08:00.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:08:00.078Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "IGameState.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\IGameState.cs",
               "RelativeDocumentMoniker": "Game\\Core\\IGameState.cs",
@@ -298,12 +286,11 @@
               "RelativeToolTip": "Game\\Core\\IGameState.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:07:15.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:07:15.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "GameObject.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\GameObject.cs",
               "RelativeDocumentMoniker": "Game\\Core\\GameObject.cs",
@@ -311,12 +298,11 @@
               "RelativeToolTip": "Game\\Core\\GameObject.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T18:06:51.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T18:06:51.16Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "Animation.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\Animation.cs",
               "RelativeDocumentMoniker": "Game\\Core\\Animation.cs",
@@ -324,38 +310,37 @@
               "RelativeToolTip": "Game\\Core\\Animation.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAowB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T15:19:35.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T15:19:35.75Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Program.cs",
               "RelativeDocumentMoniker": "Game\\Program.cs",
               "ToolTip": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Program.cs",
               "RelativeToolTip": "Game\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T15:28:22.928Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 1,
               "Title": "GameEngine.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\GameEngine.cs",
               "RelativeDocumentMoniker": "Game\\GameEngine.cs",
               "ToolTip": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\GameEngine.cs",
               "RelativeToolTip": "Game\\GameEngine.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACEAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T15:27:23.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "GameTimer.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\GameTimer.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\GameTimer.cs",
@@ -363,12 +348,11 @@
               "RelativeToolTip": "Game\\Scripts\\GameTimer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T15:19:44.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T15:19:44.932Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ExperienceOrb.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\ExperienceOrb.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\ExperienceOrb.cs",
@@ -376,12 +360,11 @@
               "RelativeToolTip": "Game\\Scripts\\ExperienceOrb.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAACQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T15:19:44.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T15:19:44.029Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "ObjectManager.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\ObjectManager.cs",
               "RelativeDocumentMoniker": "Game\\Core\\ObjectManager.cs",
@@ -389,12 +372,11 @@
               "RelativeToolTip": "Game\\Core\\ObjectManager.cs",
               "ViewState": "AQIAAHIAAAAAAAAAAAAmwIcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T01:29:09.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T01:29:09.05Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "TextManager.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\TextManager.cs",
               "RelativeDocumentMoniker": "Game\\Core\\TextManager.cs",
@@ -402,12 +384,11 @@
               "RelativeToolTip": "Game\\Core\\TextManager.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T01:22:18.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T01:22:18.131Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "StateManager.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\StateManager.cs",
               "RelativeDocumentMoniker": "Game\\Core\\StateManager.cs",
@@ -415,8 +396,7 @@
               "RelativeToolTip": "Game\\Core\\StateManager.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T01:18:51.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T01:18:51.353Z"
             },
             {
               "$type": "Document",
@@ -432,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "AudioManager.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\AudioManager.cs",
               "RelativeDocumentMoniker": "Game\\Core\\AudioManager.cs",
@@ -440,12 +420,11 @@
               "RelativeToolTip": "Game\\Core\\AudioManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T23:04:58.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T23:04:58.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 2,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Game.cs",
               "RelativeDocumentMoniker": "Game\\Game.cs",
@@ -458,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\GameManager.cs",
               "RelativeDocumentMoniker": "Game\\Core\\GameManager.cs",
@@ -466,8 +445,7 @@
               "RelativeToolTip": "Game\\Core\\GameManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T03:29:35.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T03:29:35.874Z"
             },
             {
               "$type": "Document",
@@ -479,8 +457,7 @@
               "RelativeToolTip": "Game\\Scripts\\UpgradeManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T03:18:46.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T03:18:46.766Z"
             },
             {
               "$type": "Document",
@@ -492,12 +469,11 @@
               "RelativeToolTip": "Game\\States\\PlayState.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T03:16:16.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T03:16:16.384Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Core\\UIManager.cs",
               "RelativeDocumentMoniker": "Game\\Core\\UIManager.cs",
@@ -505,18 +481,17 @@
               "RelativeToolTip": "Game\\Core\\UIManager.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAgwDsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T03:16:09.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T03:16:09.788Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Game\\Scripts\\Player.cs",
               "ToolTip": "C:\\Users\\franc\\Documents\\GitHub\\Decidit-Aasimar\\Game\\Scripts\\Player.cs",
               "RelativeToolTip": "Game\\Scripts\\Player.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCcAAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCIAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T03:16:03.837Z",
               "EditorCaption": ""
