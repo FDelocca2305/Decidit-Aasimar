@@ -22,24 +22,24 @@ namespace Game.Scripts
 
         private float attack = 10f;
 
-        private int experienceToNextLevel = 100;
-
         private float invulnerabilityTime = 0.5f;
         private float invulnerabilityTimer = 0f;
 
         public int Health { get; private set; } = 100;
+        public float MaxHealth { get; private set; } = 100;
 
         public float Attack => attack;
         
         public bool IsAttacking { get; set; }
 
         public int Experience { get; private set; } = 0;
+        public int ExperienceToNextLevel { get; private set; } = 100;
         public int Level { get; private set; } = 1;
 
         public List<string> Upgrades { get; private set; } = new List<string>();
 
-        public event Action<int> OnDamageTaken;
-        public event Action<int> OnExperienceChanged;
+        public event Action<int, float> OnDamageTaken;
+        public event Action<int, int> OnExperienceChanged;
         public event Action<Vector2> OnPositionChanged;
 
         public Player(float x, float y)
@@ -200,7 +200,7 @@ namespace Game.Scripts
                 Health -= damage;
                 invulnerabilityTimer = invulnerabilityTime;
 
-                OnDamageTaken?.Invoke(damage);
+                OnDamageTaken?.Invoke(damage, MaxHealth);
 
                 if (Health <= 0)
                 {
@@ -218,19 +218,19 @@ namespace Game.Scripts
         public void CollectExperience(ExperienceOrb orb)
         {
             Experience += orb.ExperiencePoints;
-            OnExperienceChanged?.Invoke(Experience);
+            OnExperienceChanged?.Invoke(Experience, ExperienceToNextLevel);
             orb.IsActive = false;
             CheckLevelUp();
         }
 
         private void CheckLevelUp()
         {
-            while (Experience >= experienceToNextLevel)
+            while (Experience >= ExperienceToNextLevel)
             {
-                Experience -= experienceToNextLevel;
+                Experience -= ExperienceToNextLevel;
                 Level++;
-                Console.WriteLine($"subio a nivel {Level}");
-                experienceToNextLevel = CalculateExperienceForNextLevel();
+                Console.WriteLine($"Subió a nivel {Level}");
+                ExperienceToNextLevel = CalculateExperienceForNextLevel();
 
                 GameManager.Instance.UpgradeManager.ShowUpgradeOptions();
             }
@@ -238,7 +238,7 @@ namespace Game.Scripts
 
         private int CalculateExperienceForNextLevel()
         {
-            return (int)(experienceToNextLevel * 1.5f);
+            return (int)(ExperienceToNextLevel * 1.5f);
         }
 
         public void IncreaseSpeed(float amount)
@@ -263,7 +263,9 @@ namespace Game.Scripts
 
         public void IncreaseMaxHealth(int amount)
         {
-            Health += amount;
+            MaxHealth += amount;
+            Health = Math.Min(Health + amount, (int)MaxHealth);
+            OnDamageTaken?.Invoke(Health, MaxHealth); 
         }
     }
 }

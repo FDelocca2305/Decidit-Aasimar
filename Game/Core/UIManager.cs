@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Game.Core
 {
@@ -23,7 +24,9 @@ namespace Game.Core
         private Texture upgradePanelTexture;
 
         private float currentHealth;
+        private float maxHealth;
         private int currentExperience;
+        private int maxExperienceForNextLevel;
         private Vector2 playerPosition;
 
         public UIManager(Player player)
@@ -45,16 +48,20 @@ namespace Game.Core
             currentHealth = player.Health;
             currentExperience = player.Experience;
             playerPosition = player.Position;
+            maxHealth = player.MaxHealth;
+            maxExperienceForNextLevel = player.ExperienceToNextLevel;
         }
 
-        private void UpdateHealth(int health)
+        private void UpdateHealth(int health, float maxPlayerHealth)
         {
-            currentHealth = health;
+            currentHealth -= health;
+            maxHealth = maxPlayerHealth;
         }
 
-        private void UpdateExperience(int experience)
+        private void UpdateExperience(int experience, int experienceToNextLevel)
         {
             currentExperience = experience;
+            maxExperienceForNextLevel = experienceToNextLevel;
         }
 
         private void UpdatePlayerPosition(Vector2 newPosition)
@@ -122,25 +129,22 @@ namespace Game.Core
 
         private void RenderHealthBar()
         {
-            float healthPercentage = currentHealth / 100f;
+            float healthPercentage = currentHealth / maxHealth;
             float barX = playerPosition.X - 50f;
             float barY = playerPosition.Y - 20f;
 
             Engine.Draw(healthBarBackground, barX, barY, 1f, 0.2f);
-
             Engine.Draw(healthBarBackgroundRed, barX, barY, 1f, 0.2f);
-
             Engine.Draw(healthBarForegroundGreen, barX, barY, healthPercentage, 0.2f);
         }
 
         private void RenderExpBar()
         {
-            float expPercentage = currentExperience / 100f;
+            float expPercentage = (float)currentExperience / maxExperienceForNextLevel;
             int barX = 50;
             int barY = 10;
 
             Engine.Draw(expBarBackgroundBlack, barX, barY, 1f, .5f);
-
             Engine.Draw(expBarForegroundBlue, barX, barY, expPercentage, .5f);
         }
     }

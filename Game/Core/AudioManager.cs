@@ -11,14 +11,9 @@ namespace Game.Core
     {
         private static AudioManager instance;
 
-        private Dictionary<string, AudioFileReader> tracks = new Dictionary<string, AudioFileReader>();
-        private WaveOutEvent outputDevice;
-        private AudioFileReader currentTrack;
+        private Dictionary<string, WaveOutEvent> audioOutputs = new Dictionary<string, WaveOutEvent>();
+        private Dictionary<string, AudioFileReader> audioFiles = new Dictionary<string, AudioFileReader>();
 
-        private AudioManager()
-        {
-            outputDevice = new WaveOutEvent();
-        }
 
         public static AudioManager Instance
         {
@@ -32,39 +27,70 @@ namespace Game.Core
             }
         }
 
+        
+
         public void LoadTrack(string name, string filePath)
         {
-            if (!tracks.ContainsKey(name))
+            if (!audioFiles.ContainsKey(name))
             {
-                var track = new AudioFileReader(filePath);
-                tracks.Add(name, track);
+                audioFiles[name] = new AudioFileReader(filePath);
             }
         }
 
-        public void PlayTrack(string name, bool loop = true)
+        public void PlayTrack(string name, bool loop = false)
         {
-            if (tracks.ContainsKey(name))
+            if (!audioFiles.ContainsKey(name))
             {
-                Stop();
-                currentTrack = tracks[name];
-                outputDevice.Init(currentTrack);
-                outputDevice.Play();
-                if (loop)
-                {
-                    outputDevice.PlaybackStopped += (sender, e) => PlayTrack(name, true);
-                }
+                throw new Exception($"Track {name} not found.");
             }
+
+            if (audioOutputs.ContainsKey(name))
+            {
+                audioOutputs[name].Stop();
+                audioOutputs[name].Dispose();
+                audioOutputs.Remove(name);
+            }
+
+            var waveOut = new WaveOutEvent();
+            var audioFile = audioFiles[name];
+
+            
+            audioFile.Position = 0;
+
+            waveOut.Init(audioFile);
+
+            waveOut.PlaybackStopped += (sender, args) =>
+            {
+                try
+                {
+                    if (loop)
+                    {
+                        audioFile.Position = 0;
+                        PlayTrack(name, true);
+                    }
+                    else
+                    {
+                        waveOut.Dispose();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al reproducir el audio en loop: {ex.Message}");
+                    waveOut.Dispose();
+                }
+            };
+
+            audioOutputs[name] = waveOut;
+            waveOut.Play();
         }
 
-        public void Stop()
+        public void StopTrack(string name)
         {
-            if (outputDevice != null && outputDevice.PlaybackState == PlaybackState.Playing)
+            if (audioOutputs.ContainsKey(name))
             {
-                outputDevice.Stop();
-                if (currentTrack != null)
-                {
-                    currentTrack.Position = 0;
-                }
+                audioOutputs[name].Stop();
+                audioOutputs[name].Dispose();
+                audioOutputs.Remove(name);
             }
         }
     }
