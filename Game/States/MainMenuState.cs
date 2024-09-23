@@ -1,10 +1,5 @@
 ﻿using Game.Core;
-using Game.Scripts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Game.States
 {
@@ -35,8 +30,9 @@ namespace Game.States
         public void Render()
         {
             Engine.Clear(0, 0, 0);
-            TextManager.Instance.DrawText("presiona enter para continuar", 420, 700, 2f);
-            TextManager.Instance.DrawText("presiona escape para salir", 420, 750, 2f);
+            Engine.Draw("Assets/MainScreen.png");
+            TextManager.Instance.DrawText("presiona enter para continuar", 900, 555, 1.6f);
+            TextManager.Instance.DrawText("presiona escape para salir", 930, 820, 1.6f);
             Engine.Show();
         }
 

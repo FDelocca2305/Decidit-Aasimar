@@ -30,13 +30,11 @@ namespace Game.Scripts
 
         public float Attack => attack;
         
-        public bool IsAttacking { get; set; }
+        public bool IsAttacking { get; private set; }
 
         public int Experience { get; private set; } = 0;
         public int ExperienceToNextLevel { get; private set; } = 100;
         public int Level { get; private set; } = 1;
-
-        public List<string> Upgrades { get; private set; } = new List<string>();
 
         public event Action<int, float> OnDamageTaken;
         public event Action<int, int> OnExperienceChanged;

@@ -11,7 +11,7 @@ namespace Game.Core
     {
         private static TextManager instance;
         private Dictionary<char, Texture> letterTextures = new Dictionary<char, Texture>();
-        private float letterSpacing = 1.5f;
+        private float letterSpacing = 0.1f;
 
         private TextManager()
         {
@@ -67,7 +67,7 @@ namespace Game.Core
                     }
                     else
                     {
-                        x += letterSpacing * 7 * fontSize;
+                        x += letterSpacing * 200 * fontSize;
                     }
                 }
             }
