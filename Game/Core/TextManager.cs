@@ -1,9 +1,8 @@
-﻿using Game.Core.Interfaces;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Game.Core
 {
-    public class TextManager : ITextManager
+    public class TextManager
     {
         private static TextManager instance;
         private Dictionary<char, Texture> letterTextures = new Dictionary<char, Texture>();

@@ -11,104 +11,40 @@ namespace Game.Core
 {
     public class ObjectManager
     {
-        private List<GameObject> gameObjects = new List<GameObject>();
         private Random random = new Random();
-        private List<ExperienceOrb> experienceOrbs = new List<ExperienceOrb>();
 
-        private List<GameObject> objectsToRemove = new List<GameObject>();
-        private List<GameObject> objectsToAdd = new List<GameObject>();
+        private GameObjectsManager gameObjectsManager = new GameObjectsManager();
+        private CollisionManager collisionManager = new CollisionManager();
 
         public void Add(GameObject gameObject)
         {
-            gameObjects.Add(gameObject);
+            gameObjectsManager.Add(gameObject);
 
             if (gameObject is Enemy enemy)
             {
                 enemy.OnDeath += HandleEnemyDeath;
             }
-
-            if (gameObject is ExperienceOrb orb)
-            {
-                experienceOrbs.Add(orb);
-            }
-
-        }
-
-        public void AddAll()
-        {
-            objectsToAdd.ForEach(obt =>
-            {
-                Add(obt);
-            });
         }
 
         public void UpdateAll(float deltaTime, Player player)
         {
-            AddAll();
-            foreach (var obj in objectsToRemove)
-            {
-                gameObjects.Remove(obj);
-                if (obj is ExperienceOrb orb)
-                {
-                    experienceOrbs.Remove(orb);
-                }
-            }
-            objectsToRemove.Clear();
-            foreach (var obj in gameObjects)
-            {
-                if (obj.IsActive)
-                    obj.Update(deltaTime);
-                else
-                    objectsToRemove.Add(obj);
-            }
-
-            foreach (var orb in experienceOrbs)
-            {
-                if (orb.IsActive && orb.CheckCollision(player))
-                {
-                    player.CollectExperience(orb);
-                    orb.IsActive = false;
-                    objectsToRemove.Add(orb);
-                }
-            }
-
-            foreach (var obj in gameObjects)
-            {
-                if (obj.IsActive && obj is Enemy enemy)
-                {
-                    if (GameEngine.IsBoxColliding(player.Position, new Vector2(30, 44), enemy.Position, new Vector2(48, 60)))
-                    {
-                        player.TakeDamage(10);
-                    }
-
-                    if (player.IsAttacking && GameEngine.IsBoxColliding(player.Position, new Vector2(100, 50), enemy.Position, new Vector2(48,60)))
-                    {
-                        enemy.TakeDamage(player.Attack);
-                    }
-                }
-            }
-
-            
-        }
-
-        public void SpawnExperienceOrbs(float x, float y)
-        {
-            var orb = new ExperienceOrb(x, y, 10);
-            objectsToAdd.Add(orb);
+            gameObjectsManager.UpdateAll(deltaTime);
+            collisionManager.CheckCollisions(player, gameObjectsManager.GetAllGameObjects());
         }
 
         public void RenderAll()
         {
-            foreach (var obj in gameObjects)
-            {
-                if (obj.IsActive)
-                    obj.Render();
-            }
+            gameObjectsManager.RenderAll();
+        }
+
+        public void SpawnExperienceOrbs(float x, float y, int amount = 10)
+        {
+            var orb = new ExperienceOrb(x, y, amount);
+            gameObjectsManager.Add(orb);
         }
 
         public void SpawnEnemies(int count, Player player, float difficultyMultiplier)
         {
-            Random random = new Random();
             for (int i = 0; i < count; i++)
             {
                 Vector2 spawnPosition = GenerateSpawnPosition(player);
@@ -121,7 +57,7 @@ namespace Game.Core
 
         private void HandleEnemyDeath(Enemy enemy)
         {
-            objectsToRemove.Add(enemy);
+            gameObjectsManager.Remove(enemy);
             SpawnExperienceOrbs(enemy.Position.X, enemy.Position.Y);
         }
 
@@ -131,12 +67,11 @@ namespace Game.Core
             int screenHeight = 1080;
 
             int region = random.Next(0, 4);
-
             float x = 0, y = 0;
 
             switch (region)
             {
-                case 0: 
+                case 0:
                     x = -random.Next(50, 200);
                     y = random.Next(0, screenHeight);
                     break;
@@ -167,7 +102,7 @@ namespace Game.Core
 
         public bool AreAllEnemiesDefeated()
         {
-            foreach (var obj in gameObjects)
+            foreach (var obj in gameObjectsManager.GetAllGameObjects())
             {
                 if (obj.IsActive && obj is Enemy)
                 {

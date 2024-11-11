@@ -14,13 +14,17 @@ namespace Game.Scripts
 
         protected AnimationManager animationManager = new AnimationManager();
 
+        public Vector2 Size { get; private set; }
+
         public event Action<Enemy> OnDeath;
+
 
         protected Enemy(float x, float y, Player player)
         {
             Position = new Vector2(x, y);
             this.player = player;
             IsActive = true;
+            Size = new Vector2(48, 60);
         }
 
         public abstract void Initialize(float difficultyMultiplier);

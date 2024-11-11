@@ -12,16 +12,17 @@ namespace Game.States
         private GameTimer gameTimer;
         private WaveManager waveManager;
         private UIManager uiManager;
-
+        private LevelManager levelManager;
         public void Enter()
         {
+            uiManager = new UIManager();
+            levelManager = new LevelManager();
             Console.WriteLine("Comenzando el Juego");
-            player = new Player(960f, 540f);
+            player = new Player(960f, 540f, uiManager, levelManager);
             objectManager = new ObjectManager();
             objectManager.Add(player);
             gameTimer = new GameTimer();
             waveManager = new WaveManager(objectManager, player);
-            uiManager = new UIManager(player);
             GameManager.Instance.InitializeUpgradeSystem(player, uiManager);
         }
 

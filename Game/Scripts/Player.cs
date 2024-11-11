@@ -1,4 +1,6 @@
 ﻿using Game.Core;
+using Game.Core.Interfaces;
+using Game.Scripts.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,8 @@ namespace Game.Scripts
         private float speed = 100f;
 
         private AnimationManager animationManager = new AnimationManager();
-        
+        private IUIManager uiManager;
+        private ILevelManager levelManager;
 
         private float attackCooldown = 2.0f;
         private float attackDuration = 1f;
@@ -31,20 +34,24 @@ namespace Game.Scripts
         
         public bool IsAttacking { get; private set; }
 
-        public int Experience { get; private set; } = 0;
-        public int ExperienceToNextLevel { get; private set; } = 100;
-        public int Level { get; private set; } = 1;
+        public Vector2 Size { get; private set; }
+        public Vector2 AttackColliderSize { get; private set; }
 
-        public event Action<int, float> OnDamageTaken;
-        public event Action<int, int> OnExperienceChanged;
-        public event Action<Vector2> OnPositionChanged;
-
-        public Player(float x, float y)
+        public Player(float x, float y, IUIManager uiManager, ILevelManager levelManager)
         {
             Position = new Vector2(x, y);
+            Size = new Vector2(30, 44);
+            AttackColliderSize = new Vector2(100, 50);
+
+            this.uiManager = uiManager;
+            this.levelManager = levelManager;
+            levelManager.OnLevelUp += HandleLevelUp;
 
             InitializeAnimations();
             animationManager.SetAnimation("idle");
+
+            uiManager.UpdateHealth(Health, MaxHealth);
+            uiManager.UpdatePlayerPosition(Position);
         }
 
         public override void Update(float deltaTime)
@@ -112,102 +119,29 @@ namespace Game.Scripts
             var position = Position;
             Vector2 previousPosition = Position;
 
-            if (Engine.GetKey(Keys.UP))
+            if (InputManager.IsMoveUp())
                 position = new Vector2(position.X, position.Y - speed * deltaTime);
-            if (Engine.GetKey(Keys.DOWN))
+            if (InputManager.IsMoveDown())
                 position = new Vector2(position.X, position.Y + speed * deltaTime);
-            if (Engine.GetKey(Keys.LEFT))
+            if (InputManager.IsMoveLeft())
                 position = new Vector2(position.X - speed * deltaTime, position.Y);
-            if (Engine.GetKey(Keys.RIGHT))
+            if (InputManager.IsMoveRight())
                 position = new Vector2(position.X + speed * deltaTime, position.Y);
 
             Position = position;
 
             if (previousPosition != Position)
             {
-                OnPositionChanged?.Invoke(Position);
+                uiManager.UpdatePlayerPosition(Position);
             }
         }
 
-        //private void InitializeIdleAnimation()
-        //{
-        //    Animation idle;
-        //    var idleTextures = new List<Texture>();
-        //    idleTextures.Add(Engine.GetTexture("Assets/Textures/Player/player.png"));
-        //    idle = new Animation("idle", 1f, idleTextures, true);
-        //    animations.Add("idle", idle);
-        //}
-
-        //private void InitializeRunAnimation()
-        //{
-        //    Animation run;
-            
-
-        //    run = new Animation("run", 0.1f, runningTextures, true);
-        //    animations.Add("run", run);
-        //}
-
-        //private void InitializeRunBackAnimation()
-        //{
-        //    Animation runBack;
-        //    var runningBackTextures = new List<Texture>();
-
-        //    for (int i = 0; i <= 6; i++)
-        //    {
-        //        runningBackTextures.Add(Engine.GetTexture("Assets/Textures/Player/RunBack/" + i + ".png"));
-        //    }
-
-        //    runBack = new Animation("run", 0.1f, runningBackTextures, true);
-        //    animations.Add("runBack", runBack);
-        //}
-
-        //private void InitializeAttackAnimation()
-        //{
-        //    Animation attack;
-            
-        //    var attackTextures = new List<Texture>();
-
-        //    for (int i = 0; i <= 10; i++)
-        //    {
-        //        attackTextures.Add(Engine.GetTexture("Assets/Textures/Player/Attack/" + i + ".png"));
-        //    }
-
-        //    attack = new Animation("attack", .25f, attackTextures, true);
-
-        //    animations.Add("attack", attack);
-        //}
-
         private void InitializeAnimations()
         {
-            //InitializeIdleAnimation();
-            //InitializeAttackAnimation();
-            //InitializeRunAnimation();
-            //InitializeRunBackAnimation();
-            var runningTextures = new List<Texture>();
-
-            for (int i = 0; i <= 7; i++)
-            {
-                runningTextures.Add(Engine.GetTexture("Assets/Textures/Player/Run/" + i + ".png"));
-            }
-
-            var attackTextures = new List<Texture>();
-
-            for (int i = 0; i <= 10; i++)
-            {
-               attackTextures.Add(Engine.GetTexture("Assets/Textures/Player/Attack/" + i + ".png"));
-            }
-
-            var runningBackTextures = new List<Texture>();
-
-            for (int i = 0; i <= 6; i++)
-            {
-               runningBackTextures.Add(Engine.GetTexture("Assets/Textures/Player/RunBack/" + i + ".png"));
-            }
-
-            animationManager.AddAnimation("idle", new Animation("idle", 1f, new List<Texture> { Engine.GetTexture("Assets/Textures/Player/player.png") }, true));
-            animationManager.AddAnimation("run", new Animation("run", 0.1f, runningTextures, true));
-            animationManager.AddAnimation("runBack", new Animation("runBack", 0.1f, runningBackTextures, true));
-            animationManager.AddAnimation("attack", new Animation("run", 0.25f, attackTextures, true));
+            animationManager.AddAnimation("runBack", AnimationFactory.CreateRunBackAnimation());
+            animationManager.AddAnimation("idle", AnimationFactory.CreateIdleAnimation());
+            animationManager.AddAnimation("run", AnimationFactory.CreateRunAnimation());
+            animationManager.AddAnimation("attack", AnimationFactory.CreateAttackAnimation());
         }
 
         public void TakeDamage(int damage)
@@ -217,8 +151,8 @@ namespace Game.Scripts
                 Health -= damage;
                 invulnerabilityTimer = invulnerabilityTime;
 
-                OnDamageTaken?.Invoke(damage, MaxHealth);
-
+                //OnDamageTaken?.Invoke(damage, MaxHealth);
+                uiManager.UpdateHealth(Health, MaxHealth);
                 if (Health <= 0)
                 {
                     Health = 0;
@@ -234,28 +168,13 @@ namespace Game.Scripts
 
         public void CollectExperience(ExperienceOrb orb)
         {
-            Experience += orb.ExperiencePoints;
-            OnExperienceChanged?.Invoke(Experience, ExperienceToNextLevel);
-            orb.IsActive = false;
-            CheckLevelUp();
+            levelManager.AddExperience(orb.ExperiencePoints);
+            uiManager.UpdateExperience(levelManager.Experience, levelManager.ExperienceToNextLevel);
         }
 
-        private void CheckLevelUp()
+        private void HandleLevelUp()
         {
-            while (Experience >= ExperienceToNextLevel)
-            {
-                Experience -= ExperienceToNextLevel;
-                Level++;
-                Console.WriteLine($"Subió a nivel {Level}");
-                ExperienceToNextLevel = CalculateExperienceForNextLevel();
-
-                GameManager.Instance.UpgradeManager.ShowUpgradeOptions();
-            }
-        }
-
-        private int CalculateExperienceForNextLevel()
-        {
-            return (int)(ExperienceToNextLevel * 1.5f);
+            GameManager.Instance.UpgradeManager.ShowUpgradeOptions();
         }
 
         public void IncreaseSpeed(float amount)
@@ -282,7 +201,7 @@ namespace Game.Scripts
         {
             MaxHealth += amount;
             Health = Math.Min(Health + amount, (int)MaxHealth);
-            OnDamageTaken?.Invoke(Health, MaxHealth); 
+            uiManager.UpdateHealth(Health, MaxHealth);
         }
     }
 }

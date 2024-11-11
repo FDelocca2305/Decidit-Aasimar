@@ -1,4 +1,5 @@
-﻿using Game.Scripts;
+﻿using Game.Core.Interfaces;
+using Game.Scripts;
 using Game.Scripts.Upgrades;
 using System;
 using System.Collections.Generic;
@@ -9,10 +10,8 @@ using System.Windows.Forms;
 
 namespace Game.Core
 {
-    public class UIManager
+    public class UIManager : IUIManager
     {
-        public static UIManager instance;
-
         private Texture healthBarBackground;
         private Texture healthBarBackgroundRed;
         private Texture healthBarForegroundGreen;
@@ -30,10 +29,8 @@ namespace Game.Core
         private int maxExperienceForNextLevel;
         private Vector2 playerPosition;
 
-        public UIManager(Player player)
+        public UIManager()
         {
-            instance = this;
-
             healthBarBackground = Engine.GetTexture("Assets/bar_empty.png");
             healthBarBackgroundRed = Engine.GetTexture("Assets/bar_red.png");
             healthBarForegroundGreen = Engine.GetTexture("Assets/bar_green.png");
@@ -42,30 +39,21 @@ namespace Game.Core
             expBarForegroundBlue = Engine.GetTexture("Assets/exp_bar_blue.png");
 
             upgradePanelTexture = Engine.GetTexture("Assets/upgrades_panel.png");
-
-            player.OnDamageTaken += UpdateHealth;
-            player.OnExperienceChanged += UpdateExperience;
-            player.OnPositionChanged += UpdatePlayerPosition;
-            currentHealth = player.Health;
-            currentExperience = player.Experience;
-            playerPosition = player.Position;
-            maxHealth = player.MaxHealth;
-            maxExperienceForNextLevel = player.ExperienceToNextLevel;
         }
 
-        private void UpdateHealth(int health, float maxPlayerHealth)
+        public void UpdateHealth(float currentHealth, float maxHealth)
         {
-            currentHealth -= health;
-            maxHealth = maxPlayerHealth;
+            this.currentHealth = currentHealth;
+            this.maxHealth = maxHealth;
         }
 
-        private void UpdateExperience(int experience, int experienceToNextLevel)
+        public void UpdateExperience(int currentExperience, int maxExperienceForNextLevel)
         {
-            currentExperience = experience;
-            maxExperienceForNextLevel = experienceToNextLevel;
+            this.currentExperience = currentExperience;
+            this.maxExperienceForNextLevel = maxExperienceForNextLevel;
         }
 
-        private void UpdatePlayerPosition(Vector2 newPosition)
+        public void UpdatePlayerPosition(Vector2 newPosition)
         {
             playerPosition = newPosition;
         }
@@ -88,15 +76,6 @@ namespace Game.Core
             currentUpgrades = upgrades;
         }
 
-        private void RenderUpgradePanel()
-        {
-            Engine.Draw(upgradePanelTexture, 500, 200);
-            for (int i = 0; i < currentUpgrades.Count; i++)
-            {
-                TextManager.Instance.DrawText($"{i + 1} - {currentUpgrades[i].ToString()}", 550, 250 + (i * 50), 1.5f);
-            }
-        }
-
         public void HideUpgradePanel()
         {
             isUpgradePanelVisible = false;
@@ -104,28 +83,23 @@ namespace Game.Core
 
         public void HandleUpgradeSelection()
         {
-            if (isUpgradePanelVisible)
-            {
-                if (Engine.GetKey(Keys.Num1))
-                {
-                    GameManager.Instance.UpgradeManager.ApplyUpgrade(1);
-                }
-                else if (Engine.GetKey(Keys.Num2))
-                {
-                    GameManager.Instance.UpgradeManager.ApplyUpgrade(2);
-                }
-                else if (Engine.GetKey(Keys.Num3))
-                {
-                    GameManager.Instance.UpgradeManager.ApplyUpgrade(3);
-                }
-            }
-        }
+            if (!isUpgradePanelVisible) return;
 
-        private void RenderGameTime(string formattedTime)
-        {
-            int timeX = 900;
-            int timeY = 80;
-            TextManager.Instance.DrawText(formattedTime, timeX, timeY, 1.5f);
+            if (Engine.GetKey(Keys.Num1) && currentUpgrades.Count > 0)
+            {
+                GameManager.Instance.UpgradeManager.ApplyUpgrade(1);
+                HideUpgradePanel();
+            }
+            else if (Engine.GetKey(Keys.Num2) && currentUpgrades.Count > 1)
+            {
+                GameManager.Instance.UpgradeManager.ApplyUpgrade(2);
+                HideUpgradePanel();
+            }
+            else if (Engine.GetKey(Keys.Num3) && currentUpgrades.Count > 2)
+            {
+                GameManager.Instance.UpgradeManager.ApplyUpgrade(3);
+                HideUpgradePanel();
+            }
         }
 
         private void RenderHealthBar()
@@ -147,6 +121,22 @@ namespace Game.Core
 
             Engine.Draw(expBarBackgroundBlack, barX, barY, 1f, .5f);
             Engine.Draw(expBarForegroundBlue, barX, barY, expPercentage, .5f);
+        }
+
+        private void RenderUpgradePanel()
+        {
+            Engine.Draw(upgradePanelTexture, 500, 200);
+            for (int i = 0; i < currentUpgrades.Count; i++)
+            {
+                TextManager.Instance.DrawText($"{i + 1} - {currentUpgrades[i].ToString()}", 550, 250 + (i * 50), 1.5f);
+            }
+        }
+
+        private void RenderGameTime(string formattedTime)
+        {
+            int timeX = 900;
+            int timeY = 80;
+            TextManager.Instance.DrawText(formattedTime, timeX, timeY, 1.5f);
         }
     }
 }
