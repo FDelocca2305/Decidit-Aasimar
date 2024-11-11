@@ -12,8 +12,7 @@ namespace Game.Scripts
         protected float baseHealth = 10;
         protected float currentHealth;
 
-        protected Dictionary<string, Animation> animations = new Dictionary<string, Animation>();
-        protected Animation currentAnimation;
+        protected AnimationManager animationManager = new AnimationManager();
 
         public event Action<Enemy> OnDeath;
 
@@ -26,15 +25,23 @@ namespace Game.Scripts
 
         public abstract void Initialize(float difficultyMultiplier);
 
-        protected abstract void InitializeAnimations();
+        protected virtual void InitializeAnimations()
+        {
+            animationManager.AddAnimation("run", AnimationFactory.CreateEnemyRunAnimation());
+            animationManager.AddAnimation("runBack", AnimationFactory.CreateEnemyRunBackAnimation());
+            animationManager.SetAnimation("run");
+        }
 
         public override void Update(float deltaTime)
         {
             MoveTowardsPlayer(deltaTime);
-            
-            currentAnimation = Position.X <= player.Position.X ? animations["run"] : animations["runBack"];
 
-            currentAnimation.Update(deltaTime);
+            if (Position.X <= player.Position.X)
+                animationManager.SetAnimation("run");
+            else
+                animationManager.SetAnimation("runBack");
+
+            animationManager.Update(deltaTime);
         }
 
         private void MoveTowardsPlayer(float deltaTime)
@@ -66,9 +73,9 @@ namespace Game.Scripts
 
         public override void Render()
         {
-            if (currentAnimation != null)
+            if (animationManager.GetCurrentTexture() != null)
             {
-                Engine.Draw(currentAnimation.CurrentTexture, Position.X, Position.Y);
+                Engine.Draw(animationManager.GetCurrentTexture(), Position.X, Position.Y);
             }
         }
     }

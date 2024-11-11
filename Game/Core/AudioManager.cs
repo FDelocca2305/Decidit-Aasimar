@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Game.Core.Interfaces;
 using NAudio.Wave;
 
 namespace Game.Core
 {
-    public class AudioManager
+    public class AudioManager : IAudioManager
     {
         private static AudioManager instance;
 

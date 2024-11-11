@@ -79,10 +79,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Animation.cs" />
+    <Compile Include="Core\AnimationManager.cs" />
     <Compile Include="Core\AudioManager.cs" />
+    <Compile Include="Core\CollisionManager.cs" />
     <Compile Include="Core\GameManager.cs" />
     <Compile Include="Core\GameObject.cs" />
     <Compile Include="Core\IGameState.cs" />
+    <Compile Include="Core\Interfaces\IAudioManager.cs" />
+    <Compile Include="Core\Interfaces\ITextManager.cs" />
     <Compile Include="Core\ObjectManager.cs" />
     <Compile Include="Core\Renderer.cs" />
     <Compile Include="Core\StateManager.cs" />
@@ -104,7 +108,13 @@
     <Compile Include="Scripts\ExperienceOrb.cs" />
     <Compile Include="Scripts\GameTimer.cs" />
     <Compile Include="Scripts\Player.cs" />
-    <Compile Include="Scripts\UpgradeManager.cs" />
+    <Compile Include="Scripts\Upgrades\AttackCooldownUpgrade.cs" />
+    <Compile Include="Scripts\Upgrades\DamageUpgrade.cs" />
+    <Compile Include="Scripts\Upgrades\IUpgrade.cs" />
+    <Compile Include="Scripts\Upgrades\MaxHealthUpgrade.cs" />
+    <Compile Include="Scripts\Upgrades\RegerateHealthUpgrade.cs" />
+    <Compile Include="Scripts\Upgrades\SpeedUpgrade.cs" />
+    <Compile Include="Scripts\Upgrades\UpgradeManager.cs" />
     <Compile Include="Scripts\Waves\BasicWave.cs" />
     <Compile Include="Scripts\Waves\SpecialWave.cs" />
     <Compile Include="Scripts\Waves\Wave.cs" />

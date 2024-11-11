@@ -21,29 +21,7 @@ namespace Game.Scripts.Enemies
 
         protected override void InitializeAnimations()
         {
-            Animation run;
-            var runningTextures = new List<Texture>();
-
-            for (int i = 0; i <= 7; i++)
-            {
-                runningTextures.Add(Engine.GetTexture($"Assets/Textures/Enemy/Walk/{i}.png"));
-            }
-
-            run = new Animation("run", 0.1f, runningTextures, true);
-            animations.Add("run", run);
-
-            Animation runBack;
-            var runningBackTextures = new List<Texture>();
-
-            for (int i = 0; i <= 7; i++)
-            {
-                runningBackTextures.Add(Engine.GetTexture($"Assets/Textures/Enemy/WalkBack/{i}.png"));
-            }
-
-            runBack = new Animation("runBack", 0.1f, runningBackTextures, true);
-            animations.Add("runBack", runBack);
-
-            currentAnimation = animations["run"];
+            base.InitializeAnimations();
         }
     }
 }

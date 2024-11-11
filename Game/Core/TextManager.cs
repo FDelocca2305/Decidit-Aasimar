@@ -1,13 +1,9 @@
-﻿using System;
+﻿using Game.Core.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.AxHost;
 
 namespace Game.Core
 {
-    public class TextManager
+    public class TextManager : ITextManager
     {
         private static TextManager instance;
         private Dictionary<char, Texture> letterTextures = new Dictionary<char, Texture>();

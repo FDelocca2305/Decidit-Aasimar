@@ -11,8 +11,7 @@ namespace Game.Scripts
     {
         private float speed = 100f;
 
-        private Dictionary<string, Animation> animations = new Dictionary<string, Animation>();
-        private Animation currentAnimation;
+        private AnimationManager animationManager = new AnimationManager();
         
 
         private float attackCooldown = 2.0f;
@@ -45,7 +44,7 @@ namespace Game.Scripts
             Position = new Vector2(x, y);
 
             InitializeAnimations();
-            currentAnimation = animations["idle"];
+            animationManager.SetAnimation("idle");
         }
 
         public override void Update(float deltaTime)
@@ -89,23 +88,23 @@ namespace Game.Scripts
         {
             if (Engine.GetKey(Keys.RIGHT) || Engine.GetKey(Keys.UP) || Engine.GetKey(Keys.DOWN))
             {
-                currentAnimation = animations["run"];
+                animationManager.SetAnimation("run");
             }
             else if (Engine.GetKey(Keys.LEFT) || Engine.GetKey(Keys.UP) || Engine.GetKey(Keys.DOWN))
             {
-                currentAnimation = animations["runBack"];
+                animationManager.SetAnimation("runBack");
             }
             else
             {
-                currentAnimation = animations["idle"];
+                animationManager.SetAnimation("idle");
             }
 
             if (IsAttacking)
             {
-                currentAnimation = animations["attack"];
+                animationManager.SetAnimation("attack");
             }
 
-            currentAnimation.Update(deltaTime);
+            animationManager.Update(deltaTime);
         }
 
         private void HandleInput(float deltaTime)
@@ -130,18 +129,60 @@ namespace Game.Scripts
             }
         }
 
-        private void InitializeIdleAnimation()
-        {
-            Animation idle;
-            var idleTextures = new List<Texture>();
-            idleTextures.Add(Engine.GetTexture("Assets/Textures/Player/player.png"));
-            idle = new Animation("idle", 1f, idleTextures, true);
-            animations.Add("idle", idle);
-        }
+        //private void InitializeIdleAnimation()
+        //{
+        //    Animation idle;
+        //    var idleTextures = new List<Texture>();
+        //    idleTextures.Add(Engine.GetTexture("Assets/Textures/Player/player.png"));
+        //    idle = new Animation("idle", 1f, idleTextures, true);
+        //    animations.Add("idle", idle);
+        //}
 
-        private void InitializeRunAnimation()
+        //private void InitializeRunAnimation()
+        //{
+        //    Animation run;
+            
+
+        //    run = new Animation("run", 0.1f, runningTextures, true);
+        //    animations.Add("run", run);
+        //}
+
+        //private void InitializeRunBackAnimation()
+        //{
+        //    Animation runBack;
+        //    var runningBackTextures = new List<Texture>();
+
+        //    for (int i = 0; i <= 6; i++)
+        //    {
+        //        runningBackTextures.Add(Engine.GetTexture("Assets/Textures/Player/RunBack/" + i + ".png"));
+        //    }
+
+        //    runBack = new Animation("run", 0.1f, runningBackTextures, true);
+        //    animations.Add("runBack", runBack);
+        //}
+
+        //private void InitializeAttackAnimation()
+        //{
+        //    Animation attack;
+            
+        //    var attackTextures = new List<Texture>();
+
+        //    for (int i = 0; i <= 10; i++)
+        //    {
+        //        attackTextures.Add(Engine.GetTexture("Assets/Textures/Player/Attack/" + i + ".png"));
+        //    }
+
+        //    attack = new Animation("attack", .25f, attackTextures, true);
+
+        //    animations.Add("attack", attack);
+        //}
+
+        private void InitializeAnimations()
         {
-            Animation run;
+            //InitializeIdleAnimation();
+            //InitializeAttackAnimation();
+            //InitializeRunAnimation();
+            //InitializeRunBackAnimation();
             var runningTextures = new List<Texture>();
 
             for (int i = 0; i <= 7; i++)
@@ -149,46 +190,24 @@ namespace Game.Scripts
                 runningTextures.Add(Engine.GetTexture("Assets/Textures/Player/Run/" + i + ".png"));
             }
 
-            run = new Animation("run", 0.1f, runningTextures, true);
-            animations.Add("run", run);
-        }
-
-        private void InitializeRunBackAnimation()
-        {
-            Animation runBack;
-            var runningBackTextures = new List<Texture>();
-
-            for (int i = 0; i <= 6; i++)
-            {
-                runningBackTextures.Add(Engine.GetTexture("Assets/Textures/Player/RunBack/" + i + ".png"));
-            }
-
-            runBack = new Animation("run", 0.1f, runningBackTextures, true);
-            animations.Add("runBack", runBack);
-        }
-
-        private void InitializeAttackAnimation()
-        {
-            Animation attack;
-            
             var attackTextures = new List<Texture>();
 
             for (int i = 0; i <= 10; i++)
             {
-                attackTextures.Add(Engine.GetTexture("Assets/Textures/Player/Attack/" + i + ".png"));
+               attackTextures.Add(Engine.GetTexture("Assets/Textures/Player/Attack/" + i + ".png"));
             }
 
-            attack = new Animation("attack", .25f, attackTextures, true);
+            var runningBackTextures = new List<Texture>();
 
-            animations.Add("attack", attack);
-        }
+            for (int i = 0; i <= 6; i++)
+            {
+               runningBackTextures.Add(Engine.GetTexture("Assets/Textures/Player/RunBack/" + i + ".png"));
+            }
 
-        private void InitializeAnimations()
-        {
-            InitializeIdleAnimation();
-            InitializeAttackAnimation();
-            InitializeRunAnimation();
-            InitializeRunBackAnimation();
+            animationManager.AddAnimation("idle", new Animation("idle", 1f, new List<Texture> { Engine.GetTexture("Assets/Textures/Player/player.png") }, true));
+            animationManager.AddAnimation("run", new Animation("run", 0.1f, runningTextures, true));
+            animationManager.AddAnimation("runBack", new Animation("runBack", 0.1f, runningBackTextures, true));
+            animationManager.AddAnimation("attack", new Animation("run", 0.25f, attackTextures, true));
         }
 
         public void TakeDamage(int damage)
@@ -210,7 +229,7 @@ namespace Game.Scripts
 
         public override void Render()
         {
-            Engine.Draw(currentAnimation.CurrentTexture, Position.X, Position.Y);
+            Engine.Draw(animationManager.GetCurrentTexture(), Position.X, Position.Y);
         }
 
         public void CollectExperience(ExperienceOrb orb)

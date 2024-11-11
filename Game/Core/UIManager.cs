@@ -1,4 +1,5 @@
 ﻿using Game.Scripts;
+using Game.Scripts.Upgrades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace Game.Core
         private Texture expBarForegroundBlue;
 
         private bool isUpgradePanelVisible = false;
-        private List<string> currentUpgrades;
+        private List<IUpgrade> currentUpgrades;
         private Texture upgradePanelTexture;
 
         private float currentHealth;
@@ -81,7 +82,7 @@ namespace Game.Core
             }
         }
 
-        public void ShowUpgradePanel(List<string> upgrades)
+        public void ShowUpgradePanel(List<IUpgrade> upgrades)
         {
             isUpgradePanelVisible = true;
             currentUpgrades = upgrades;
@@ -92,7 +93,7 @@ namespace Game.Core
             Engine.Draw(upgradePanelTexture, 500, 200);
             for (int i = 0; i < currentUpgrades.Count; i++)
             {
-                TextManager.Instance.DrawText($"{i + 1} - {currentUpgrades[i]}", 550, 250 + (i * 50), 1.5f);
+                TextManager.Instance.DrawText($"{i + 1} - {currentUpgrades[i].ToString()}", 550, 250 + (i * 50), 1.5f);
             }
         }
 
