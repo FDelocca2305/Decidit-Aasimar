@@ -87,8 +87,10 @@
     <Compile Include="Core\GameObject.cs" />
     <Compile Include="Core\GameObjectsManager.cs" />
     <Compile Include="Core\IGameState.cs" />
+    <Compile Include="Core\InputManager.cs" />
     <Compile Include="Core\Interfaces\IUIManager.cs" />
     <Compile Include="Core\ObjectManager.cs" />
+    <Compile Include="Core\Quadtree.cs" />
     <Compile Include="Core\Renderer.cs" />
     <Compile Include="Core\StateManager.cs" />
     <Compile Include="Core\TextManager.cs" />
@@ -119,7 +121,10 @@
     <Compile Include="Scripts\Upgrades\SpeedUpgrade.cs" />
     <Compile Include="Scripts\Upgrades\UpgradeManager.cs" />
     <Compile Include="Scripts\Waves\BasicWave.cs" />
+    <Compile Include="Scripts\Waves\IWaveStrategy.cs" />
     <Compile Include="Scripts\Waves\SpecialWave.cs" />
+    <Compile Include="Scripts\Waves\Strategy\BasicWaveStrategy.cs" />
+    <Compile Include="Scripts\Waves\Strategy\SpecialWaveStrategy.cs" />
     <Compile Include="Scripts\Waves\Wave.cs" />
     <Compile Include="Scripts\Waves\WaveFactory.cs" />
     <Compile Include="Scripts\Waves\WaveManager.cs" />

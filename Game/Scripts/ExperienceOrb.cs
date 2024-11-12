@@ -13,9 +13,10 @@ namespace Game.Scripts
 
         public ExperienceOrb(float x, float y, int experiencePoints)
         {
-            Position = new Vector2(x, y);
+            Transform.Position = new Vector2(x, y);
             ExperiencePoints = experiencePoints;
             IsActive = true;
+            this.Size = new Vector2(25.6f, 25.6f);
         }
 
         public override void Update(float deltaTime)
@@ -25,14 +26,14 @@ namespace Game.Scripts
 
         public override void Render()
         {
-            Engine.Draw("Assets/experience_orb.png", Position.X, Position.Y, 0.2f, 0.2f);
+            Engine.Draw("Assets/experience_orb.png", Transform.Position.X, Transform.Position.Y, 0.2f, 0.2f);
         }
 
         public bool CheckCollision(Player player)
         {
             float distance = (float)Math.Sqrt(
-                Math.Pow(player.Position.X - Position.X, 2) +
-                Math.Pow(player.Position.Y - Position.Y, 2)
+                Math.Pow(player.Transform.Position.X - Transform.Position.X, 2) +
+                Math.Pow(player.Transform.Position.Y - Transform.Position.Y, 2)
             );
 
             return distance < 20f;

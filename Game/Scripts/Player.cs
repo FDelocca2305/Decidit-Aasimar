@@ -21,7 +21,6 @@ namespace Game.Scripts
         private float attackDuration = 1f;
         private float attackTimer = 0f;
         private float attackDurationTimer = 0f;
-
         private float attack = 10f;
 
         private float invulnerabilityTime = 0.5f;
@@ -33,14 +32,12 @@ namespace Game.Scripts
         public float Attack => attack;
         
         public bool IsAttacking { get; private set; }
-
-        public Vector2 Size { get; private set; }
         public Vector2 AttackColliderSize { get; private set; }
 
         public Player(float x, float y, IUIManager uiManager, ILevelManager levelManager)
         {
-            Position = new Vector2(x, y);
-            Size = new Vector2(30, 44);
+            Transform.Position = new Vector2(x, y);
+            this.Size = new Vector2(30, 44);
             AttackColliderSize = new Vector2(100, 50);
 
             this.uiManager = uiManager;
@@ -51,7 +48,7 @@ namespace Game.Scripts
             animationManager.SetAnimation("idle");
 
             uiManager.UpdateHealth(Health, MaxHealth);
-            uiManager.UpdatePlayerPosition(Position);
+            uiManager.UpdatePlayerPosition(Transform.Position);
         }
 
         public override void Update(float deltaTime)
@@ -116,8 +113,8 @@ namespace Game.Scripts
 
         private void HandleInput(float deltaTime)
         {
-            var position = Position;
-            Vector2 previousPosition = Position;
+            var position = Transform.Position;
+            Vector2 previousPosition = Transform.Position;
 
             if (InputManager.IsMoveUp())
                 position = new Vector2(position.X, position.Y - speed * deltaTime);
@@ -128,11 +125,11 @@ namespace Game.Scripts
             if (InputManager.IsMoveRight())
                 position = new Vector2(position.X + speed * deltaTime, position.Y);
 
-            Position = position;
+            Transform.Position = position;
 
-            if (previousPosition != Position)
+            if (previousPosition != Transform.Position)
             {
-                uiManager.UpdatePlayerPosition(Position);
+                uiManager.UpdatePlayerPosition(Transform.Position);
             }
         }
 
@@ -151,7 +148,6 @@ namespace Game.Scripts
                 Health -= damage;
                 invulnerabilityTimer = invulnerabilityTime;
 
-                //OnDamageTaken?.Invoke(damage, MaxHealth);
                 uiManager.UpdateHealth(Health, MaxHealth);
                 if (Health <= 0)
                 {
@@ -163,7 +159,7 @@ namespace Game.Scripts
 
         public override void Render()
         {
-            Engine.Draw(animationManager.GetCurrentTexture(), Position.X, Position.Y);
+            Engine.Draw(animationManager.GetCurrentTexture(), Transform.Position.X, Transform.Position.Y);
         }
 
         public void CollectExperience(ExperienceOrb orb)

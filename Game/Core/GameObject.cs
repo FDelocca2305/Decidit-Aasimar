@@ -9,7 +9,8 @@ namespace Game.Core
 {
     public abstract class GameObject
     {
-        public Vector2 Position { get; set; }
+        public Transform Transform { get; private set; } = new Transform();
+        public Vector2 Size { get; protected set; }
         public bool IsActive { get; set; } = true;
 
         public abstract void Update(float deltaTime);

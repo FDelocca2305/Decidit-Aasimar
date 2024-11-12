@@ -1,6 +1,7 @@
 ﻿using Game.Scripts;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,13 @@ namespace Game.Core
 {
     public class CollisionManager
     {
+        private Quadtree quadtree;
+
+        public CollisionManager()
+        {
+            quadtree = new Quadtree(0, new Rectangle(0, 0, 1920, 1080));
+        }
+
         public static bool IsBoxColliding(Vector2 positionA, Vector2 sizeA, Vector2 positionB, Vector2 sizeB)
         {
             float distanceX = Math.Abs(positionA.X - positionB.X);
@@ -22,25 +30,42 @@ namespace Game.Core
 
         public void CheckCollisions(Player player, IEnumerable<GameObject> gameObjects)
         {
+            quadtree.Clear();
             foreach (var obj in gameObjects)
             {
-                if(obj is Enemy enemy && enemy.IsActive)
-                {
-                    if (IsBoxColliding(player.Position, player.Size, enemy.Position, enemy.Size))
-                    {
-                        player.TakeDamage(10);
-                    }
+                quadtree.Insert(obj);
+            }
 
-                    if (player.IsAttacking && IsBoxColliding(player.Position, player.AttackColliderSize, enemy.Position, enemy.Size))
-                    {
-                        enemy.TakeDamage(player.Attack);
-                    }
-                }
+            List<GameObject> possibleCollisions = new List<GameObject>();
 
-                if (obj is ExperienceOrb orb && orb.IsActive && orb.CheckCollision(player))
+            foreach (var obj in gameObjects)
+            {
+                if (obj.IsActive)
                 {
-                    player.CollectExperience(orb);
-                    orb.IsActive = false;
+                    possibleCollisions.Clear();
+                    quadtree.Retrieve(possibleCollisions, obj);
+
+                    foreach (var otherObj in possibleCollisions)
+                    {
+                        if (obj is Enemy enemy && enemy.IsActive)
+                        {
+                            if (IsBoxColliding(player.Transform.Position, player.Size, enemy.Transform.Position, enemy.Size))
+                            {
+                                player.TakeDamage(10);
+                            }
+
+                            if (player.IsAttacking && IsBoxColliding(player.Transform.Position, player.AttackColliderSize, enemy.Transform.Position, enemy.Size))
+                            {
+                                enemy.TakeDamage(player.Attack);
+                            }
+                        }
+
+                        if (obj is ExperienceOrb orb && orb.IsActive && orb.CheckCollision(player))
+                        {
+                            player.CollectExperience(orb);
+                            orb.IsActive = false;
+                        }
+                    }
                 }
             }
         }

@@ -1,4 +1,5 @@
 ﻿using Game.Core;
+using Game.Scripts.Waves.Strategy;
 using System;
 namespace Game.Scripts.Waves
 {
@@ -7,15 +8,17 @@ namespace Game.Scripts.Waves
         private ObjectManager objectManager;
         private Player player;
         private int currentWave = 1;
-        private int basicWaveCount;
+        private int basicWaveCount = 2;
         private float timeBetweenWaves = 3f;
         private float waveTimer;
         private bool waveInProgress;
+        private IWaveStrategy waveStrategy;
 
         public WaveManager(ObjectManager objectManager, Player player)
         {
             this.objectManager = objectManager;
             this.player = player;
+            this.waveStrategy = new BasicWaveStrategy();
         }
 
         public void Update(float deltaTime)
@@ -41,24 +44,44 @@ namespace Game.Scripts.Waves
         private void StartNextWave()
         {
             waveInProgress = true;
-            
-            WaveFactory.WaveType waveType;
+            SelectWaveStrategy();
+            //WaveFactory.WaveType waveType;
 
+            //if (basicWaveCount < 2)
+            //{
+            //    waveType = WaveFactory.WaveType.Basic;
+            //    basicWaveCount++;
+            //}
+            //else
+            //{
+            //    waveType = WaveFactory.WaveType.Special;
+            //    basicWaveCount = 0;  
+            //}
+
+            //Wave wave = WaveFactory.CreateWave(waveType, currentWave, objectManager, player);
+            //wave.StartWave();
+            //Console.WriteLine($"Wave {currentWave} started. Wave Type: {waveType}");
+            //currentWave++;
+
+            Wave wave = waveStrategy.GenerateWave(currentWave, objectManager, player);
+            wave.StartWave();
+
+            Console.WriteLine($"Wave {currentWave} started. Wave Type: {wave.GetType().Name}");
+            currentWave++;
+        }
+
+        private void SelectWaveStrategy()
+        {
             if (basicWaveCount < 2)
             {
-                waveType = WaveFactory.WaveType.Basic;
+                waveStrategy = new BasicWaveStrategy();
                 basicWaveCount++;
             }
             else
             {
-                waveType = WaveFactory.WaveType.Special;
-                basicWaveCount = 0;  
+                waveStrategy = new SpecialWaveStrategy();
+                basicWaveCount = 0;
             }
-            
-            Wave wave = WaveFactory.CreateWave(waveType, currentWave, objectManager, player);
-            wave.StartWave();
-            Console.WriteLine($"Wave {currentWave} started. Wave Type: {waveType}");
-            currentWave++;
         }
     }
 }

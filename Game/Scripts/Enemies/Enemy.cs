@@ -14,17 +14,17 @@ namespace Game.Scripts
 
         protected AnimationManager animationManager = new AnimationManager();
 
-        public Vector2 Size { get; private set; }
+        //public Vector2 Size { get; private set; }
 
         public event Action<Enemy> OnDeath;
 
 
         protected Enemy(float x, float y, Player player)
         {
-            Position = new Vector2(x, y);
+            Transform.Position = new Vector2(x, y);
             this.player = player;
+            this.Size = new Vector2(48, 60);
             IsActive = true;
-            Size = new Vector2(48, 60);
         }
 
         public abstract void Initialize(float difficultyMultiplier);
@@ -40,7 +40,7 @@ namespace Game.Scripts
         {
             MoveTowardsPlayer(deltaTime);
 
-            if (Position.X <= player.Position.X)
+            if (Transform.Position.X <= player.Transform.Position.X)
                 animationManager.SetAnimation("run");
             else
                 animationManager.SetAnimation("runBack");
@@ -50,17 +50,17 @@ namespace Game.Scripts
 
         private void MoveTowardsPlayer(float deltaTime)
         {
-            float dirX = player.Position.X - Position.X;
-            float dirY = player.Position.Y - Position.Y;
+            float dirX = player.Transform.Position.X - Transform.Position.X;
+            float dirY = player.Transform.Position.Y - Transform.Position.Y;
             float magnitude = (float)Math.Sqrt(dirX * dirX + dirY * dirY);
 
             if (magnitude > 0)
             {
                 
-                float newX = Position.X + (dirX / magnitude) * speed * deltaTime;
-                float newY = Position.Y + (dirY / magnitude) * speed * deltaTime;
+                float newX = Transform.Position.X + (dirX / magnitude) * speed * deltaTime;
+                float newY = Transform.Position.Y + (dirY / magnitude) * speed * deltaTime;
 
-                Position = new Vector2(newX, newY);
+                Transform.Position = new Vector2(newX, newY);
             }
         }
 
@@ -79,7 +79,7 @@ namespace Game.Scripts
         {
             if (animationManager.GetCurrentTexture() != null)
             {
-                Engine.Draw(animationManager.GetCurrentTexture(), Position.X, Position.Y);
+                Engine.Draw(animationManager.GetCurrentTexture(), Transform.Position.X, Transform.Position.Y);
             }
         }
     }

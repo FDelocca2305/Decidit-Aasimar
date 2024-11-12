@@ -58,7 +58,7 @@ namespace Game.Core
         private void HandleEnemyDeath(Enemy enemy)
         {
             gameObjectsManager.Remove(enemy);
-            SpawnExperienceOrbs(enemy.Position.X, enemy.Position.Y);
+            SpawnExperienceOrbs(enemy.Transform.Position.X, enemy.Transform.Position.Y);
         }
 
         private Vector2 GenerateSpawnPosition(Player player)
@@ -92,7 +92,7 @@ namespace Game.Core
                     break;
             }
 
-            if (Math.Abs(x - player.Position.X) < 200 && Math.Abs(y - player.Position.Y) < 200)
+            if (Math.Abs(x - player.Transform.Position.X) < 200 && Math.Abs(y - player.Transform.Position.Y) < 200)
             {
                 return GenerateSpawnPosition(player);
             }
