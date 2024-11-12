@@ -1,10 +1,11 @@
 ﻿using Game.Core;
+using Game.Scripts.Interfaces;
 using System;
 using System.Collections.Generic;
 
 namespace Game.Scripts
 {
-    public abstract class Enemy : GameObject
+    public abstract class Enemy : GameObject, IRenderizable
     {
         protected Player player;
         protected float speed;
@@ -14,10 +15,16 @@ namespace Game.Scripts
 
         protected AnimationManager animationManager = new AnimationManager();
 
-        //public Vector2 Size { get; private set; }
-
         public event Action<Enemy> OnDeath;
+        public Renderer Renderer { get; }
 
+        protected Enemy()
+        {
+            IsActive = true;
+            Size = new Vector2(48, 60);
+            InitializeAnimations();
+            Renderer = new Renderer(animationManager.GetCurrentTexture(), Size);
+        }
 
         protected Enemy(float x, float y, Player player)
         {
@@ -25,6 +32,19 @@ namespace Game.Scripts
             this.player = player;
             this.Size = new Vector2(48, 60);
             IsActive = true;
+            InitializeAnimations();
+            Renderer = new Renderer(animationManager.GetCurrentTexture(), Size);
+        }
+
+        public void Reset(Vector2 position, float health, float speed, Player player)
+        {
+            Transform.Position = position;
+            currentHealth = health;
+            this.speed = speed;
+            this.player = player;
+            IsActive = true;
+            this.Size = new Vector2(48, 60);
+            animationManager.SetAnimation("run");
         }
 
         public abstract void Initialize(float difficultyMultiplier);
@@ -77,9 +97,15 @@ namespace Game.Scripts
 
         public override void Render()
         {
-            if (animationManager.GetCurrentTexture() != null)
+            var texture = animationManager.GetCurrentTexture();
+            if (texture != null)
             {
-                Engine.Draw(animationManager.GetCurrentTexture(), Transform.Position.X, Transform.Position.Y);
+                Renderer.SetTexture(animationManager.GetCurrentTexture());
+                Renderer.Draw(Transform);
+            }
+            else
+            {
+                Console.WriteLine("Warning: Current texture is null for Enemy rendering.");
             }
         }
     }

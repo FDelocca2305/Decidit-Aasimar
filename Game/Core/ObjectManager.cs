@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,54 @@ namespace Game.Core
 
         private GameObjectsManager gameObjectsManager = new GameObjectsManager();
         private CollisionManager collisionManager = new CollisionManager();
+
+        private ObjectPool<BasicEnemy> basicEnemyPool;
+        private ObjectPool<FastEnemy> fastEnemyPool;
+
+        public ObjectManager()
+        {
+            basicEnemyPool = new ObjectPool<BasicEnemy>(
+                objectFactory: () => new BasicEnemy(),
+                resetAction: (enemy) => enemy.Reset(new Vector2(0, 0), 10, 20, null)
+            );
+
+            fastEnemyPool = new ObjectPool<FastEnemy>(
+                objectFactory: () => new FastEnemy(),
+                resetAction: (enemy) => enemy.Reset(new Vector2(0, 0), 5, 40, null)
+            );
+        }
+
+        public Enemy GetEnemy(EnemyFactory.EnemyType type, Vector2 position, Player player, float difficultyMultiplier)
+        {
+            Enemy enemy = null;
+
+            switch (type)
+            {
+                case EnemyFactory.EnemyType.Basic:
+                    enemy = basicEnemyPool.Get();
+                    enemy.Reset(position, 10 * difficultyMultiplier, 20 * difficultyMultiplier, player);
+                    break;
+
+                case EnemyFactory.EnemyType.Fast:
+                    enemy = fastEnemyPool.Get();
+                    enemy.Reset(position, 5 * difficultyMultiplier, 40 * difficultyMultiplier, player);
+                    break;
+            }
+
+            return enemy;
+        }
+
+        public void ReleaseEnemy(Enemy enemy)
+        {
+            if (enemy is BasicEnemy basicEnemy)
+            {
+                basicEnemyPool.Release(basicEnemy);
+            }
+            else if (enemy is FastEnemy fastEnemy)
+            {
+                fastEnemyPool.Release(fastEnemy);
+            }
+        }
 
         public void Add(GameObject gameObject)
         {
@@ -45,13 +94,19 @@ namespace Game.Core
 
         public void SpawnEnemies(int count, Player player, float difficultyMultiplier)
         {
+            EnemyFactory enemyFactory = new EnemyFactory(this);
+
             for (int i = 0; i < count; i++)
             {
                 Vector2 spawnPosition = GenerateSpawnPosition(player);
                 EnemyFactory.EnemyType randomType = (EnemyFactory.EnemyType)random.Next(0, Enum.GetNames(typeof(EnemyFactory.EnemyType)).Length);
 
-                var enemy = EnemyFactory.CreateEnemy(randomType, spawnPosition.X, spawnPosition.Y, player, difficultyMultiplier);
-                Add(enemy);
+                Enemy enemy = enemyFactory.CreateEnemy(randomType, spawnPosition, player, difficultyMultiplier);
+
+                if (enemy != null)
+                {
+                    Add(enemy);
+                }
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,28 +9,22 @@ namespace Game.Scripts.Enemies
 {
     public class EnemyFactory
     {
+        private readonly ObjectManager objectManager;
+
+        public EnemyFactory(ObjectManager objectManager)
+        {
+            this.objectManager = objectManager;
+        }
+
+        public Enemy CreateEnemy(EnemyType type, Vector2 position, Player player, float difficultyMultiplier)
+        {
+            return objectManager.GetEnemy(type, position, player, difficultyMultiplier);
+        }
+
         public enum EnemyType
         {
             Basic,
             Fast
-        }
-
-        public static Enemy CreateEnemy(EnemyType type, float x, float y, Player player, float difficultyMultiplier)
-        {
-            Enemy enemy = null;
-
-            switch (type)
-            {
-                case EnemyType.Basic:
-                    enemy = new BasicEnemy(x, y, player);
-                    break;
-                case EnemyType.Fast:
-                    enemy = new FastEnemy(x, y, player);
-                    break;
-            }
-
-            enemy.Initialize(difficultyMultiplier);
-            return enemy;
         }
     }
 }

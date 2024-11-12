@@ -17,6 +17,11 @@ namespace Game.Core
             this.baseSize = baseSize;
         }
 
+        public void SetTexture(Texture texture)
+        {
+            this.texture = texture;
+        }
+
         public void Draw(Transform transform)
         {
             Engine.Draw(texture, transform.Position.X, transform.Position.Y, transform.Scale.X, transform.Scale.Y);

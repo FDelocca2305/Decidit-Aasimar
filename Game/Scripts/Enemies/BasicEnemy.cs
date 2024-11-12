@@ -9,7 +9,7 @@ namespace Game.Scripts.Enemies
 {
     public class BasicEnemy : Enemy
     {
-        public BasicEnemy(float x, float y, Player player) : base(x, y, player) { }
+        public BasicEnemy() : base() { }
 
         public override void Initialize(float difficultyMultiplier)
         {

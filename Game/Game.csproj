@@ -90,6 +90,7 @@
     <Compile Include="Core\InputManager.cs" />
     <Compile Include="Core\Interfaces\IUIManager.cs" />
     <Compile Include="Core\ObjectManager.cs" />
+    <Compile Include="Core\ObjectPool.cs" />
     <Compile Include="Core\Quadtree.cs" />
     <Compile Include="Core\Renderer.cs" />
     <Compile Include="Core\StateManager.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Scripts\ExperienceOrb.cs" />
     <Compile Include="Scripts\GameTimer.cs" />
     <Compile Include="Scripts\Interfaces\ILevelManager.cs" />
+    <Compile Include="Scripts\Interfaces\IRenderizable.cs" />
     <Compile Include="Scripts\LevelManager.cs" />
     <Compile Include="Scripts\Player.cs" />
     <Compile Include="Scripts\Upgrades\AttackCooldownUpgrade.cs" />

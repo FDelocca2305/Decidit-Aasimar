@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Game.Scripts
 {
-    public class Player : GameObject
+    public class Player : GameObject, IRenderizable
     {
         private float speed = 100f;
 
@@ -33,6 +33,7 @@ namespace Game.Scripts
         
         public bool IsAttacking { get; private set; }
         public Vector2 AttackColliderSize { get; private set; }
+        public Renderer Renderer { get; }
 
         public Player(float x, float y, IUIManager uiManager, ILevelManager levelManager)
         {
@@ -49,6 +50,8 @@ namespace Game.Scripts
 
             uiManager.UpdateHealth(Health, MaxHealth);
             uiManager.UpdatePlayerPosition(Transform.Position);
+
+            Renderer = new Renderer(animationManager.GetCurrentTexture(), Size);
         }
 
         public override void Update(float deltaTime)
@@ -159,7 +162,8 @@ namespace Game.Scripts
 
         public override void Render()
         {
-            Engine.Draw(animationManager.GetCurrentTexture(), Transform.Position.X, Transform.Position.Y);
+            Renderer.SetTexture(animationManager.GetCurrentTexture());
+            Renderer.Draw(Transform);
         }
 
         public void CollectExperience(ExperienceOrb orb)
