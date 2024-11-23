@@ -12,7 +12,7 @@ namespace Game.Core
         private readonly Func<T> objectFactory;
         private readonly Action<T> resetAction;
 
-        public ObjectPool(Func<T> objectFactory, Action<T> resetAction = null, int initialCapacity = 20)
+        public ObjectPool(Func<T> objectFactory, Action<T> resetAction = null, int initialCapacity = 100)
         {
             this.pool = new Stack<T>(initialCapacity);
             this.objectFactory = objectFactory ?? (() => new T());

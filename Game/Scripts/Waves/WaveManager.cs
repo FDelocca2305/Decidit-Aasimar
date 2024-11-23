@@ -8,7 +8,7 @@ namespace Game.Scripts.Waves
         private ObjectManager objectManager;
         private Player player;
         private int currentWave = 1;
-        private int basicWaveCount = 2;
+        private int basicWaveCount = 0;
         private float timeBetweenWaves = 3f;
         private float waveTimer;
         private bool waveInProgress;
@@ -45,23 +45,6 @@ namespace Game.Scripts.Waves
         {
             waveInProgress = true;
             SelectWaveStrategy();
-            //WaveFactory.WaveType waveType;
-
-            //if (basicWaveCount < 2)
-            //{
-            //    waveType = WaveFactory.WaveType.Basic;
-            //    basicWaveCount++;
-            //}
-            //else
-            //{
-            //    waveType = WaveFactory.WaveType.Special;
-            //    basicWaveCount = 0;  
-            //}
-
-            //Wave wave = WaveFactory.CreateWave(waveType, currentWave, objectManager, player);
-            //wave.StartWave();
-            //Console.WriteLine($"Wave {currentWave} started. Wave Type: {waveType}");
-            //currentWave++;
 
             Wave wave = waveStrategy.GenerateWave(currentWave, objectManager, player);
             wave.StartWave();
