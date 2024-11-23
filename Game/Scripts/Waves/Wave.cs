@@ -17,7 +17,7 @@ namespace Game.Scripts.Waves
             this.difficultyMultiplier = 1.0f + (currentWave * 0.1f);
         }
         public abstract void StartWave();
-        protected int CalculateEnemyCountForWave(int baseMultiplier)
+        public int CalculateEnemyCountForWave(int baseMultiplier)
         {
             return currentWave * baseMultiplier;
         }

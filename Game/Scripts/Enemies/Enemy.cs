@@ -18,6 +18,8 @@ namespace Game.Scripts
         public event Action<Enemy> OnDeath;
         public Renderer Renderer { get; }
 
+        public float CurrentHealth { get { return currentHealth; } }
+
         protected Enemy()
         {
             IsActive = true;

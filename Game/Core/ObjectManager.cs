@@ -20,16 +20,18 @@ namespace Game.Core
         private ObjectPool<BasicEnemy> basicEnemyPool;
         private ObjectPool<FastEnemy> fastEnemyPool;
 
-        public ObjectManager()
+        public GameObjectsManager GameObjectsManager { get { return gameObjectsManager; } }
+
+        public ObjectManager(Player player)
         {
             basicEnemyPool = new ObjectPool<BasicEnemy>(
                 objectFactory: () => new BasicEnemy(),
-                resetAction: (enemy) => enemy.Reset(new Vector2(0, 0), 10, 20, null)
+                resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(), 10, 20, player)
             );
 
             fastEnemyPool = new ObjectPool<FastEnemy>(
                 objectFactory: () => new FastEnemy(),
-                resetAction: (enemy) => enemy.Reset(new Vector2(0, 0), 5, 40, null)
+                resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(), 5, 40, player)
             );
         }
 
@@ -78,6 +80,15 @@ namespace Game.Core
         public void UpdateAll(float deltaTime, Player player)
         {
             gameObjectsManager.UpdateAll(deltaTime);
+
+            foreach (var obj in gameObjectsManager.GetAllGameObjects())
+            {
+                if (obj is Enemy enemy && !enemy.IsActive)
+                {
+                    ReleaseEnemy(enemy);
+                }
+            }
+
             collisionManager.CheckCollisions(player, gameObjectsManager.GetAllGameObjects());
         }
 
@@ -98,7 +109,7 @@ namespace Game.Core
 
             for (int i = 0; i < count; i++)
             {
-                Vector2 spawnPosition = GenerateSpawnPosition(player);
+                Vector2 spawnPosition = GenerateSpawnPosition();
                 EnemyFactory.EnemyType randomType = (EnemyFactory.EnemyType)random.Next(0, Enum.GetNames(typeof(EnemyFactory.EnemyType)).Length);
 
                 Enemy enemy = enemyFactory.CreateEnemy(randomType, spawnPosition, player, difficultyMultiplier);
@@ -114,9 +125,10 @@ namespace Game.Core
         {
             gameObjectsManager.Remove(enemy);
             SpawnExperienceOrbs(enemy.Transform.Position.X, enemy.Transform.Position.Y);
+            ReleaseEnemy(enemy);
         }
 
-        private Vector2 GenerateSpawnPosition(Player player)
+        private Vector2 GenerateSpawnPosition()
         {
             int screenWidth = 1920;
             int screenHeight = 1080;
@@ -145,11 +157,6 @@ namespace Game.Core
                     x = random.Next(0, screenWidth);
                     y = screenHeight + random.Next(50, 200);
                     break;
-            }
-
-            if (Math.Abs(x - player.Transform.Position.X) < 200 && Math.Abs(y - player.Transform.Position.Y) < 200)
-            {
-                return GenerateSpawnPosition(player);
             }
 
             return new Vector2(x, y);

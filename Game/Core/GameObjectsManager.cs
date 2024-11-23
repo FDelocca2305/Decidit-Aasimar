@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game.Scripts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,8 +42,14 @@ namespace Game.Core
 
             foreach (var obj in objectsToRemove)
             {
+                if (obj is Enemy enemy)
+                {
+                    continue;
+                }
+
                 gameObjects.Remove(obj);
             }
+
             objectsToRemove.Clear();
         }
 
@@ -58,6 +65,11 @@ namespace Game.Core
         public IEnumerable<GameObject> GetAllGameObjects()
         {
             return gameObjects;
+        }
+
+        public IEnumerable<GameObject> GetObjectsToAdd()
+        {
+            return objectsToAdd;
         }
     }
 }

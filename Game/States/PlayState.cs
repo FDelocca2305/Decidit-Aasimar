@@ -19,7 +19,7 @@ namespace Game.States
             levelManager = new LevelManager();
             Console.WriteLine("Comenzando el Juego");
             player = new Player(960f, 540f, uiManager, levelManager);
-            objectManager = new ObjectManager();
+            objectManager = new ObjectManager(player);
             objectManager.Add(player);
             gameTimer = new GameTimer();
             waveManager = new WaveManager(objectManager, player);

@@ -180,10 +180,18 @@ namespace Game
 
         public Texture(string path)
         {
-            TextureData data = LoadTexture(path);
-            Id = data.id;
-            Width = data.width;
-            Height = data.height;
+            try
+            {
+                TextureData data = LoadTexture(path);
+                Id = data.id;
+                Width = data.width;
+                Height = data.height;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
         }
 
         [DllImport("Engine.dll", CallingConvention = CallingConvention.Cdecl)]
