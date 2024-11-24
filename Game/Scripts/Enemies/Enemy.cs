@@ -9,8 +9,6 @@ namespace Game.Scripts
     {
         protected Player player;
         protected float speed;
-        protected float baseSpeed = 20f;
-        protected float baseHealth = 10;
         protected float currentHealth;
 
         protected AnimationManager animationManager = new AnimationManager();

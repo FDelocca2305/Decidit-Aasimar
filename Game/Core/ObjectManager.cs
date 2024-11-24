@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using Game.Scripts.Utils;
 
 namespace Game.Core
 {
@@ -21,17 +22,17 @@ namespace Game.Core
         private ObjectPool<FastEnemy> fastEnemyPool;
 
         public GameObjectsManager GameObjectsManager { get { return gameObjectsManager; } }
-
+        
         public ObjectManager(Player player)
         {
             basicEnemyPool = new ObjectPool<BasicEnemy>(
                 objectFactory: () => new BasicEnemy(),
-                resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(), 10, 20, player)
+                resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(), ConfigLoader.EnemyConfig.BasicEnemy.Health, ConfigLoader.EnemyConfig.BasicEnemy.Speed, player)
             );
 
             fastEnemyPool = new ObjectPool<FastEnemy>(
                 objectFactory: () => new FastEnemy(),
-                resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(), 5, 40, player)
+                resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(),  ConfigLoader.EnemyConfig.FastEnemy.Health, ConfigLoader.EnemyConfig.FastEnemy.Speed, player)
             );
         }
 
@@ -43,12 +44,12 @@ namespace Game.Core
             {
                 case EnemyFactory.EnemyType.Basic:
                     enemy = basicEnemyPool.Get();
-                    enemy.Reset(position, 10 * difficultyMultiplier, 20 * difficultyMultiplier, player);
+                    enemy.Reset(position, ConfigLoader.EnemyConfig.BasicEnemy.Health * difficultyMultiplier, ConfigLoader.EnemyConfig.BasicEnemy.Speed * difficultyMultiplier, player);
                     break;
 
                 case EnemyFactory.EnemyType.Fast:
                     enemy = fastEnemyPool.Get();
-                    enemy.Reset(position, 5 * difficultyMultiplier, 40 * difficultyMultiplier, player);
+                    enemy.Reset(position,  ConfigLoader.EnemyConfig.FastEnemy.Health * difficultyMultiplier, ConfigLoader.EnemyConfig.FastEnemy.Speed * difficultyMultiplier, player);
                     break;
             }
 
@@ -130,8 +131,8 @@ namespace Game.Core
 
         private Vector2 GenerateSpawnPosition()
         {
-            int screenWidth = 1920;
-            int screenHeight = 1080;
+            int screenWidth = GlobalConstants.GraphicsConstants.ScreenWidth;
+            int screenHeight = GlobalConstants.GraphicsConstants.ScreenHeight;
 
             int region = random.Next(0, 4);
             float x = 0, y = 0;

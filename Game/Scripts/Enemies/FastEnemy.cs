@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Game.Scripts.Utils;
 
 namespace Game.Scripts.Enemies
 {
@@ -13,12 +14,12 @@ namespace Game.Scripts.Enemies
 
         public override void Initialize(float difficultyMultiplier)
         {
-            speed = 40f * difficultyMultiplier;
-            currentHealth = 5 * difficultyMultiplier;
+            speed = ConfigLoader.EnemyConfig.FastEnemy.Speed * difficultyMultiplier;
+            currentHealth = ConfigLoader.EnemyConfig.FastEnemy.Health * difficultyMultiplier;
 
             InitializeAnimations();
         }
-
+        
         protected override void InitializeAnimations()
         {
             base.InitializeAnimations();

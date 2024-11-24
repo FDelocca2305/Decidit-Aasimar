@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Game.Scripts.Utils;
 
 namespace Game.Core
 {
@@ -14,7 +15,7 @@ namespace Game.Core
 
         public CollisionManager()
         {
-            quadtree = new Quadtree(0, new Rectangle(0, 0, 1920, 1080));
+            quadtree = new Quadtree(0, new Rectangle(0, 0,GlobalConstants.GraphicsConstants.ScreenWidth, GlobalConstants.GraphicsConstants.ScreenHeight));
         }
 
         public static bool IsBoxColliding(Vector2 positionA, Vector2 sizeA, Vector2 positionB, Vector2 sizeB)
@@ -51,7 +52,7 @@ namespace Game.Core
                         {
                             if (IsBoxColliding(player.Transform.Position, player.Size, enemy.Transform.Position, enemy.Size))
                             {
-                                player.TakeDamage(10);
+                                player.TakeDamage(ConfigLoader.PlayerConfig.BaseDamageTaken);
                             }
 
                             if (player.IsAttacking && IsBoxColliding(player.Transform.Position, player.AttackColliderSize, enemy.Transform.Position, enemy.Size))
