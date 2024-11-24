@@ -27,22 +27,22 @@ namespace Game.Scripts.Waves
 
         public void Update(float deltaTime)
         {
-            if (!waveInProgress)
+            waveTimer += deltaTime;
+
+            float currentInterval = CalculateTimeBetweenWaves();
+
+            if (waveTimer >= currentInterval)
             {
-                waveTimer += deltaTime;
-                if (waveTimer >= timeBetweenWaves)
-                {
-                    StartNextWave();
-                }
+                StartNextWave();
+                waveTimer = 0f;
             }
-            else
-            {
-                if (objectManager.AreAllEnemiesDefeated())
-                {
-                    waveInProgress = false;
-                    waveTimer = 0f;
-                }
-            }
+        }
+
+        private float CalculateTimeBetweenWaves()
+        {
+            float baseInterval = ConfigLoader.WaveConfig.TimeBetweenWaves;
+            float scalingFactor = 1f;
+            return baseInterval + (currentWave - 1) * scalingFactor;
         }
 
         private void StartNextWave()

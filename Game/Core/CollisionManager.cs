@@ -32,7 +32,7 @@ namespace Game.Core
         public void CheckCollisions(Player player, IEnumerable<GameObject> gameObjects)
         {
             quadtree.Clear();
-            foreach (var obj in gameObjects)
+            foreach (var obj in gameObjects.Where(obj => obj.IsActive))
             {
                 quadtree.Insert(obj);
             }

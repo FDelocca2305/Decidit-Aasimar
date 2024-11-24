@@ -22,8 +22,8 @@
   "WaveConfig": {
     "BasicWaveEnemyCount": 5,
     "SpecialWaveEnemyCount": 10,
-    "TimeBetweenWaves": 3.0,
-    "BasicWavesBeforeSpecial": 2,
+    "TimeBetweenWaves": 5.0,
+    "BasicWavesBeforeSpecial": 5,
     "TimeUntilFirstWave": 5,
     "TimeUntilGameEnds": 2
   },

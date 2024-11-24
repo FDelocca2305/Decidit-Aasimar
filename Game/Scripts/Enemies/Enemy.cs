@@ -2,6 +2,7 @@
 using Game.Scripts.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Game.Scripts
 {
@@ -17,7 +18,7 @@ namespace Game.Scripts
         public Renderer Renderer { get; }
 
         public float CurrentHealth { get { return currentHealth; } }
-
+        public float Speed { get { return speed; } }
         protected Enemy()
         {
             IsActive = true;
@@ -45,6 +46,7 @@ namespace Game.Scripts
             IsActive = true;
             this.Size = new Vector2(48, 60);
             animationManager.SetAnimation("run");
+            Console.WriteLine($"Resetting Enemy: Speed={speed}, Health={health}");
         }
 
         public abstract void Initialize(float difficultyMultiplier);
@@ -67,18 +69,36 @@ namespace Game.Scripts
 
             animationManager.Update(deltaTime);
         }
+        public static float Clamp(float value, float min, float max)
+        {
+            if (value < min) return min;
+            if (value > max) return max;
+            return value;
+        }
 
         private void MoveTowardsPlayer(float deltaTime)
         {
+            if (speed <= 0)
+            {
+                return;
+            }
+
+            float clampedDeltaTime = Clamp(deltaTime, 0.001f, 0.1f);
+
             float dirX = player.Transform.Position.X - Transform.Position.X;
             float dirY = player.Transform.Position.Y - Transform.Position.Y;
             float magnitude = (float)Math.Sqrt(dirX * dirX + dirY * dirY);
 
+            if (magnitude == 0)
+            {
+                return;
+            }
+
             if (magnitude > 0)
             {
                 
-                float newX = Transform.Position.X + (dirX / magnitude) * speed * deltaTime;
-                float newY = Transform.Position.Y + (dirY / magnitude) * speed * deltaTime;
+                float newX = Transform.Position.X + (dirX / magnitude) * speed * clampedDeltaTime;
+                float newY = Transform.Position.Y + (dirY / magnitude) * speed * clampedDeltaTime;
 
                 Transform.Position = new Vector2(newX, newY);
             }

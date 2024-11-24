@@ -46,12 +46,12 @@ namespace Game.Core
             {
                 case EnemyFactory.EnemyType.Basic:
                     enemy = basicEnemyPool.Get();
-                    enemy.Reset(position, ConfigLoader.EnemyConfig.BasicEnemy.Health * difficultyMultiplier, ConfigLoader.EnemyConfig.BasicEnemy.Speed * difficultyMultiplier, player);
+                    enemy.Reset(position, ConfigLoader.EnemyConfig.BasicEnemy.Health * difficultyMultiplier, ConfigLoader.EnemyConfig.BasicEnemy.Speed, player);
                     break;
 
                 case EnemyFactory.EnemyType.Fast:
                     enemy = fastEnemyPool.Get();
-                    enemy.Reset(position,  ConfigLoader.EnemyConfig.FastEnemy.Health * difficultyMultiplier, ConfigLoader.EnemyConfig.FastEnemy.Speed * difficultyMultiplier, player);
+                    enemy.Reset(position,  ConfigLoader.EnemyConfig.FastEnemy.Health * difficultyMultiplier, ConfigLoader.EnemyConfig.FastEnemy.Speed, player);
                     break;
             }
 
@@ -60,6 +60,7 @@ namespace Game.Core
 
         public void ReleaseEnemy(Enemy enemy)
         {
+            Console.WriteLine($"Releasing Enemy: {enemy.GetType().Name}, Speed={enemy.Speed}");
             if (enemy is BasicEnemy basicEnemy)
             {
                 basicEnemyPool.Release(basicEnemy);
@@ -92,7 +93,8 @@ namespace Game.Core
                 }
             }
 
-            collisionManager.CheckCollisions(player, gameObjectsManager.GetAllGameObjects());
+            var activeObjects = gameObjectsManager.GetAllGameObjects().Where(obj => obj.IsActive);
+            collisionManager.CheckCollisions(player, activeObjects);
         }
 
         public void RenderAll()
@@ -126,6 +128,7 @@ namespace Game.Core
 
         private void HandleEnemyDeath(Enemy enemy)
         {
+            enemy.IsActive = false;
             gameObjectsManager.Remove(enemy);
             SpawnExperienceOrbs(enemy.Transform.Position.X, enemy.Transform.Position.Y);
             ReleaseEnemy(enemy);
@@ -167,20 +170,15 @@ namespace Game.Core
 
         public bool AreAllEnemiesDefeated()
         {
-            foreach (var obj in gameObjectsManager.GetAllGameObjects())
-            {
-                if (obj.IsActive && obj is Enemy)
-                {
-                    return false;
-                }
-            }
-            return true;
+            return !gameObjectsManager.GetAllGameObjects()
+                .Any(obj => obj.IsActive && obj is Enemy);
         }
 
         private int GetInitialPoolCapacity(Enemy enemy)
         {
             float totalWaves = ((ConfigLoader.WaveConfig.TimeUntilGameEnds * 60) - ConfigLoader.WaveConfig.TimeUntilFirstWave) / ConfigLoader.WaveConfig.TimeBetweenWaves;
-
+            Console.WriteLine((int)totalWaves * ConfigLoader.WaveConfig.BasicWaveEnemyCount);
+            Console.WriteLine((int)totalWaves * ConfigLoader.WaveConfig.SpecialWaveEnemyCount);
             if (enemy is BasicEnemy)
             {
                 return (int)totalWaves * ConfigLoader.WaveConfig.BasicWaveEnemyCount;

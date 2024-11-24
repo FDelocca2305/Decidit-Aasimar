@@ -14,8 +14,8 @@ namespace Game.Scripts.Enemies
 
         public override void Initialize(float difficultyMultiplier)
         {
-            currentHealth = ConfigLoader.EnemyConfig.BasicEnemy.Speed * difficultyMultiplier;
-            speed = ConfigLoader.EnemyConfig.BasicEnemy.Health * difficultyMultiplier;
+            currentHealth = ConfigLoader.EnemyConfig.BasicEnemy.Health * difficultyMultiplier;
+            speed = ConfigLoader.EnemyConfig.BasicEnemy.Speed;
 
             InitializeAnimations();
         }
