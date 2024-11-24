@@ -17,11 +17,6 @@
     "FastEnemy": {
       "Health": 5,
       "Speed": 40
-    },
-    "DifficultyMultiplier": {
-      "Easy": 0.8,
-      "Normal": 1.0,
-      "Hard": 1.5
     }
   },
   "WaveConfig": {
