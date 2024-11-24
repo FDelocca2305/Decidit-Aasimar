@@ -11,7 +11,6 @@ namespace Game.Scripts.Waves
             Basic,
             Special
         }
-
         public static Wave CreateWave(WaveType type, int currentWave, ObjectManager objectManager, Player player)
         {
             Wave wave = null;

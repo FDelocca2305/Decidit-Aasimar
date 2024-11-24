@@ -4,14 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Game.Scripts.Utils;
 
 namespace Game.Scripts
 {
     public class LevelManager: ILevelManager
     {
+        //This To?
         private int experience = 0;
-        private int level = 1;
-        private int experienceToNextLevel = 100;
+        private int level = ConfigLoader.LevelConfig.InitialLevel;
+        private int experienceToNextLevel =  ConfigLoader.LevelConfig.ExperienceToNextLevel;
 
         public int Level => level;
         public int Experience => experience;

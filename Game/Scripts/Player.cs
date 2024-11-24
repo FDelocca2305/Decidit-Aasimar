@@ -6,28 +6,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Game.Scripts.Utils;
 
 namespace Game.Scripts
 {
     public class Player : GameObject, IRenderizable
     {
-        private float speed = 100f;
+        private float speed =  ConfigLoader.PlayerConfig.Speed;
 
         private AnimationManager animationManager = new AnimationManager();
         private IUIManager uiManager;
         private ILevelManager levelManager;
 
-        private float attackCooldown = 2.0f;
-        private float attackDuration = 1f;
+        private float attackCooldown = ConfigLoader.PlayerConfig.AttackCooldown;
+        private float attackDuration = ConfigLoader.PlayerConfig.AttackDuration;
         private float attackTimer = 0f;
         private float attackDurationTimer = 0f;
-        private float attack = 10f;
+        private float attack = ConfigLoader.PlayerConfig.Attack;
 
-        private float invulnerabilityTime = 0.5f;
+        private float invulnerabilityTime = ConfigLoader.PlayerConfig.InvulnerabilityTime;
         private float invulnerabilityTimer = 0f;
 
-        public int Health { get; private set; } = 100;
-        public float MaxHealth { get; private set; } = 100;
+        public int Health { get; private set; } = ConfigLoader.PlayerConfig.Health;
+        public float MaxHealth { get; private set; } = ConfigLoader.PlayerConfig.MaxHealth;
 
         public float Attack => attack;
         

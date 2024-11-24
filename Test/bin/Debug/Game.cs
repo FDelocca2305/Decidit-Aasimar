@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using Game.Scripts.Utils;
 
 namespace Game
 {
@@ -11,7 +12,8 @@ namespace Game
     {
         public Game()
         {
-            Engine.Initialize("Decidit Asimar", 1920, 1080);
+            ConfigLoader.LoadConfigurations("Scripts/Utils/configs.json");
+            Engine.Initialize("Decidit Asimar", GlobalConstants.GraphicsConstants.ScreenWidth, GlobalConstants.GraphicsConstants.ScreenHeight);
             AudioManager.Instance.LoadTrack("Main", "Assets/Audio/background-music.mp3");
             GameManager.Instance.ChangeState(new MainMenuState());
         }

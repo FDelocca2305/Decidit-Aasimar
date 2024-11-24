@@ -1,15 +1,19 @@
 ﻿using Game.Core;
 using Game.Scripts.Waves.Strategy;
 using System;
+using Game.Scripts.Utils;
+
 namespace Game.Scripts.Waves
 {
     public class WaveManager
     {
+        //Move this to a constantD
         private ObjectManager objectManager;
         private Player player;
         private int currentWave = 1;
         private int basicWaveCount = 0;
-        private float timeBetweenWaves = 3f;
+        private float timeBetweenWaves = ConfigLoader.WaveConfig.TimeBetweenWaves;
+        private int basicWavesBeforeSpecial = ConfigLoader.WaveConfig.BasicWavesBeforeSpecial;
         private float waveTimer;
         private bool waveInProgress;
         private IWaveStrategy waveStrategy;
@@ -55,7 +59,7 @@ namespace Game.Scripts.Waves
 
         private void SelectWaveStrategy()
         {
-            if (basicWaveCount < 2)
+            if (basicWaveCount < basicWavesBeforeSpecial)
             {
                 waveStrategy = new BasicWaveStrategy();
                 basicWaveCount++;

@@ -1,5 +1,6 @@
 using System;
 using Game.Core;
+using Game.Scripts.Utils;
 
 namespace Game.Scripts.Waves
 {
@@ -10,7 +11,7 @@ namespace Game.Scripts.Waves
 
         public override void StartWave()
         {
-            int enemyCount = CalculateEnemyCountForWave(5);
+            int enemyCount = CalculateEnemyCountForWave(ConfigLoader.WaveConfig.BasicWaveEnemyCount);
             objectManager.SpawnEnemies(enemyCount, player, difficultyMultiplier);
             Console.WriteLine($"Basic Wave {currentWave} has {enemyCount} enemies.");
         }
