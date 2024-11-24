@@ -27,12 +27,14 @@ namespace Game.Core
         {
             basicEnemyPool = new ObjectPool<BasicEnemy>(
                 objectFactory: () => new BasicEnemy(),
-                resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(), ConfigLoader.EnemyConfig.BasicEnemy.Health, ConfigLoader.EnemyConfig.BasicEnemy.Speed, player)
+                resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(), ConfigLoader.EnemyConfig.BasicEnemy.Health, ConfigLoader.EnemyConfig.BasicEnemy.Speed, player),
+                200
             );
 
             fastEnemyPool = new ObjectPool<FastEnemy>(
                 objectFactory: () => new FastEnemy(),
-                resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(),  ConfigLoader.EnemyConfig.FastEnemy.Health, ConfigLoader.EnemyConfig.FastEnemy.Speed, player)
+                resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(),  ConfigLoader.EnemyConfig.FastEnemy.Health, ConfigLoader.EnemyConfig.FastEnemy.Speed, player),
+                400
             );
         }
 
