@@ -28,13 +28,13 @@ namespace Game.Core
             basicEnemyPool = new ObjectPool<BasicEnemy>(
                 objectFactory: () => new BasicEnemy(),
                 resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(), ConfigLoader.EnemyConfig.BasicEnemy.Health, ConfigLoader.EnemyConfig.BasicEnemy.Speed, player),
-                200
+                GetInitialPoolCapacity(new BasicEnemy())
             );
 
             fastEnemyPool = new ObjectPool<FastEnemy>(
                 objectFactory: () => new FastEnemy(),
                 resetAction: (enemy) => enemy.Reset(GenerateSpawnPosition(),  ConfigLoader.EnemyConfig.FastEnemy.Health, ConfigLoader.EnemyConfig.FastEnemy.Speed, player),
-                400
+                GetInitialPoolCapacity(new FastEnemy())
             );
         }
 
@@ -175,6 +175,24 @@ namespace Game.Core
                 }
             }
             return true;
+        }
+
+        private int GetInitialPoolCapacity(Enemy enemy)
+        {
+            float totalWaves = ((ConfigLoader.WaveConfig.TimeUntilGameEnds * 60) - ConfigLoader.WaveConfig.TimeUntilFirstWave) / ConfigLoader.WaveConfig.TimeBetweenWaves;
+
+            if (enemy is BasicEnemy)
+            {
+                return (int)totalWaves * ConfigLoader.WaveConfig.BasicWaveEnemyCount;
+            }
+            else if (enemy is FastEnemy)
+            {
+                return (int)totalWaves * ConfigLoader.WaveConfig.SpecialWaveEnemyCount; ;
+            }
+            else
+            {
+                return 200;
+            }
         }
     }
 

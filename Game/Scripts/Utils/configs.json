@@ -23,7 +23,9 @@
     "BasicWaveEnemyCount": 5,
     "SpecialWaveEnemyCount": 10,
     "TimeBetweenWaves": 3.0,
-    "BasicWavesBeforeSpecial": 2
+    "BasicWavesBeforeSpecial": 2,
+    "TimeUntilFirstWave": 5,
+    "TimeUntilGameEnds": 2
   },
   "LevelConfig": {
     "InitialLevel": 1,

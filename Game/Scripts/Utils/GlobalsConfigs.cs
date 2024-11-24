@@ -80,6 +80,8 @@ namespace Game.Scripts.Utils
         public int SpecialWaveEnemyCount { get; set; }
         public float TimeBetweenWaves { get; set; }
         public int BasicWavesBeforeSpecial { get; set; }
+        public int TimeUntilFirstWave { get; set; }
+        public int TimeUntilGameEnds { get; set; }
     }
 
     [Serializable]

@@ -472,3 +472,6 @@ C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bi
 C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Scripts\Utils\configs.json
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Scripts\Utils\configs.json
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Newtonsoft.Json.dll
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Newtonsoft.Json.xml

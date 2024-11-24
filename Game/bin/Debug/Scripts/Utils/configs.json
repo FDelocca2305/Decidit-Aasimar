@@ -17,18 +17,15 @@
     "FastEnemy": {
       "Health": 5,
       "Speed": 40
-    },
-    "DifficultyMultiplier": {
-      "Easy": 0.8,
-      "Normal": 1.0,
-      "Hard": 1.5
     }
   },
   "WaveConfig": {
     "BasicWaveEnemyCount": 5,
     "SpecialWaveEnemyCount": 10,
     "TimeBetweenWaves": 3.0,
-    "BasicWavesBeforeSpecial": 2
+    "BasicWavesBeforeSpecial": 2,
+    "TimeUntilFirstWave": 5,
+    "TimeUntilGameEnds": 2
   },
   "LevelConfig": {
     "InitialLevel": 1,
