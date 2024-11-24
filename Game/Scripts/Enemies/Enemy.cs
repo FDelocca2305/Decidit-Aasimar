@@ -24,7 +24,7 @@ namespace Game.Scripts
             IsActive = true;
             Size = new Vector2(48, 60);
             InitializeAnimations();
-            Renderer = new Renderer(animationManager.GetCurrentTexture(), Size);
+            Renderer = new Renderer(animationManager.GetCurrentTexture());
         }
 
         protected Enemy(float x, float y, Player player)
@@ -34,7 +34,7 @@ namespace Game.Scripts
             this.Size = new Vector2(48, 60);
             IsActive = true;
             InitializeAnimations();
-            Renderer = new Renderer(animationManager.GetCurrentTexture(), Size);
+            Renderer = new Renderer(animationManager.GetCurrentTexture());
         }
 
         public void Reset(Vector2 position, float health, float speed, Player player)
@@ -115,7 +115,7 @@ namespace Game.Scripts
             }
         }
 
-        public override void Render()
+        public void Render()
         {
             var texture = animationManager.GetCurrentTexture();
             if (texture != null)

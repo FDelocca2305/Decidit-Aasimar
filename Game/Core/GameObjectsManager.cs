@@ -1,4 +1,5 @@
 ﻿using Game.Scripts;
+using Game.Scripts.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,8 +58,10 @@ namespace Game.Core
         {
             foreach (var obj in gameObjects)
             {
-                if (obj.IsActive)
-                    obj.Render();
+                if (obj.IsActive && obj is IRenderizable renderizable)
+                {
+                    renderizable.Render();
+                }
             }
         }
 

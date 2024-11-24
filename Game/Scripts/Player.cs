@@ -52,7 +52,7 @@ namespace Game.Scripts
             uiManager.UpdateHealth(Health, MaxHealth);
             uiManager.UpdatePlayerPosition(Transform.Position);
 
-            Renderer = new Renderer(animationManager.GetCurrentTexture(), Size);
+            Renderer = new Renderer(animationManager.GetCurrentTexture());
         }
 
         public override void Update(float deltaTime)
@@ -161,7 +161,7 @@ namespace Game.Scripts
             }
         }
 
-        public override void Render()
+        public void Render()
         {
             Renderer.SetTexture(animationManager.GetCurrentTexture());
             Renderer.Draw(Transform);

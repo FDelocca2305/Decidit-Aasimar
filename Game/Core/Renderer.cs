@@ -9,12 +9,10 @@ namespace Game.Core
     public class Renderer
     {
         private Texture texture;
-        private Vector2 baseSize;
 
-        public Renderer(Texture texture, Vector2 baseSize)
+        public Renderer(Texture texture)
         {
             this.texture = texture;
-            this.baseSize = baseSize;
         }
 
         public void SetTexture(Texture texture)

@@ -14,7 +14,6 @@ namespace Game.Core
         public bool IsActive { get; set; } = true;
 
         public abstract void Update(float deltaTime);
-        public abstract void Render();
 
     }
 }

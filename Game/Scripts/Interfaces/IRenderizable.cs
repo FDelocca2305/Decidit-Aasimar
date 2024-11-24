@@ -10,5 +10,7 @@ namespace Game.Scripts.Interfaces
     public interface IRenderizable
     {
         Renderer Renderer { get; }
+
+        void Render();
     }
 }

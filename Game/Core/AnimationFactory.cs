@@ -60,5 +60,8 @@ namespace Game.Core
             }
             return new Animation("attack", 0.25f, attackTextures, true);
         }
+
+        public static Animation CreateExperienceOrbAnimation() =>
+        new Animation("experienceOrb", 1f, new List<Texture> { Engine.GetTexture("Assets/experience_orb.png") }, true);
     }
 }
