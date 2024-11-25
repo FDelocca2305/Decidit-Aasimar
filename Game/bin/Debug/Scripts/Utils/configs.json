@@ -23,7 +23,7 @@
     "BasicWaveEnemyCount": 5,
     "SpecialWaveEnemyCount": 10,
     "TimeBetweenWaves": 5.0,
-    "BasicWavesBeforeSpecial": 500000,
+    "BasicWavesBeforeSpecial": 5,
     "TimeUntilFirstWave": 5,
     "TimeUntilGameEnds": 2
   },

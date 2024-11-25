@@ -26,17 +26,6 @@ namespace Game.Scripts
             InitializeAnimations();
             Renderer = new Renderer(animationManager.GetCurrentTexture());
         }
-
-        protected Enemy(float x, float y, Player player)
-        {
-            Transform.Position = new Vector2(x, y);
-            this.player = player;
-            this.Size = new Vector2(48, 60);
-            IsActive = true;
-            InitializeAnimations();
-            Renderer = new Renderer(animationManager.GetCurrentTexture());
-        }
-
         public void Reset(Vector2 position, float health, float speed, Player player)
         {
             Transform.Position = position;

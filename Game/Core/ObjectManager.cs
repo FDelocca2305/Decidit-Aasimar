@@ -108,16 +108,16 @@ namespace Game.Core
             gameObjectsManager.Add(orb);
         }
 
-        public void SpawnEnemies(int count, Player player, float difficultyMultiplier)
+        public void SpawnEnemies(int count, Player player, float difficultyMultiplier, EnemyFactory.EnemyType enemyType)
         {
             EnemyFactory enemyFactory = new EnemyFactory(this);
 
             for (int i = 0; i < count; i++)
             {
                 Vector2 spawnPosition = GenerateSpawnPosition();
-                EnemyFactory.EnemyType randomType = (EnemyFactory.EnemyType)random.Next(0, Enum.GetNames(typeof(EnemyFactory.EnemyType)).Length);
+                //EnemyFactory.EnemyType randomType = (EnemyFactory.EnemyType)random.Next(0, Enum.GetNames(typeof(EnemyFactory.EnemyType)).Length);
 
-                Enemy enemy = enemyFactory.CreateEnemy(randomType, spawnPosition, player, difficultyMultiplier);
+                Enemy enemy = enemyFactory.CreateEnemy(enemyType, spawnPosition, player, difficultyMultiplier);
 
                 if (enemy != null)
                 {
