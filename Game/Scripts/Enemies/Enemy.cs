@@ -42,8 +42,8 @@ namespace Game.Scripts
 
         protected virtual void InitializeAnimations()
         {
-            animationManager.AddAnimation("run", AnimationFactory.CreateEnemyRunAnimation());
-            animationManager.AddAnimation("runBack", AnimationFactory.CreateEnemyRunBackAnimation());
+            animationManager.AddAnimation("run", AnimationFactory.CreateBasicEnemyRunAnimation());
+            animationManager.AddAnimation("runBack", AnimationFactory.CreateBasicEnemyRunBackAnimation());
             animationManager.SetAnimation("run");
         }
 

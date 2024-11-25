@@ -8,7 +8,7 @@ namespace Game.Core
 {
     public static class AnimationFactory
     {
-        public static Animation CreateEnemyRunAnimation()
+        public static Animation CreateFastEnemyRunAnimation()
         {
             var runningTextures = new List<Texture>();
             for (int i = 0; i <= 7; i++)
@@ -18,12 +18,32 @@ namespace Game.Core
             return new Animation("run", 0.1f, runningTextures, true);
         }
 
-        public static Animation CreateEnemyRunBackAnimation()
+        public static Animation CreateFastEnemyRunBackAnimation()
         {
             var runningBackTextures = new List<Texture>();
             for (int i = 0; i <= 7; i++)
             {
                 runningBackTextures.Add(Engine.GetTexture($"Assets/Textures/Enemy/WalkBack/{i}.png"));
+            }
+            return new Animation("runBack", 0.1f, runningBackTextures, true);
+        }
+
+        public static Animation CreateBasicEnemyRunAnimation()
+        {
+            var runningTextures = new List<Texture>();
+            for (int i = 0; i <= 7; i++)
+            {
+                runningTextures.Add(Engine.GetTexture($"Assets/Textures/Enemy/WalkGoblin/{i}.png"));
+            }
+            return new Animation("run", 0.1f, runningTextures, true);
+        }
+
+        public static Animation CreateBasicEnemyRunBackAnimation()
+        {
+            var runningBackTextures = new List<Texture>();
+            for (int i = 0; i <= 7; i++)
+            {
+                runningBackTextures.Add(Engine.GetTexture($"Assets/Textures/Enemy/WalkBackGoblin/{i}.png"));
             }
             return new Animation("runBack", 0.1f, runningBackTextures, true);
         }

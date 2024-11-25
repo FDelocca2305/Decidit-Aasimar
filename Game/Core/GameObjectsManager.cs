@@ -43,10 +43,10 @@ namespace Game.Core
 
             foreach (var obj in objectsToRemove)
             {
-                if (obj is Enemy enemy)
-                {
-                    continue;
-                }
+                //if (obj is Enemy enemy)
+                //{
+                //    continue;
+                //}
 
                 gameObjects.Remove(obj);
             }

@@ -26,12 +26,13 @@ namespace Game.Core
 
         public T Get()
         {
-            return pool.Count > 0 ? pool.Pop() : objectFactory();
+            T obj = pool.Count > 0 ? pool.Pop() : objectFactory();
+            resetAction?.Invoke(obj);
+            return obj;
         }
 
         public void Release(T obj)
         {
-            resetAction?.Invoke(obj);
             pool.Push(obj);
         }
     }

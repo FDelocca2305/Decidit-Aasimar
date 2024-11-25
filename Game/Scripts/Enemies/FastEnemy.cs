@@ -16,13 +16,15 @@ namespace Game.Scripts.Enemies
         {
             speed = ConfigLoader.EnemyConfig.FastEnemy.Speed;
             currentHealth = ConfigLoader.EnemyConfig.FastEnemy.Health * difficultyMultiplier;
-
+            Transform.Scale = new Vector2 (1.5f, 1.5f);
             InitializeAnimations();
         }
-        
+
         protected override void InitializeAnimations()
         {
-            base.InitializeAnimations();
+            animationManager.AddAnimation("run", AnimationFactory.CreateFastEnemyRunAnimation());
+            animationManager.AddAnimation("runBack", AnimationFactory.CreateFastEnemyRunBackAnimation());
+            animationManager.SetAnimation("run");
         }
     }
 }
