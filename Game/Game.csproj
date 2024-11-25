@@ -171,6 +171,9 @@
     <Content Include="Assets\floor.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\floorStone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\floorVoid.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

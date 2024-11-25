@@ -52,7 +52,7 @@ namespace Game.States
         public void Render()
         {
             Engine.Clear(0, 0, 0);
-            Engine.Draw("Assets/floorVoid.png");
+            Engine.Draw("Assets/floorStone.png");
             objectManager.RenderAll();
             uiManager.Render(gameTimer.GetFormattedTime());
             Engine.Show();

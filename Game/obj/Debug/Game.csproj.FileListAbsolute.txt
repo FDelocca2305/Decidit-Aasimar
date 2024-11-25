@@ -492,3 +492,4 @@ C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\
 C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\6.png
 C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\7.png
 C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\floorVoid.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\floorStone.png
