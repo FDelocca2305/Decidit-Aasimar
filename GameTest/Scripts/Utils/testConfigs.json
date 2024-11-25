@@ -1,0 +1,33 @@
+{
+  "PlayerConfig": {
+    "BaseDamageTaken": 10,
+    "Health": 100,
+    "MaxHealth": 100.0,
+    "Speed": 100,
+    "AttackCooldown": 2.0,
+    "AttackDuration": 1.0,
+    "Attack": 10.0,
+    "InvulnerabilityTime": 0.5
+  },
+  "EnemyConfig": {
+    "BasicEnemy": {
+      "Health": 50,
+      "Speed": 20
+    },
+    "FastEnemy": {
+      "Health": 25,
+      "Speed": 50
+    }
+  },
+  "WaveConfig": {
+    "BasicWaveEnemyCount": 5,
+    "SpecialWaveEnemyCount": 10,
+    "TimeBetweenWaves": 3.0,
+    "BasicWavesBeforeSpecial": 2,
+    "MaxEnemies": 50
+  },
+  "LevelConfig": {
+    "InitialLevel": 1,
+    "ExperienceToNextLevel": 100
+  }
+}
