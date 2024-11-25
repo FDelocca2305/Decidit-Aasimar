@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución",
 		README.me = README.me
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{6EF2F351-21DE-4893-90C3-67228BBD7204}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameTest", "GameTest\GameTest.csproj", "{6EF2F351-21DE-4893-90C3-67228BBD7204}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

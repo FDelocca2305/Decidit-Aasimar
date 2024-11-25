@@ -493,3 +493,21 @@ C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\
 C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\7.png
 C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\floorVoid.png
 C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\floorStone.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\floorStone.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\floorVoid.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkBackGoblin\0.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkBackGoblin\1.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkBackGoblin\2.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkBackGoblin\3.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkBackGoblin\4.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkBackGoblin\5.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkBackGoblin\6.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkBackGoblin\7.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\0.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\1.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\2.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\3.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\4.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\5.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\6.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\7.png
