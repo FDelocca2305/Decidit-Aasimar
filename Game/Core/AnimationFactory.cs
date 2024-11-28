@@ -83,5 +83,45 @@ namespace Game.Core
 
         public static Animation CreateExperienceOrbAnimation() =>
         new Animation("experienceOrb", 1f, new List<Texture> { Engine.GetTexture("Assets/experience_orb.png") }, true);
+
+        public static Animation CreateBossWalkAnimation()
+        {
+            var runningTextures = new List<Texture>();
+            for (int i = 0; i <= 5; i++)
+            {
+                runningTextures.Add(Engine.GetTexture("Assets/Textures/Boss/Walk/" + i + ".png"));
+            }
+            return new Animation("run", 0.1f, runningTextures, true);
+        }
+
+        public static Animation CreateBossWalkBackAnimation()
+        {
+            var runningTextures = new List<Texture>();
+            for (int i = 0; i <= 5; i++)
+            {
+                runningTextures.Add(Engine.GetTexture("Assets/Textures/Boss/WalkBack/" + i + ".png"));
+            }
+            return new Animation("runBack", 0.1f, runningTextures, true);
+        }
+
+        public static Animation CreateBossDeathAnimation()
+        {
+            var deathTextures = new List<Texture>();
+            for (int i = 0; i <= 7; i++)
+            {
+                deathTextures.Add(Engine.GetTexture("Assets/Textures/Boss/Death/" + i + ".png"));
+            }
+            return new Animation("bossDeath", 0.1f, deathTextures, true);
+        }
+
+        public static Animation CreateBossDeathBackAnimation()
+        {
+            var deathTextures = new List<Texture>();
+            for (int i = 0; i <= 7; i++)
+            {
+                deathTextures.Add(Engine.GetTexture("Assets/Textures/Boss/DeathBack/" + i + ".png"));
+            }
+            return new Animation("bossDeathBack", 0.1f, deathTextures, true);
+        }
     }
 }

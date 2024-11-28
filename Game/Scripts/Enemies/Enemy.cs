@@ -19,6 +19,7 @@ namespace Game.Scripts
 
         public float CurrentHealth { get { return currentHealth; } }
         public float Speed { get { return speed; } }
+
         protected Enemy()
         {
             IsActive = true;
@@ -26,6 +27,7 @@ namespace Game.Scripts
             InitializeAnimations();
             Renderer = new Renderer(animationManager.GetCurrentTexture());
         }
+
         public void Reset(Vector2 position, float health, float speed, Player player)
         {
             Transform.Position = position;

@@ -1,6 +1,7 @@
 ﻿using Game.Core.Interfaces;
 using Game.Scripts;
 using Game.Scripts.Upgrades;
+using Game.Scripts.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,11 +24,18 @@ namespace Game.Core
         private List<IUpgrade> currentUpgrades;
         private Texture upgradePanelTexture;
 
+        private Texture bossBarBackgroundBlack;
+        private Texture bossBarForegroundRed;
+
         private float currentHealth;
         private float maxHealth;
         private int currentExperience;
         private int maxExperienceForNextLevel;
         private Vector2 playerPosition;
+
+        private bool isBossBarVisible = false;
+        private float bossCurrentHealth;
+        private float bossMaxHealth;
 
         public UIManager()
         {
@@ -39,6 +47,9 @@ namespace Game.Core
             expBarForegroundBlue = Engine.GetTexture("Assets/exp_bar_blue.png");
 
             upgradePanelTexture = Engine.GetTexture("Assets/upgrades_panel.png");
+
+            bossBarBackgroundBlack = Engine.GetTexture("Assets/exp_bar_black.png");
+            bossBarForegroundRed = Engine.GetTexture("Assets/exp_bar_blue.png");
         }
 
         public void UpdateHealth(float currentHealth, float maxHealth)
@@ -67,6 +78,11 @@ namespace Game.Core
             if (isUpgradePanelVisible)
             {
                 RenderUpgradePanel();
+            }
+
+            if (isBossBarVisible)
+            {
+                RenderBossBar();
             }
         }
 
@@ -137,6 +153,34 @@ namespace Game.Core
             int timeX = 900;
             int timeY = 80;
             TextManager.Instance.DrawText(formattedTime, timeX, timeY, 1.5f);
+        }
+
+        public void ShowBossBar(float bossHealth, float bossMaxHealth)
+        {
+            isBossBarVisible = true;
+            this.bossCurrentHealth = bossHealth;
+            this.bossMaxHealth = bossMaxHealth;
+        }
+
+        public void UpdateBossHealth(float bossHealth)
+        {
+            bossCurrentHealth = bossHealth;
+        }
+
+        public void HideBossBar()
+        {
+            isBossBarVisible = false;
+        }
+
+        private void RenderBossBar()
+        {
+            float bossHealthPercentage = bossCurrentHealth / bossMaxHealth;
+            int barX = 50;
+            int barY = GlobalConstants.GraphicsConstants.ScreenHeight - 50;
+
+            Engine.Draw(bossBarBackgroundBlack, barX, barY, 1f, .5f);
+            Engine.Draw(bossBarForegroundRed, barX, barY, bossHealthPercentage, .5f);
+            TextManager.Instance.DrawText("boss health", barX + 10, barY - 20, 1.5f);
         }
     }
 }
