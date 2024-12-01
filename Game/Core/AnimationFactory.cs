@@ -8,6 +8,7 @@ namespace Game.Core
 {
     public static class AnimationFactory
     {
+        //FAST ENEMY
         public static Animation CreateFastEnemyRunAnimation()
         {
             var runningTextures = new List<Texture>();
@@ -28,6 +29,7 @@ namespace Game.Core
             return new Animation("runBack", 0.1f, runningBackTextures, true);
         }
 
+        //BASIC ENEMY
         public static Animation CreateBasicEnemyRunAnimation()
         {
             var runningTextures = new List<Texture>();
@@ -81,9 +83,11 @@ namespace Game.Core
             return new Animation("attack", 0.25f, attackTextures, true);
         }
 
+        //ORB
         public static Animation CreateExperienceOrbAnimation() =>
         new Animation("experienceOrb", 1f, new List<Texture> { Engine.GetTexture("Assets/experience_orb.png") }, true);
 
+        //BOSS
         public static Animation CreateBossWalkAnimation()
         {
             var runningTextures = new List<Texture>();

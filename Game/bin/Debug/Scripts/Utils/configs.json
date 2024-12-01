@@ -25,7 +25,7 @@
     "TimeBetweenWaves": 5.0,
     "BasicWavesBeforeSpecial": 5,
     "TimeUntilFirstWave": 5,
-    "TimeUntilGameEnds": 2
+    "TimeUntilGameEnds": 1
   },
   "LevelConfig": {
     "InitialLevel": 1,

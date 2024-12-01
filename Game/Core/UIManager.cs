@@ -155,16 +155,17 @@ namespace Game.Core
             TextManager.Instance.DrawText(formattedTime, timeX, timeY, 1.5f);
         }
 
-        public void ShowBossBar(float bossHealth, float bossMaxHealth)
+        public void ShowBossBar(float bossCurrentHealth, float bossMaxHealth)
         {
             isBossBarVisible = true;
-            this.bossCurrentHealth = bossHealth;
+            this.bossCurrentHealth = bossCurrentHealth;
             this.bossMaxHealth = bossMaxHealth;
         }
 
-        public void UpdateBossHealth(float bossHealth)
+        public void UpdateBossHealth(float bossCurrentHealth,float maxHealth)
         {
-            bossCurrentHealth = bossHealth;
+            this.bossCurrentHealth = bossCurrentHealth;
+            this.maxHealth = maxHealth;
         }
 
         public void HideBossBar()
@@ -174,7 +175,7 @@ namespace Game.Core
 
         private void RenderBossBar()
         {
-            float bossHealthPercentage = bossCurrentHealth / bossMaxHealth;
+            float bossHealthPercentage = bossCurrentHealth / 50000;
             int barX = 50;
             int barY = GlobalConstants.GraphicsConstants.ScreenHeight - 50;
 
@@ -182,5 +183,6 @@ namespace Game.Core
             Engine.Draw(bossBarForegroundRed, barX, barY, bossHealthPercentage, .5f);
             TextManager.Instance.DrawText("boss health", barX + 10, barY - 20, 1.5f);
         }
+
     }
 }

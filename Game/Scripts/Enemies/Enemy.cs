@@ -96,7 +96,7 @@ namespace Game.Scripts
         }
 
         public void TakeDamage(float damage)
-        {
+        {   
             this.currentHealth -= damage;
 
             if (currentHealth <= 0)
