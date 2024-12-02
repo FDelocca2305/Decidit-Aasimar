@@ -3,6 +3,7 @@ using Game.Scripts;
 using Game.Scripts.Enemies;
 using Game.Scripts.Waves;
 using System;
+using Game.Scripts.Utils;
 
 namespace Game.States
 {
@@ -85,8 +86,7 @@ namespace Game.States
             boss = new Boss();
             boss.Initialize(1.5f);
             boss.OnDeath += HandleBossDefeat;
-            boss.Reset(new Vector2(0, 0), boss.MaxHealth, boss.Speed, player);
-            
+            boss.Reset(new Vector2(960,540), boss.MaxHealth, boss.Speed, player);
             uiManager.ShowBossBar(boss.CurrentHealth, boss.CurrentHealth);
             objectManager.Add(boss);
         }

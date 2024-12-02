@@ -23,8 +23,7 @@ namespace Game.Scripts.Enemies
         {
             currentHealth = maxHealth;
             speed = ConfigLoader.EnemyConfig.Boss.Speed;
-            Transform.Scale = new Vector2(2.0f, 2.0f);
-            Size = new Vector2(80, 80);
+            Size = new Vector2(98, 78);
             InitializeAnimations();
         }
         
@@ -47,6 +46,12 @@ namespace Game.Scripts.Enemies
             }
         }
 
+        public override void Reset(Vector2 position, float health, float speed, Player player)
+        {
+            base.Reset(position,health,speed,player);
+            Size = new Vector2(98, 78);
+        }
+        
         public override void TakeDamage(float damage)
         {
             if (invulnerabilityTimer > 0)

@@ -28,14 +28,14 @@ namespace Game.Scripts
             Renderer = new Renderer(animationManager.GetCurrentTexture());
         }
 
-        public void Reset(Vector2 position, float health, float speed, Player player)
+        public virtual void Reset(Vector2 position, float health, float speed, Player player)
         {
             Transform.Position = position;
             currentHealth = health;
             this.speed = speed;
             this.player = player;
             IsActive = true;
-            this.Size = new Vector2(48, 60);
+            Size = new Vector2(48, 60);
             animationManager.SetAnimation("run");
             Console.WriteLine($"Resetting Enemy: Speed={speed}, Health={health}");
         }
@@ -97,7 +97,7 @@ namespace Game.Scripts
 
         public virtual void TakeDamage(float damage)
         {   
-            this.currentHealth -= damage;
+            currentHealth -= damage;
 
             if (currentHealth <= 0)
             {
