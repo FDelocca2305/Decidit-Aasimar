@@ -19,6 +19,7 @@ namespace Game.Scripts
 
         public float CurrentHealth { get { return currentHealth; } }
         public float Speed { get { return speed; } }
+
         protected Enemy()
         {
             IsActive = true;
@@ -26,14 +27,15 @@ namespace Game.Scripts
             InitializeAnimations();
             Renderer = new Renderer(animationManager.GetCurrentTexture());
         }
-        public void Reset(Vector2 position, float health, float speed, Player player)
+
+        public virtual void Reset(Vector2 position, float health, float speed, Player player)
         {
             Transform.Position = position;
             currentHealth = health;
             this.speed = speed;
             this.player = player;
             IsActive = true;
-            this.Size = new Vector2(48, 60);
+            Size = new Vector2(48, 60);
             animationManager.SetAnimation("run");
             Console.WriteLine($"Resetting Enemy: Speed={speed}, Health={health}");
         }
@@ -93,9 +95,9 @@ namespace Game.Scripts
             }
         }
 
-        public void TakeDamage(float damage)
-        {
-            this.currentHealth -= damage;
+        public virtual void TakeDamage(float damage)
+        {   
+            currentHealth -= damage;
 
             if (currentHealth <= 0)
             {

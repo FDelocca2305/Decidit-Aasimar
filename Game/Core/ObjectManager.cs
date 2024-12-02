@@ -89,6 +89,19 @@ namespace Game.Core
             }
         }
 
+        public void ClearEnemies()
+        {
+            var enemies = gameObjectsManager.GetAllGameObjects()
+                .Where(obj => obj is Enemy)
+                .ToList();
+
+            foreach (var enemy in enemies)
+            {
+                gameObjectsManager.Remove(enemy);
+            }
+        }
+
+
         public void UpdateAll(float deltaTime, Player player)
         {
             gameObjectsManager.UpdateAll(deltaTime);
@@ -138,7 +151,10 @@ namespace Game.Core
         {
             enemy.IsActive = false;
             gameObjectsManager.Remove(enemy);
-            SpawnExperienceOrbs(enemy.Transform.Position.X, enemy.Transform.Position.Y);
+            if (!(enemy is Boss))
+            {
+                SpawnExperienceOrbs(enemy.Transform.Position.X, enemy.Transform.Position.Y);
+            }
             ReleaseEnemy(enemy);
         }
 
@@ -180,6 +196,15 @@ namespace Game.Core
         {
             return !gameObjectsManager.GetAllGameObjects()
                 .Any(obj => obj.IsActive && obj is Enemy);
+        }
+
+        public void RemoveAllEnemies()
+        {
+            var enemies = gameObjectsManager.GetAllGameObjects().Where(obj => obj is Enemy).ToList();
+            foreach (var enemy in enemies)
+            {
+                gameObjectsManager.Remove(enemy);
+            }
         }
 
         private int GetInitialPoolCapacity(Enemy enemy)

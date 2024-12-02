@@ -511,3 +511,59 @@ C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bi
 C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\5.png
 C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\6.png
 C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Enemy\WalkGoblin\7.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\0.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\1.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\2.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\3.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\4.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\5.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\6.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\7.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\0.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\1.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\2.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\3.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\4.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\5.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\6.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\7.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\0.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\1.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\2.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\3.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\4.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\5.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\0.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\1.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\2.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\3.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\4.png
+C:\Users\franc\OneDrive\Documentos\GitHub\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\5.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\0.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\1.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\2.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\3.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\4.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\5.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\6.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\DeathBack\7.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\0.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\1.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\2.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\3.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\4.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\5.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\6.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Death\7.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\0.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\1.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\2.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\3.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\4.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\WalkBack\5.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\0.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\1.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\2.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\3.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\4.png
+C:\Users\Sebastarbucks\Desktop\Paradigmas de Programcion\Decidit-Aasimar\Game\bin\Debug\Assets\Textures\Boss\Walk\5.png

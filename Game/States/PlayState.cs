@@ -1,7 +1,9 @@
 ﻿using Game.Core;
 using Game.Scripts;
+using Game.Scripts.Enemies;
 using Game.Scripts.Waves;
 using System;
+using Game.Scripts.Utils;
 
 namespace Game.States
 {
@@ -13,6 +15,8 @@ namespace Game.States
         private WaveManager waveManager;
         private UIManager uiManager;
         private LevelManager levelManager;
+        private bool bossSpawned = false;
+        private Boss boss;
         public void Enter()
         {
             uiManager = new UIManager();
@@ -28,25 +32,37 @@ namespace Game.States
 
         public void Update(float deltaTime)
         {
-            gameTimer.Update(deltaTime);
-            objectManager.UpdateAll(deltaTime, player);
-            
-            waveManager.Update(deltaTime);
+            if (!bossSpawned && gameTimer.TimeElapsedInMinutes >= .01f)
+            {
+                SpawnBoss();
+            }
+
+            if (!bossSpawned)
+            {
+                waveManager.Update(deltaTime);
+            }
+            else
+            {
+                boss.Update(deltaTime);
+                uiManager.UpdateBossHealth(boss.CurrentHealth, boss.MaxHealth);
+                if (boss.CurrentHealth <= 0)
+                {
+                    uiManager.HideBossBar();
+                    GameManager.Instance.ChangeState(new VictoryState());
+                }
+            }
 
             if (player.Health <= 0)
             {
                 GameManager.Instance.ChangeState(new GameOverState());
             }
 
-            if (gameTimer.TimeElapsedInMinutes == 2f)
-            {
-                GameManager.Instance.ChangeState(new VictoryState());
-            }
-
             if (Engine.GetKey(Keys.ESCAPE))
                 GameManager.Instance.ChangeState(new MainMenuState());
 
             uiManager.HandleUpgradeSelection();
+            gameTimer.Update(deltaTime);
+            objectManager.UpdateAll(deltaTime, player);
         }
 
         public void Render()
@@ -63,6 +79,21 @@ namespace Game.States
             Console.WriteLine("Saliendo del Juego");
         }
 
-        
+        private void SpawnBoss()
+        {
+            bossSpawned = true;
+            objectManager.RemoveAllEnemies();
+            boss = new Boss();
+            boss.Initialize(1.5f);
+            boss.OnDeath += HandleBossDefeat;
+            boss.Reset(new Vector2(960,540), boss.MaxHealth, boss.Speed, player);
+            uiManager.ShowBossBar(boss.CurrentHealth, boss.CurrentHealth);
+            objectManager.Add(boss);
+        }
+
+        private void HandleBossDefeat(Enemy boss)
+        {
+            GameManager.Instance.ChangeState(new VictoryState());
+        }
     }
 }

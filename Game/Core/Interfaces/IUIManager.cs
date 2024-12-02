@@ -16,5 +16,8 @@ namespace Game.Core.Interfaces
         void ShowUpgradePanel(List<IUpgrade> upgrades);
         void HideUpgradePanel();
         void HandleUpgradeSelection();
+        void ShowBossBar(float bossHealth,float maxHealth);
+        void UpdateBossHealth(float bossHealth,float maxHealth);
+        void HideBossBar();
     }
 }
