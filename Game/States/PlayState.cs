@@ -43,7 +43,7 @@ namespace Game.States
             else
             {
                 boss.Update(deltaTime);
-                uiManager.UpdateBossHealth(boss.CurrentHealth,500);
+                uiManager.UpdateBossHealth(boss.CurrentHealth, boss.MaxHealth);
                 if (boss.CurrentHealth <= 0)
                 {
                     uiManager.HideBossBar();
@@ -85,8 +85,9 @@ namespace Game.States
             boss = new Boss();
             boss.Initialize(1.5f);
             boss.OnDeath += HandleBossDefeat;
-            boss.Reset(new Vector2(0, 0), 500, 60, player);
-            uiManager.ShowBossBar(boss.CurrentHealth, 500); 
+            boss.Reset(new Vector2(0, 0), boss.MaxHealth, boss.Speed, player);
+            
+            uiManager.ShowBossBar(boss.CurrentHealth, boss.CurrentHealth);
             objectManager.Add(boss);
         }
 

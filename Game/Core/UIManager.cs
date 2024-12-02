@@ -162,10 +162,10 @@ namespace Game.Core
             this.bossMaxHealth = bossMaxHealth;
         }
 
-        public void UpdateBossHealth(float bossCurrentHealth,float maxHealth)
+        public void UpdateBossHealth(float bossCurrentHealth, float bossMaxHealth)
         {
             this.bossCurrentHealth = bossCurrentHealth;
-            this.maxHealth = maxHealth;
+            this.bossMaxHealth = bossMaxHealth;
         }
 
         public void HideBossBar()
@@ -175,7 +175,7 @@ namespace Game.Core
 
         private void RenderBossBar()
         {
-            float bossHealthPercentage = bossCurrentHealth / 50000;
+            float bossHealthPercentage = bossCurrentHealth / bossMaxHealth;
             int barX = 50;
             int barY = GlobalConstants.GraphicsConstants.ScreenHeight - 50;
 

@@ -95,7 +95,7 @@ namespace Game.Scripts
             }
         }
 
-        public void TakeDamage(float damage)
+        public virtual void TakeDamage(float damage)
         {   
             this.currentHealth -= damage;
 

@@ -11,16 +11,23 @@ namespace Game.Scripts.Enemies
 {
     public class Boss : Enemy
     {
+        private float invulnerabilityTime = 1.0f;
+        private float invulnerabilityTimer = 0f;
+        private float maxHealth = 500;
+
+        public float MaxHealth => maxHealth;
+
         public Boss() : base() {}
 
         public override void Initialize(float difficultyMultiplier)
         {
-            currentHealth = 500;
+            currentHealth = maxHealth;
             speed = 60;
             Transform.Scale = new Vector2(2.0f, 2.0f);
             Size = new Vector2(128, 128);
             InitializeAnimations();
         }
+        
         protected override void InitializeAnimations()
         {
             animationManager.AddAnimation("run", AnimationFactory.CreateBossWalkAnimation());
@@ -28,6 +35,27 @@ namespace Game.Scripts.Enemies
             animationManager.AddAnimation("bossDeath", AnimationFactory.CreateBossDeathAnimation());
             animationManager.AddAnimation("bossDeathBack", AnimationFactory.CreateBossDeathBackAnimation());
             animationManager.SetAnimation("run");
+        }
+        
+        public override void Update(float deltaTime)
+        {
+            base.Update(deltaTime);
+            
+            if (invulnerabilityTimer > 0)
+            {
+                invulnerabilityTimer -= deltaTime;
+            }
+        }
+
+        public override void TakeDamage(float damage)
+        {
+            if (invulnerabilityTimer > 0)
+            {
+                return;
+            }
+            
+            base.TakeDamage(damage);
+            invulnerabilityTimer = invulnerabilityTime;
         }
     }
 }
