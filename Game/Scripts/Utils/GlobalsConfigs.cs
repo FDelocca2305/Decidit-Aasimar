@@ -64,6 +64,7 @@ namespace Game.Scripts.Utils
     {
         public EnemyStats BasicEnemy { get; set; }
         public EnemyStats FastEnemy { get; set; }
+        public EnemyStats Boss { get; set; }
     }
 
     [Serializable]

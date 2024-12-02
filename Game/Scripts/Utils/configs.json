@@ -17,6 +17,10 @@
     "FastEnemy": {
       "Health": 5,
       "Speed": 50
+    },
+    "Boss": {
+      "Health": 500,
+      "Speed": 60
     }
   },
   "WaveConfig": {

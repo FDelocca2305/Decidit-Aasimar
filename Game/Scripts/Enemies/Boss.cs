@@ -13,7 +13,7 @@ namespace Game.Scripts.Enemies
     {
         private float invulnerabilityTime = 1.0f;
         private float invulnerabilityTimer = 0f;
-        private float maxHealth = 500;
+        private float maxHealth = ConfigLoader.EnemyConfig.Boss.Health;
 
         public float MaxHealth => maxHealth;
 
@@ -22,9 +22,9 @@ namespace Game.Scripts.Enemies
         public override void Initialize(float difficultyMultiplier)
         {
             currentHealth = maxHealth;
-            speed = 60;
+            speed = ConfigLoader.EnemyConfig.Boss.Speed;
             Transform.Scale = new Vector2(2.0f, 2.0f);
-            Size = new Vector2(128, 128);
+            Size = new Vector2(80, 80);
             InitializeAnimations();
         }
         
