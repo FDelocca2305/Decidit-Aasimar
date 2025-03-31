@@ -1,14 +1,37 @@
-# Hacer cosas
-# 1 - Hacer factory de waves para crear waves de diferente dificultad - LISTO
-# 2 - refactor el object manager para que no conozca los orbes si no migrar el update de orbes a su propia clase de experience orbs - DEUDA TECNICA
-# 3 - Hacer mas enemigos y hacer logica de creacion en el factory dependiendo de la WAVE - DEUDA TECNICA
-# 4 - refactorizar collision entre jugadores y enemigos y visceversa - DEUDA TECNICA
-# 5 - hacer que el jugador tome la cantidad igual a el ataque de el enemigo (si el enemigo no tiene ataque se agrega) - DEUDA TECNICA
-# 6 - crear pantalla de main menu - LISTO
-# 7 - crear pantalla de victoria - LISTO
-# 8 - crear pantalla de game over - LISTO
-# 9 - crear popup de mejoras para seleccionar 3 mejoras en el play state sin que sea random - LISTO
-# 10 - Arreglar bug de la vida en la UI - LISTO
+Decidit Aasimar – Survival Game with Custom Engine
+-Language: C#
+-Paradigm: Object-Oriented Programming (OOP)
+-Engine: Custom 2D engine provided by the university course
+-Type: Academic project – Universidad Argentina de la Empresa (UADE) – OOP course
 
+Description
+This project was developed as the final assignment for the Object-Oriented Programming course at UADE. It is a survival-style game built on top of a custom 2D engine provided by the course instructors.
+The game showcases the application of advanced OOP concepts and multiple design patterns. It features a modular architecture and gameplay systems including:
 
-Agregar c# reflection para la generacion de enemigos para evitar que haya 50cs si necesito 50 enemigos
+-State-driven game flow (menu, gameplay, victory, game over)
+-AI enemies with wave progression
+-Experience and upgrade system
+-Event-driven UI with health/EXP bars and upgrade selector
+-Custom collision logic and real-time rendering
+
+Design Patterns Implemented
+-Singleton: Global managers (GameManager, AudioManager, TextManager)
+
+-Factory / Abstract Factory: Enemy and wave creation (EnemyFactory, WaveFactory)
+
+-State: Game state transitions (MainMenuState, PlayState, etc.)
+
+-Template Method: Base wave structure (Wave.cs) with overrides
+
+-Observer: Player and enemy events (OnDamageTaken, OnDeath, OnExperienceChanged)
+
+-Strategy (Emergent): Different enemy behaviors and upgrades
+
+-Game Loop: Core engine update and render cycle
+
+Project Architecture
+*Game.Core: Custom engine layer (input, rendering, audio, core classes)
+
+*Game.Scripts: Game-specific logic (states, waves, upgrades, gameplay)
+
+*Game.Managers: High-level controllers (UI, objects, audio, game flow)
